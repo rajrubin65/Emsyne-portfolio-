@@ -25,12 +25,12 @@ let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
             // Clear existing timeout
             clearTimeout(inactivityTimeout);
 
-            // Set new timeout to hide navbar after 4 seconds
-            inactivityTimeout = setTimeout(() => {
-                if (navbar) {
-                    navbar.classList.add("hidden");
-                }
-            }, 2000);
+            // // Set new timeout to hide navbar after 4 seconds
+            // inactivityTimeout = setTimeout(() => {
+            //     if (navbar) {
+            //         navbar.classList.add("hidden");
+            //     }
+            // }, 2000);
         }
 
         checkNavbar();
@@ -81,3 +81,5 @@ let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 overlay.style.display = "none";
             }
         });
+
+        
