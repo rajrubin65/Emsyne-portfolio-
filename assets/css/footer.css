@@ -1,0 +1,335 @@
+/* ================================
+   Footer Base Styles
+=================================*/
+.footer {
+  background-color: rgba(73, 75, 91, 0.02);
+  font-size: 15px;
+}
+
+.footer h2,
+.footer h3,
+.footer h4 {
+  font-size: 16px;
+}
+
+.footer ul li {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.footer a {
+  color: rgba(var(--inverse-color-rgb), 0.6);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--inverse-color);
+}
+
+.footer a .badge {
+  transition: 0.3s all ease;
+  background-color: rgba(var(--bs-primary-rgb), 0.1);
+  color: var(--bs-primary);
+}
+
+.footer a:hover .badge {
+  background-color: rgba(var(--bs-primary-rgb), 1);
+  color: var(--bs-white);
+}
+
+.footer .quick-contact i {
+  color: var(--inverse-color);
+}
+
+.footer .credits {
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Footer Container */
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: block;
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.footer .col-md-4,
+.footer .col-md-5,
+.footer .col-md-7,
+.footer .col-xl-8,
+.footer .col-xl-4 {
+  padding: 0 15px;
+}
+
+/* ================================
+   Social Buttons
+=================================*/
+.rounded-social-buttons .social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.125rem;
+  height: 2.125rem;
+  border: 0.125rem solid transparent;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: #fefefe;
+  transition: all 0.5s ease;
+}
+
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
+  transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter,
+.rounded-social-buttons .fa-facebook-f,
+.rounded-social-buttons .fa-linkedin,
+.rounded-social-buttons .fa-tiktok,
+.rounded-social-buttons .fa-youtube,
+.rounded-social-buttons .fa-instagram {
+  font-size: 20px;
+}
+
+/* Facebook */
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover {
+  color: #3b5998;
+  background: #fff;
+  border-color: #3b5998;
+}
+
+/* Twitter */
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover {
+  color: #55acee;
+  background: #fff;
+  border-color: #55acee;
+}
+
+/* LinkedIn */
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover {
+  color: #007bb5;
+  background: #fff;
+  border-color: #007bb5;
+}
+
+/* TikTok */
+.rounded-social-buttons .social-button.tiktok {
+  background: #000;
+}
+
+.rounded-social-buttons .social-button.tiktok:hover {
+  color: #000;
+  background: #fff;
+  border-color: #000;
+}
+
+/* YouTube */
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover {
+  color: #bb0000;
+  background: #fff;
+  border-color: #bb0000;
+}
+
+/* Instagram */
+.rounded-social-buttons .social-button.instagram {
+  background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover {
+  color: #125688;
+  background: #fff;
+  border-color: #125688;
+}
+
+/* ================================
+   Responsive Footer Using Your Queries
+=================================*/
+
+/* Tablet + Mobile ≤ 991px */
+@media (max-width: 991px) {
+  /* Stack credits text and social buttons */
+  .footer .credits {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer .credits .rounded-social-buttons {
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile ≤ 767px */
+@media (max-width: 767px) {
+  .footer .col-md-4,
+  .footer .col-md-5,
+  .footer .col-md-7,
+  .footer .col-xl-8,
+  .footer .col-xl-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Extra Small ≤ 480px */
+@media (max-width: 480px) {
+  .footer .container {
+    padding: 0 10px;
+    display: block;
+  }
+}
+
+/* Optional: Adjust container padding for tablets ≤900px */
+@media (max-width: 900px) {
+  .footer .container {
+    padding: 0 15px;
+    display: block;
+  }
+}
+
+
+    header h1 {
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .heading_h1 {
+      margin: 0;
+      font-size: 116px;
+      font-weight: 500;
+      line-height: 94%;
+      padding-left: 25px;
+      padding-top: 30px;
+    }
+
+    .heading_h1 span {
+      color: gray;
+    }
+
+    .heading_h2 {
+      margin: 0;
+      font-size: 50px;
+      font-weight: 200;
+      color: gray;
+      
+    }
+
+    .subheading {
+      padding-top: 30px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #555;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      display: inline-block;
+      padding-left: 25px;
+    }
+
+    .main_heading {
+      padding-top: 40px;
+      padding-bottom: 1px;
+    }
+
+     /* --- Breadcrumb styles --- */
+        .breadcrumb-link {
+            color: #888888;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .breadcrumb-link:hover {
+            color: #111111;
+        }
+
+        .breadcrumb-separator {
+            color: #888888;
+            font-size: 0.8rem;
+            margin: 0 5px;
+        }
+
+        .breadcrumb-item.active {
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            display: none;
+        }
+
+         /* --- Hero Section --- */
+        .hero {
+            background-color: #fff;
+        }
+
+        .hero-title {
+            font-size: 6rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -3px;
+        }
+
+        .hero-title .color {
+            color: #a0a0a0;
+        }
+
+
+          /* --- Responsive Design --- */
+        @media (max-width: 991px) {
+
+            .hero-title {
+                font-size: 4rem;
+                letter-spacing: -2px;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+        }
+
+.fa,
+.fas,
+.fa-solid,
+.fa-regular,
+.fa-light,
+.fa-thin,
+.fa-duotone {
+  font-family: "Font Awesome 6 Free" !important;
+}
+
+.fab, .fa-brands {
+  font-family: "Font Awesome 6 Brands" !important;
+}
