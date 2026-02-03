@@ -133,6 +133,8 @@ body::before {
             margin-bottom: 40px;
         }
 
+        
+
         /* LINE BREAK (space on desktop, break on mobile) */
         .line-break {
             display: inline-block;
@@ -288,106 +290,382 @@ body::before {
             text-align: center;
         }
 
-        /* Learn More Button (grouped) */
-        button.learn-more {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-            outline: none;
-            border: 0;
-            vertical-align: middle;
-            text-decoration: none;
-            background: transparent;
-            padding: 0;
-            font-size: inherit;
-            width: 12rem;
-            height: auto;
-            transition: none;
+        /*Read More Button
 
-            --circle-size: 3rem;
-            --border-radius: 1.625rem;
-            --arrow-left: 0.625rem;
-            --arrow-width: 1.125rem;
-            --arrow-height: 0.125rem;
-            --head-top: -0.29rem;
-            --head-right: 0.0625rem;
-            --head-size: 0.625rem;
-            --border-width: 0.125rem;
-            --text-margin: 1.85rem;
-            --text-padding: 0.75rem;
-            --translate: 1rem;
-            --font-size: inherit;
-        }
+        /* ===============================
+   Read More Button (Reduced Size)
+   =============================== */
+/* ===============================
+   Read More Button (Reduced Size)
+   Primary Color: #002a74
+   =============================== */
+/* ===============================
+   Read More Button (Reduced Size)
+   Primary:   #002a74
+   Secondary: #58ea01
+   =============================== */
 
-        button.learn-more .circle {
-            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-            position: relative;
-            display: block;
-            margin: 0;
-            width: var(--circle-size);
-            height: var(--circle-size);
-            background: #282936;
-            border-radius: var(--border-radius);
-        }
+button.read-more {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    width: 9rem;
+    height: auto;
+    transition: none;
 
-        button.learn-more .circle .icon {
-            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            background: #fff;
-        }
+    --circle-size: 2.4rem;
+    --border-radius: 1.25rem;
+    --arrow-left: 0.45rem;
+    --arrow-width: 0.85rem;
+    --arrow-height: 0.1rem;
+    --head-top: -0.22rem;
+    --head-right: 0.05rem;
+    --head-size: 0.5rem;
+    --border-width: 0.1rem;
+    --text-margin: 1.6rem;
+    --text-padding: 0.55rem;
+    --translate: 0.7rem;
+    --font-size: 12px;
+}
 
-        button.learn-more .circle .icon.arrow {
-            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-            left: var(--arrow-left);
-            width: var(--arrow-width);
-            height: var(--arrow-height);
-            background: none;
-        }
+button.read-more .circle {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background: #002a74; /* Primary */
+    border-radius: var(--border-radius);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
 
-        button.learn-more .circle .icon.arrow::before {
-            position: absolute;
-            content: "";
-            top: var(--head-top);
-            right: var(--head-right);
-            width: var(--head-size);
-            height: var(--head-size);
-            border-top: var(--border-width) solid #fff;
-            border-right: var(--border-width) solid #fff;
-            transform: rotate(45deg);
-        }
+button.read-more .circle .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #58ea01; /* Secondary */
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
 
-        button.learn-more .button-text {
-            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            padding: var(--text-padding) 0;
-            margin: 0 0 0 var(--text-margin);
-            color: #282936;
-            font-weight: 700;
-            line-height: 1.6;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: var(--font-size);
-        }
+button.read-more .circle .icon.arrow {
+    left: var(--arrow-left);
+    width: var(--arrow-width);
+    height: var(--arrow-height);
+    background: none;
+}
 
-        button.learn-more:hover .circle {
-            width: 100%;
-        }
+button.read-more .circle .icon.arrow::before {
+    content: "";
+    position: absolute;
+    top: var(--head-top);
+    right: var(--head-right);
+    width: var(--head-size);
+    height: var(--head-size);
+    border-top: var(--border-width) solid #58ea01; /* Secondary */
+    border-right: var(--border-width) solid #58ea01;
+    transform: rotate(45deg);
+}
 
-        button.learn-more:hover .circle .icon.arrow {
-            background: #fff;
-            transform: translate(var(--translate), 0);
-        }
+button.read-more .button-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: var(--text-padding) 0;
+    margin-left: var(--text-margin);
+    color: #002a74; /* Primary */
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--font-size);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
 
-        button.learn-more:hover .button-text {
-            color: #fff;
-        }
+/* Hover */
+button.read-more:hover .circle {
+    width: 100%;
+    background: #002a74;
+}
+
+button.read-more:hover .circle .icon.arrow {
+    background: #58ea01;
+    transform: translateX(var(--translate));
+}
+
+button.read-more:hover .button-text {
+    color: #58ea01; /* Secondary */
+}
+
+/* ===============================
+   Tablet
+   =============================== */
+
+@media (max-width: 991.98px) {
+    button.read-more {
+        width: 8rem;
+
+        --circle-size: 2.1rem;
+        --border-radius: 1.1rem;
+        --arrow-left: 0.4rem;
+        --arrow-width: 0.75rem;
+        --arrow-height: 0.09rem;
+        --head-top: -0.2rem;
+        --head-right: 0.045rem;
+        --head-size: 0.45rem;
+        --border-width: 0.09rem;
+        --text-margin: 1.5rem;
+        --text-padding: 0.5rem;
+        --translate: 0.6rem;
+        --font-size: 11px;
+    }
+}
+
+/* ===============================
+   Mobile
+   =============================== */
+
+@media (max-width: 480px) {
+    button.read-more {
+        width: 7rem;
+
+        --circle-size: 1.9rem;
+        --border-radius: 1rem;
+        --arrow-left: 0.35rem;
+        --arrow-width: 0.65rem;
+        --arrow-height: 0.08rem;
+        --head-top: -0.18rem;
+        --head-right: 0.04rem;
+        --head-size: 0.4rem;
+        --border-width: 0.08rem;
+        --text-margin: 1.4rem;
+        --text-padding: 0.45rem;
+        --translate: 0.5rem;
+        --font-size: 10px;
+    }
+
+    button.read-more .button-text {
+        top: -0.15rem;
+    }
+}
+
+/* ===============================
+   Crew Card Variant
+   =============================== */
+
+.crew-card .read-more {
+    width: 7rem;
+
+    --circle-size: 2rem;
+    --border-radius: 0.9rem;
+    --arrow-left: 0.35rem;
+    --arrow-width: 0.65rem;
+    --arrow-height: 0.09rem;
+    --head-top: -0.18rem;
+    --head-right: 0.04rem;
+    --head-size: 0.4rem;
+    --border-width: 0.09rem;
+    --text-margin: 1.7rem;
+    --text-padding: 0.45rem;
+    --translate: 0.5rem;
+    --font-size: 10px;
+}
+
+.crew-card .read-more .button-text {
+    color: #fff;
+}
+
+.crew-card .read-more:hover .button-text {
+    color: #58ea01;
+}
+
+
+/* ===============================
+   Learn More Button (LARGER)
+   =============================== */
+
+button.learn-more {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: 11.5rem; /* ↑ from 9rem */
+  font-size: inherit;
+
+  --circle-size: 3rem;        /* ↑ from 2.4rem */
+  --border-radius: 1.6rem;   /* ↑ */
+  --arrow-left: 0.6rem;      /* ↑ */
+  --arrow-width: 1.05rem;    /* ↑ */
+  --arrow-height: 0.12rem;   /* ↑ */
+  --head-top: -0.28rem;      /* ↑ */
+  --head-right: 0.07rem;     /* ↑ */
+  --head-size: 0.62rem;      /* ↑ */
+  --border-width: 0.12rem;   /* ↑ */
+  --text-margin: 2.1rem;     /* ↑ */
+  --text-padding: 0.7rem;    /* ↑ */
+  --translate: 0.9rem;       /* ↑ */
+  --font-size: 15px;         /* ↑ */
+}
+
+button.learn-more .circle {
+  position: relative;
+  display: block;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  background: #002a74; /* PRIMARY */
+  border-radius: var(--border-radius);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+button.learn-more .circle .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+button.learn-more .circle .icon.arrow {
+  left: var(--arrow-left);
+  width: var(--arrow-width);
+  height: var(--arrow-height);
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  content: "";
+  position: absolute;
+  top: var(--head-top);
+  right: var(--head-right);
+  width: var(--head-size);
+  height: var(--head-size);
+  border-top: var(--border-width) solid #58ea01; /* SECONDARY */
+  border-right: var(--border-width) solid #58ea01;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  position: absolute;
+  inset: 0;
+  padding: var(--text-padding) 0;
+  margin-left: var(--text-margin);
+  color: #002a74; /* PRIMARY */
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+/* Hover (same behavior as Read More) */
+button.learn-more:hover .circle {
+  width: 100%;
+  background: #002a74;
+}
+
+button.learn-more:hover .circle .icon.arrow {
+  background: #58ea01;
+  transform: translateX(var(--translate));
+}
+
+button.learn-more:hover .button-text {
+  color: #58ea01;
+}
+
+/* ===============================
+   Tablet
+   =============================== */
+
+@media (max-width: 991.98px) {
+  button.learn-more {
+    width: 10rem;
+
+    --circle-size: 2.6rem;
+    --border-radius: 1.4rem;
+    --arrow-left: 0.52rem;
+    --arrow-width: 0.9rem;
+    --arrow-height: 0.11rem;
+    --head-top: -0.24rem;
+    --head-right: 0.06rem;
+    --head-size: 0.55rem;
+    --border-width: 0.11rem;
+    --text-margin: 1.9rem;
+    --text-padding: 0.62rem;
+    --translate: 0.75rem;
+    --font-size: 13px;
+  }
+}
+
+/* ===============================
+   Mobile
+   =============================== */
+
+@media (max-width: 480px) {
+  button.learn-more {
+    width: 8.8rem;
+
+    --circle-size: 2.3rem;
+    --border-radius: 1.25rem;
+    --arrow-left: 0.45rem;
+    --arrow-width: 0.8rem;
+    --arrow-height: 0.1rem;
+    --head-top: -0.22rem;
+    --head-right: 0.05rem;
+    --head-size: 0.5rem;
+    --border-width: 0.1rem;
+    --text-margin: 1.7rem;
+    --text-padding: 0.55rem;
+    --translate: 0.65rem;
+    --font-size: 12px;
+  }
+
+  button.learn-more .button-text {
+    top: -0.12rem;
+  }
+}
+
+/* ===============================
+   Crew Card Variant (LARGER)
+   =============================== */
+
+.crew-card .learn-more {
+  width: 8.8rem;
+
+  --circle-size: 2.5rem;
+  --border-radius: 1.2rem;
+  --arrow-left: 0.45rem;
+  --arrow-width: 0.8rem;
+  --arrow-height: 0.11rem;
+  --head-top: -0.22rem;
+  --head-right: 0.05rem;
+  --head-size: 0.5rem;
+  --border-width: 0.11rem;
+  --text-margin: 2rem;
+  --text-padding: 0.6rem;
+  --translate: 0.65rem;
+  --font-size: 12px;
+}
+
+.crew-card .learn-more .button-text {
+  color: #fff;
+}
+
+.crew-card .learn-more:hover .button-text {
+  color: #58ea01;
+}
 
         /* Responsive adjustments for Learn More Button */
         @media (max-width: 991.98px) {
@@ -1643,14 +1921,22 @@ body::before {
             margin-top: 15px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 12px;
             color: #333;
             transition: color 0.3s;
         }
 
         .toggle-btn:hover {
-            color: #007bff;
+            color: #002a74;
+            
         }
+
+        .toggle-btn {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            }
+
         .partners-section {
             width: 100%;
             padding-top: 50px;
@@ -1682,7 +1968,7 @@ body::before {
             display: block;
             width: 60px;
             height: 3px;
-            background: #007bff;
+            background: #58ea01;
             /* accent color */
             margin: 8px auto 0;
             border-radius: 2px;

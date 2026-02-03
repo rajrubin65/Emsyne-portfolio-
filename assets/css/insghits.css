@@ -161,8 +161,7 @@
         background-color: #ffffff;
         border-radius: 12px;
         padding: 35px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.12);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
         overflow: hidden;

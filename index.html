@@ -46,7 +46,7 @@
                 <!-- Desktop Menu -->
                 <nav class="desktop-menu">
                     <a href="index.html">Home</a>
-                    <a href="#about">About</a>
+                    <a href="about.html">About</a>
                     <a href="#portfolio">Portfolio</a>
                     <a href="services.html">Services</a>
                     <a href="insights.html">Insights</a>
@@ -87,7 +87,7 @@
             <!-- HERO SECTION -->
             <section class="hero__v6 section" id="home">
                 <video autoplay muted loop playsinline class="hero-video">
-                    <source src="assets/videos/2795167-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+                    <source src="assets/videos/hero_video2.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <div class="container">
@@ -103,22 +103,27 @@
                                 Experience cutting-edge technology, industry expertise,
                                 and customer-focused services to transform your business
                                 into a success story.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
             <!-- ABOUT SECTION -->
             <section class="about__v4 section" id="about">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
-                            <div class="sticky-heading text-center mb-4" data-animate>
-                                <span style="--i: 0">A</span><span style="--i: 1">B</span><span
-                                    style="--i: 2">O</span><span style="--i: 3">U</span><span style="--i: 4">T</span>
-                                <span style="--i: 6; color: #3173dc">U</span><span
-                                    style="--i: 7; color: #3173dc">S</span>
-                            </div>
+                            <h1 class="sticky1-heading">
+                                <span class="left-letter">A</span>
+                                <span class="left-letter">B</span>
+                                <span class="left-letter">O</span>
+                                <span class="left-letter">U</span>
+                                <span class="left-letter">T</span>
+                                <span class="spacer"></span>
+                                <span class="right-letter">U</span>
+                                <span class="right-letter">S</span>
+                                </h1>
+
                             <div class="tip" data-animate>
                                 <p class="subheading">
                                     <strong>Emsyne Technologies</strong>, the IT arm of The Muthoot Group, is a leading
@@ -158,16 +163,19 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <!-- Left: Image with Badge -->
-                        <div class="col-md-6 mb-4 mb-md-0">
-                            <div class="position-relative" data-aos="fade-up" data-aos-delay="400">
-                                <img src="assets/images/group-people-working-out-business-plan-office.jpg"
-                                    class="img-fluid rounded shadow" alt="vision" />
-                                <!-- Experience Badge -->
-                                <div class="experience-badge position-absolute start-50 translate-middle-x px-4 py-2 text-white rounded fw-bold shadow"
-                                    style="background-color: #376fdf; bottom: -25px">
-                                    <span data-purecounter-start="0" data-purecounter-end="20"
-                                        data-purecounter-duration="2" class="purecounter fs-3"></span>
-                                    YEARS OF EXPERIENCE
+                        <!-- Left: Experience Circle -->
+                        <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center"
+                            data-aos="fade-up" data-aos-delay="400">
+
+                            <div class="machine">
+                                <div class="ring r1"></div>
+                                <div class="ring r2"></div>
+                                <div class="ring r3"></div>
+                                <div class="ring r4"></div>
+
+                                <div class="center">
+                                    <div class="count" id="counter">0</div>
+                                    <div class="label">YEARS EXPERIENCE</div>
                                 </div>
                             </div>
                         </div>
@@ -331,16 +339,29 @@
                                 style="--i: 8; color: #3173dc">F</span><span
                                 style="--i: 9; color: #3173dc">E</span><span style="--i: 10; color: #3173dc">R</span>
                         </div>
+                        <!-- Mini Gallery Slider -->
+                        <!-- <div class="offer-gallery-wrapper">
+                            <div class="offer-gallery">
+                                <div class="offer-track">
+                                    <div class="offer-card">Web Apps</div>
+                                    <div class="offer-card">Mobile Apps</div>
+                                    <div class="offer-card">Cloud</div>
+                                    <div class="offer-card">ERP</div>
+                                    <div class="offer-card">AI</div>
+                                </div>
+                            </div>
+                        </div> -->
+
                     </div>
 
                     <div class="right">
                         <!-- 01 Web Application Development -->
-                        <div class="service tip" data-animate>
+                        <div class="servicoe tip" data-animate>
                             <div class="service-image tip">
                                 <img src="assets/images/webdvlp1.jpg" alt="Web Application Development" />
                             </div>
                             <div class="service-content tip">
-                                <div class="number tip">01</div>
+                                <div class="number-tip">01</div>
                                 <div>
                                     <h4 class="fw-bold mb-3">Web Application Development</h4>
                                 </div>
@@ -351,17 +372,26 @@
                                     </p>
 
                                 </div>
-                                <a class="tip" href="services.html#service_web">Read More</a>
+                                
+                                <a class="tip" href="services.html#service_web">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
+
                             </div>
                         </div>
 
                         <!-- 02 Mobility Services -->
-                        <div class="service tip" data-animate>
+                        <div class="extra-services" data-animate>
                             <div class="service-image tip">
                                 <img src="assets/images/mobileapp.jpg" alt="Mobility Services" />
                             </div>
                             <div class="service-content tip">
-                                <div class="number tip">02</div>
+                                <div class="number-tip">02</div>
                                 <div class="title tip">Mobility Services</div>
                                 <div class="description tip">
                                     <p>
@@ -370,41 +400,63 @@
                                     </p>
 
                                 </div>
-                                <a class="tip" href="services.html#service_mobile">Read More</a>
+                                <a class="tip" href="services.html#service_mobile">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
                             </div>
                         </div>
 
                         <!-- 03 Application Integration -->
-                        <div class="service tip" data-animate>
+                        <div class="extra-services" data-animate>
                             <div class="service-image tip">
                                 <img src="assets/images/appintegration.jpg" alt="Application Integration" />
                             </div>
                             <div class="service-content tip">
-                                <div class="number tip">03</div>
+                                <div class="number-tip">03</div>
                                 <div class="title tip">Application Integration</div>
                                 <div class="description tip">
                                     <p>
                                         Seamless middleware and BPI solutions to connect enterprise
                                         systems efficiently. </p>
                                 </div>
-                                <a class="tip" href="services.html#service_integration">Read More</a>
+                                
+                                <a class="tip" href="services.html#service_integration">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
                             </div>
                         </div>
 
                         <!-- 04 Cloud Computing -->
-                        <div class="service tip" data-animate>
+                        <div class="extra-services" data-animate>
                             <div class="service-image tip">
                                 <img src="assets/images/cloudservice.jpg" alt="Cloud Computing" />
                             </div>
                             <div class="service-content tip">
-                                <div class="number tip">04</div>
+                                <div class="number-tip">04</div>
                                 <div class="title tip">Cloud Computing</div>
                                 <div class="description tip">
                                     <p>
                                         Scalable cloud solutions with big data, BI, and future-ready
                                         architectures. </p>
                                 </div>
-                                <a class="tip" href="services.html#service_cloud">Read More</a>
+                                <a class="tip" href="services.html#service_cloud">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
                             </div>
                         </div>
                         <div class="extra-services">
@@ -414,14 +466,21 @@
                                     <img src="assets/images/erpservice.jpg" alt="ERP Solutions" />
                                 </div>
                                 <div class="service-content tip">
-                                    <div class="number tip">05</div>
+                                    <div class="number-tip">05</div>
                                     <div class="title tip">ERP Solutions</div>
                                     <div class="description tip">
                                         <p>
                                             Performance-driven ERP modules for supply chain, CRM, and
                                             business growth.</p>
                                     </div>
-                                    <a class="tip" href="services.html#service_erp">Read More</a>
+                                    <a class="tip" href="services.html#service_erp">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
                                 </div>
                             </div>
 
@@ -431,14 +490,21 @@
                                     <img src="assets/images/financial.jpg" alt="Financial Solutions" />
                                 </div>
                                 <div class="service-content tip">
-                                    <div class="number tip">06</div>
+                                    <div class="number-tip">06</div>
                                     <div class="title tip">Financial Solutions</div>
                                     <div class="description tip">
                                         <p>
                                             Secure end-to-end financial software for banking and
                                             non-banking services.</p>
                                     </div>
-                                    <a class="tip" href="services.html#service_financial">Read More</a>
+                                    <a class="tip" href="services.html#service_financial">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
                                 </div>
                             </div>
 
@@ -448,14 +514,21 @@
                                     <img src="assets/images/databaseservice.jpg" alt="Database Services" />
                                 </div>
                                 <div class="service-content tip">
-                                    <div class="number tip">07</div>
+                                    <div class="number-tip">07</div>
                                     <div class="title tip">Database Services</div>
                                     <div class="description tip">
                                         <p>
                                             Reliable Oracle and SQL database setup, monitoring, and
                                             performance tuning.</p>
                                     </div>
-                                    <a class="tip" href="services.html#service_database">Read More</a>
+                                    <a class="tip" href="services.html#service_database">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
                                 </div>
                             </div>
 
@@ -465,14 +538,21 @@
                                     <img src="assets/images/outsource.jpg" alt="Outsourcing Services" />
                                 </div>
                                 <div class="service-content tip">
-                                    <div class="number tip">08</div>
+                                    <div class="number-tip">08</div>
                                     <div class="title tip">Outsourcing Services</div>
                                     <div class="description tip">
                                         <p>
                                             Cost-effective onsite and offshore outsourcing with
                                             dedicated teams.</p>
                                     </div>
-                                    <a class="tip" href="services.html#service_outsourcing">Read More</a>
+                                    <a class="tip" href="services.html#service_outsourcing">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
                                 </div>
                             </div>
 
@@ -482,7 +562,7 @@
                                     <img src="assets/images/ai.jpg" alt="AI Solutions" />
                                 </div>
                                 <div class="service-content tip">
-                                    <div class="number tip">09</div>
+                                    <div class="number-tip">09</div>
                                     <div class="title tip">AI Solutions</div>
                                     <div class="description tip">
                                         <p>
@@ -490,7 +570,14 @@
                                             analytics, and automation.
                                         </p>
                                     </div>
-                                    <a class="tip" href="services.html#service_ai">Read More</a>
+                                    <a class="tip" href="services.html#service_ai">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -514,7 +601,7 @@
                     </p>
 
                     <!-- Scroller -->
-                    <div class="scroller" data-speed="slow">
+                    <div class="scroller" >
                         <div class="scroller__inner">
                             <!-- Logos -->
                             <div class="logo-item">
@@ -845,5 +932,101 @@
     <script src="assets/js/send_email.js"></script>
     <!-- End JavaScripts-->
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const counter = document.getElementById("counter");
+    if (!counter) return;
+
+    const target = 20;
+    const speed = 180;
+    let started = false;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !started) {
+                    started = true;
+                    let value = 0;
+
+                    const timer = setInterval(() => {
+                        value++;
+                        counter.textContent = value;
+                        if (value >= target) clearInterval(timer);
+                    }, speed);
+                }
+            });
+        },
+        {
+            root: null,
+            threshold: 0.4
+        }
+    );
+
+    observer.observe(counter);
+});
+
+
+</script>
+<script>
+const heading = document.querySelector('.sticky1-heading');
+
+if (heading) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const letters = heading.querySelectorAll('span');
+
+        if (entry.isIntersecting) {
+          // Entering viewport → trigger animation
+          letters.forEach((letter, index) => {
+            letter.style.setProperty('--i', index); // set stagger index
+            letter.classList.add('animate');
+          });
+        } else {
+          // Leaving viewport → reset for next time
+          letters.forEach((letter) => {
+            letter.classList.remove('animate');
+            // Optional: force reset opacity/transform immediately
+            // (helps in some browsers if animation was interrupted)
+            letter.style.opacity = '0';
+            letter.style.transform = 'translateX(0)';
+          });
+        }
+      });
+    },
+    {
+      threshold: 0.1,                    // start when ~10% visible
+      rootMargin: "0px 0px -10% 0px"     // trigger a bit earlier (adjust to taste)
+    }
+  );
+
+  observer.observe(heading);
+}
+</script>
+
+<script>
+  const track = document.querySelector(".offer-track");
+  const prevBtn = document.querySelector(".slider-btn.prev");
+  const nextBtn = document.querySelector(".slider-btn.next");
+
+  let index = 0;
+  const cardWidth = 156; // card width + gap
+  const maxIndex = track.children.length - 2;
+
+  nextBtn.addEventListener("click", () => {
+    if (index < maxIndex) {
+      index++;
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+  });
+</script>
+
 
 </html>
