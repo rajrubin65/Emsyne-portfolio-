@@ -7,7 +7,8 @@
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
     border-radius: 15px;
-    padding: 10px 20px;
+    padding: 4px 10px;
+    /* padding: 10px 20px; */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     z-index: 999;
     opacity: 0; /* start invisible */
@@ -33,15 +34,17 @@
     align-items: center;
 }
 
+/* image height and nav*/ 
+
 .logo-img {
-    height: 60px;
+    height: 55px;
 }
 
 /* Desktop Menu */
 .desktop-menu {
     display: flex;
     gap: 2rem;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 500;
     font-display: swap;
 }

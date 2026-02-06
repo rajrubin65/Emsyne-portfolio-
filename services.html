@@ -17,24 +17,82 @@
 
  <link href="assets/css/services.css" rel="stylesheet">
  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+ <!-- ======= Theme Style =======-->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- <link href="assets/css/custom_styles.css" rel="stylesheet" /> -->
+    <link href="assets/css/navbar.css" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+
+
 </head>
 
 <body>
+<header class="custom-navbar" id="mainNavbar">
+        <div class="navbar-inner">
+                <!-- Logo Left -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/emsyne-logo.png" alt="Logo" class="logo-img" />
+
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="desktop-menu">
+                    <a href="index.html">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="services.html">Services</a>
+                    <a href="insights.html">Insights</a>
+                    <a href="contactsus.html">Contact</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="http://172.17.17.201:8010/blogs.html" target="_blank" rel="noopener noreferrer">Blog <i
+                            class="bi bi-box-arrow-up-right" style="font-size: 1em; vertical-align: middle;"></i></a>
+                </nav>
+
+                <!-- Hamburger Icon -->
+                <div class="hamburger-icon" id="icon">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="http://172.17.17.201:8010/blogs.html" target="_blank" rel="noopener noreferrer">Blog <i
+                                class="bi bi-box-arrow-up-right"
+                                style="font-size: 1em; vertical-align: middle;"></i></a></li>
+                </ul>
+            </nav>
+
+            <!-- Overlay -->
+    <div class="dark-overlay" id="overlay"></div>
+  </header>
   <div class="container">
     <section class="hero">
       <div class="container">
-        <div class="row align-items-center" data-aos="fade-right">
-          <div class="col-lg-7">
+        <div class="row align-items-center" data-aos="fade-right">       
+          <div class="col-lg-7 mt-custom">
             <h1 class="hero-title">Services <br><span class="color">we provide</span></h1>
           </div>
-          <nav aria-label="breadcrumb">
+          <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">HOME</a></li>
               <li class="breadcrumb-item"><span class="breadcrumb-separator"><i
                     class="fa-solid fa-chevron-right"></i></span></li>
               <li class="breadcrumb-item active" aria-current="page" style="color: black;">Services</li>
             </ol>
-          </nav>
+          </nav> -->
 
         </div>
 
@@ -212,6 +270,7 @@
     </div>
   </footer>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/navbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
   AOS.init({
