@@ -1,16 +1,16 @@
-const toggleArrow = document.getElementById("toggleArrow");
-const extraServices = document.querySelector(".extra-services");
-const servicesSection = document.getElementById("services");
-toggleArrow.addEventListener("click", () => {
-  extraServices.classList.toggle("show");
-  if (extraServices.classList.contains("show")) {
-    toggleArrow.textContent = "▲ Show Less";
-  } else {
-    toggleArrow.textContent = "▼ Show More";
-    // Scroll to bottom of the services section instead of testimonials
-    servicesSection.scrollIntoView({ behavior: "smooth", block: "end" });
-  }
-});
+// const toggleArrow = document.getElementById("toggleArrow");
+// const extraServices = document.querySelector(".extra-services");
+// const servicesSection = document.getElementById("services");
+// toggleArrow.addEventListener("click", () => {
+//   extraServices.classList.toggle("show");
+//   if (extraServices.classList.contains("show")) {
+//     toggleArrow.textContent = "▲ Show Less";
+//   } else {
+//     toggleArrow.textContent = "▼ Show More";
+//     // Scroll to bottom of the services section instead of testimonials
+//     servicesSection.scrollIntoView({ behavior: "smooth", block: "end" });
+//   }
+// });
 // document.addEventListener('DOMContentLoaded', () => {
 const tiles = document.querySelectorAll(".vision-tile");
 const observer = new IntersectionObserver(

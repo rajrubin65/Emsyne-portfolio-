@@ -1,33 +1,17 @@
 /*
-Template name: Nova
-Template author: FreeBootstrap.net
-Author website: https://freebootstrap.net/
-License: https://freebootstrap.net/license
-Buy Pro
+  Project: Emsyne static portfolio
+  Purpose: consolidated CSS with sections and minimal cleanup
+  NOTE: This file was reorganized to add section headers; rules were preserved
 */
-:root,
-[data-bs-theme=light] {
-  --bs-body-bg: #ffffff;
-  --bs-body-color: #494B5B;
-  --bs-primary: #376fdf;
-  --bs-primary-rgb: 33, 92, 92;
-  --bs-primary-hover: #376fdfb6;
-  --bs-primary-hover-rgb: 20, 75, 75;
-  --bs-secondary: #8cb1d6;
-  --bs-secondary-rgb: 204, 232, 201;
-  --bs-heading-color: #16181B;
-  --inverse-color: #494B5B;
-  --inverse-color-rgb: 73, 75, 91;
-  --bs-link-color: var(--bs-primary);
-  --nav-bg: #ffffff;
-  --nav-color: #fff;
-  --nav-hover-color: #1f6bff;
-  --dropdown-bg: #ffffff;
-  --dropdown-color: #1f6bff;
-  --dropdown-hover-bg: #f7f7f7;
-  --nav-inverse: #000000;
-  --nav-inverse-alt: #ffffff;
-}
+
+/* Root variables moved to assets/css/common.css (single source of truth) */
+
+/* See: assets/css/common.css for CSS variables */
+
+/* ==========================
+   Base / Typography
+   ==========================
+*/
 
 body {
   font: 1rem/1.7 "Inter", sans-serif;
@@ -41,38 +25,10 @@ body {
   position: relative;
 }
 
-::-moz-selection {
-  background-color: var(--bs-black);
-  color: var(--bs-white);
-}
+/* Utilities moved to assets/css/common.css (selection, links, headings, container) */
 
-::selection {
-  background-color: var(--bs-black);
-  color: var(--bs-white);
-}
+/* See: assets/css/common.css */
 
-a {
-  -webkit-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
-  color: var(--bs-primary);
-  text-decoration: underline;
-}
-a:hover {
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--bs-heading-color);
-}
-
-.container {
-  max-width: 1140px;
-}
 
 .section {
   padding: 70px 0;
@@ -111,79 +67,15 @@ h6 {
           box-shadow: 0 1rem 3rem 0 rgba(var(--bs-black-rgb), 0.05) !important;
 }
 
-.list-checked {
-  padding: 0;
-  margin: 0;
-  color: var(--bs-body-color);
-}
-.list-checked li {
-  position: relative;
-  margin-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  gap: 10px;
-}
-.list-checked li i {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  display: inline-block;
-  background-color: rgba(var(--bs-primary-rgb), 0.1);
-  border-radius: 50%;
-  color: var(--bs-primary);
-  font-size: 20px;
-}
-.list-checked li:before {
-  position: absolute;
-  display: inline-block;
-  left: 0;
-  content: "";
-  vertical-align: -0.125em;
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 1.5625rem 1.5625rem;
-  width: 1.5625rem;
-  height: 1.5625rem;
-}
+/* .list-checked moved to assets/css/common.css */
 
-.btn {
-  padding: 12px 20px;
-  background-color: var(--bs-primary);
-  color: var(--bs-white);
-  border: 1px solid transparent;
-  border-radius: 7px;
-  font-weight: 600;
-  position: relative;
-}
-.btn:hover, .btn:active, .btn:focus {
-  color: var(--bs-white);
-  background-color: var(--bs-primary-hover) !important;
-  border: 1px solid var(--bs-primary-hover) !important;
-}
-.btn.btn-white.hover-outline {
-  background-color: var(--bs-white) !important;
-  color: var(--bs-black) !important;
-  border: 1px solid transparent !important;
-}
-.btn.btn-white.hover-outline:hover {
-  color: var(--bs-white) !important;
-  background-color: transparent !important;
-  border: 1px solid var(--bs-white) !important;
-}
-.btn.btn-white-outline {
-  border: 1px solid rgba(var(--inverse-color-rgb), 0.2) !important;
-  color: var(--inverse-color) !important;
-  background-color: transparent;
-}
-.btn.btn-white-outline:hover, .btn.btn-white-outline:focus, .btn.btn-white-outline:active {
-  background-color: transparent !important;
-  border: 1px solid rgba(var(--inverse-color-rgb), 0.5) !important;
-}
+/* See: assets/css/common.css */
+
+
+/* Buttons moved to assets/css/common.css */
+
+/* See: assets/css/common.css */
+
 
 .block-squares {
   position: absolute;
@@ -193,37 +85,15 @@ h6 {
   width: auto;
 }
 
-.form-control {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-width: 1px;
-  font-size: 16px;
-  background-color: transparent;
-  border-color: rgba(var(--inverse-color-rgb), 0.1);
-}
+/* Form controls moved to assets/css/common.css */
 
-.form-control:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-color: var(--bs-primary);
-}
+/* See: assets/css/common.css */
 
-.a-link i {
-  font-size: 26px;
-  margin-left: 10px;
-  -webkit-transition: 0.25s all ease-in-out;
-  transition: 0.25s all ease-in-out;
-}
-.a-link:hover i {
-  margin-left: 15px;
-}
 
-.page-title {
-  padding-top: 100px !important;
-  padding-bottom: 50px !important;
-  background-color: rgba(var(--inverse-color-rgb), 0.03);
-}
+/* Small helpers (a-link, page-title) moved to assets/css/common.css */
+
+/* See: assets/css/common.css */
+
 
 .special-link .icons {
   display: inline-block;
@@ -760,13 +630,14 @@ h6 {
   padding: 5rem 0 !important;
 }
 .hero__v6 .hero-subtitle {
-  background: color-mix(in srgb, var(--bs-secondary), transparent 70%);
+  background: color-mix(in srgb, var(--bs-secondary), transparent 75%);
+
   color: var(--bs-primary);
   display: inline-block;
   padding: 5px 12px;
   border-radius: 7px;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
@@ -1521,51 +1392,298 @@ h6 {
 
 
 /* what we offer */
+/* ================= CAROUSEL WRAPPER ================= */
+.offer-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 
-/* Slider wrapper */
-.offer-gallery-wrapper {
-  margin-top: 20px;
-  overflow: hidden;
+    max-width: 330px;
+    width: 100%;
+
+    margin: 35% auto 0;        /* center horizontally */
+    padding: 0 16px;           /* equal left & right padding */
+    box-sizing: border-box;
 }
 
-/* Slider area */
+/* ================= GALLERY ================= */
 .offer-gallery {
-  width: 320px;
-  overflow: hidden;
+    width: 100%;
+    max-width: 280px;
+
+    overflow: hidden;          /* IMPORTANT */
+    scroll-behavior: auto;  
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.offer-gallery::-webkit-scrollbar {
+    display: none;
 }
 
-/* Track */
+/* ================= TRACK ================= */
 .offer-track {
-  display: flex;
-  gap: 16px;
-  animation: autoSlide 10s linear infinite;
+    display: flex;
+    gap: 12px;
+    width: max-content;
+    flex-wrap: nowrap;
+
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    will-change: transform;
 }
 
-/* Cards */
+
+
+/* ================= CARDS ================= */
 .offer-card {
-  min-width: 140px;
-  padding: 14px 18px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  font-weight: 600;
-  text-align: center;
-  white-space: nowrap;
+    min-width: 70px;
+    height: 70px;
+
+    background: #f8f9fa;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+
+    /* 🔥 crew-like transition */
+    transition:
+        transform 0.8s ease,
+        opacity 0.4s ease,
+        filter 0.4s ease;
+
+    transform: scale(0.85) translateZ(-80px);
+    opacity: 0.4;
+    filter: blur(0.3px);
+
+    will-change: transform, opacity;
 }
 
-/* Pause on hover (optional but nice UX) */
-.offer-gallery:hover .offer-track {
-  animation-play-state: paused;
+.offer-card.active {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+    filter: none;
+    z-index: 2;
+    background-color: rgba(33, 150, 243, 0.32);
+    box-shadow: 0 0 22px rgba(33, 150, 243, 0.4);
+
+
+
+
+}
+.offer-card.prev,
+.offer-card.next {
+    transform: scale(0.92) translateZ(-40px);
+    opacity: 0.3;
+    z-index: 1;
 }
 
-/* Auto slide animation */
-@keyframes autoSlide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+
+.offer-card img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 6px;
+}
+
+/* ================= NAV BUTTONS ================= */
+.nav-btn {
+    background: #002a74;
+    color: #fff;
+    border: none;
+
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    .offer-carousel {
+        margin-top: 24px;      /* remove % based spacing */
+        gap: 6px;
+    }
+
+    .offer-gallery {
+        max-width: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-gallery {
+        max-width: 200px;
+    }
+
+    .offer-card {
+        min-width: 56px;
+        height: 56px;
+    }
+
+    .offer-card img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
+.site-footer {
+    background: #002a74; /* Primary color */
+    color: #cbd5e1;
+    padding: 60px 20px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Layout */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 25% 45%;
+    gap: 40px;
+}
+
+/* Logo & Description */
+.footer-logo {
+    color: #ffffff; /* default text */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Make first letter green */
+.footer-logo::first-letter {
+    color: #58ea01; /* Secondary color */
+    font-weight: bold;
+}
+
+/* Footer column headings */
+.footer-column h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Make first letter of headings green */
+.footer-column h4::first-letter {
+    color: #58ea01; /* Secondary color */
+    font-weight: bold;
+}
+
+/* Quick Links */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #58ea01;
+}
+
+/* Contact Section */
+.footer-column small {
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+.footer-address-row small {
+    line-height: 1.4;
+    display: block;
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.newsletter-form button {
+    padding: 8px 12px;
+    border: none;
+    background: #58ea01;
+    color: #002a74;
+    cursor: pointer;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    background: #002a74;
+    color: #58ea01;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #58ea01;
+    color: #002a74;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #58ea01;
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.footer-bottom a {
+    margin: 0 10px;
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.footer-bottom a:hover {
+    color: #58ea01;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 .mt-custom {
   margin-top: 120px; /* increase as needed */

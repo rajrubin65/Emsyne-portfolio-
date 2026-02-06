@@ -1,15 +1,6 @@
-    body {
-      background-color: #ffffff;
-      color: #1a202c;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      overflow-y: auto;
-      height: 100%;
-      width: 100%;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+    /* Base body styles moved to assets/css/common.css */
+
+    /* Page-specific overrides can remain below (e.g., .container sizing) */
 
     body::-webkit-scrollbar {
       display: none;

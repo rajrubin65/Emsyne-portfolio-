@@ -24,6 +24,7 @@
         integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
         crossorigin="anonymous"></script>
     <!-- ======= Theme Style =======-->
+    <link href="assets/css/common.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/custom_styles.css" rel="stylesheet" />
     <link href="assets/css/navbar.css" rel="stylesheet" />
@@ -87,7 +88,7 @@
             <!-- HERO SECTION -->
             <section class="hero__v6 section" id="home">
                 <video autoplay muted loop playsinline class="hero-video">
-                    <source src="assets/videos/hero_video2.mp4" type="video/mp4" />
+                    <source src="assets/videos/hero_video1.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <div class="container">
@@ -103,11 +104,11 @@
                                 Experience cutting-edge technology, industry expertise,
                                 and customer-focused services to transform your business
                                 into a success story.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- ABOUT SECTION -->
             <section class="about__v4 section" id="about">
                 <div class="container">
@@ -122,28 +123,20 @@
                                 <span class="spacer"></span>
                                 <span class="right-letter">U</span>
                                 <span class="right-letter">S</span>
-                                </h1>
+                            </h1>
 
                             <div class="tip" data-animate>
                                 <p class="subheading">
-                                    <strong>Emsyne Technologies</strong>, the IT arm of The Muthoot Group, is a leading
-                                    provider of ERP, CRM, IT Infrastructure, Workflow Automation, and end-to-end digital
-                                    solutions. Based in <strong>Infopark, Kochi</strong>, we empower businesses to
-                                    embrace digital transformation by combining <em>deep industry expertise, innovative
-                                        technology, and proven delivery excellence</em>. Backed by one of India’s most
-                                    respected business conglomerates, with an annual revenue exceeding US $100 million,
-                                    <strong>Emsyne</strong> delivers solutions that are reliable, scalable, and designed
-                                    to meet evolving business needs. With over 16 years of experience and more than 1000
-                                    satisfied clients worldwide, we have built a reputation for providing
-                                    cost-effective, quality-driven, and future-ready IT services. Certified with
-                                    <strong>ISO 9001:2015</strong>, our team specializes in creating software that
-                                    enhances productivity, operational efficiency, and strategic growth. From consulting
-                                    and design to development, testing, implementation, and support,
-                                    <strong>Emsyne</strong> ensures organizations achieve their business objectives
-                                    while staying ahead in a competitive digital landscape. We pride ourselves on
-                                    delivering solutions that not only solve complex problems but also create meaningful
-                                    impact for clients, fostering long-term success and innovation.
+                                    <strong>Emsyne Technologies</strong>, the IT arm of The Muthoot Group, delivers ERP,
+                                    CRM, IT infrastructure, workflow automation, and end-to-end digital solutions. Based
+                                    in <strong>Infopark, Kochi</strong>, we help businesses drive digital transformation
+                                    through innovative technology and proven expertise. With over <strong>20 years of
+                                        experience</strong>, <strong>1000+ global clients</strong>, and <strong>ISO
+                                        9001:2015 certification</strong>, Emsyne provides reliable, scalable, and
+                                    cost-effective IT services that enhance productivity, efficiency, and long-term
+                                    growth.
                                 </p>
+
                                 <div class="text-center mt-4">
                                     <button class="learn-more" onclick="window.location.href='about.html'">
                                         <span class="circle" aria-hidden="true">
@@ -339,18 +332,43 @@
                                 style="--i: 8; color: #3173dc">F</span><span
                                 style="--i: 9; color: #3173dc">E</span><span style="--i: 10; color: #3173dc">R</span>
                         </div>
-                        <!-- Mini Gallery Slider -->
-                        <!-- <div class="offer-gallery-wrapper">
+
+
+                        <div class="offer-carousel">
+                            <button class="nav-btn prev">‹</button>
+
                             <div class="offer-gallery">
                                 <div class="offer-track">
-                                    <div class="offer-card">Web Apps</div>
-                                    <div class="offer-card">Mobile Apps</div>
-                                    <div class="offer-card">Cloud</div>
-                                    <div class="offer-card">ERP</div>
-                                    <div class="offer-card">AI</div>
+                                    <div class="offer-card">
+                                        <img src="assets/images/webdvlp1.jpg" alt="Web Apps">
+                                        <span>Web Apps</span>
+                                    </div>
+                                    <div class="offer-card">
+                                        <img src="assets/images/mobileapp.jpg" alt="Mobile Apps">
+                                        <span>Mobile Apps</span>
+                                    </div>
+                                    <div class="offer-card">
+                                        <img src="assets/images/appintegration.jpg" alt="Cloud">
+                                        <span>App Integ</span>
+                                    </div>
+                                    <div class="offer-card">
+                                        <img src="assets/images/cloudservice.jpg" alt="Cloud">
+                                        <span>Cloud</span>
+                                    </div>
+                                    <div class="offer-card">
+                                        <img src="assets/images/erpservice.jpg" alt="ERP">
+                                        <span>ERP</span>
+                                    </div>
+                                    <div class="offer-card">
+                                        <img src="assets/images/ai.jpg" alt="AI">
+                                        <span>AI</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div> -->
+
+                            <button class="nav-btn next">›</button>
+                        </div>
+
 
                     </div>
 
@@ -372,7 +390,7 @@
                                     </p>
 
                                 </div>
-                                
+
                                 <a class="tip" href="services.html#service_web">
                                     <button class="read-more">
                                         <span class="circle" aria-hidden="true">
@@ -424,7 +442,7 @@
                                         Seamless middleware and BPI solutions to connect enterprise
                                         systems efficiently. </p>
                                 </div>
-                                
+
                                 <a class="tip" href="services.html#service_integration">
                                     <button class="read-more">
                                         <span class="circle" aria-hidden="true">
@@ -474,13 +492,13 @@
                                             business growth.</p>
                                     </div>
                                     <a class="tip" href="services.html#service_erp">
-                                    <button class="read-more">
-                                        <span class="circle" aria-hidden="true">
-                                            <span class="icon arrow"></span>
-                                        </span>
-                                        <span class="button-text">Read More</span>
-                                    </button>
-                                </a>
+                                        <button class="read-more">
+                                            <span class="circle" aria-hidden="true">
+                                                <span class="icon arrow"></span>
+                                            </span>
+                                            <span class="button-text">Read More</span>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
 
@@ -498,13 +516,13 @@
                                             non-banking services.</p>
                                     </div>
                                     <a class="tip" href="services.html#service_financial">
-                                    <button class="read-more">
-                                        <span class="circle" aria-hidden="true">
-                                            <span class="icon arrow"></span>
-                                        </span>
-                                        <span class="button-text">Read More</span>
-                                    </button>
-                                </a>
+                                        <button class="read-more">
+                                            <span class="circle" aria-hidden="true">
+                                                <span class="icon arrow"></span>
+                                            </span>
+                                            <span class="button-text">Read More</span>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
 
@@ -522,13 +540,13 @@
                                             performance tuning.</p>
                                     </div>
                                     <a class="tip" href="services.html#service_database">
-                                    <button class="read-more">
-                                        <span class="circle" aria-hidden="true">
-                                            <span class="icon arrow"></span>
-                                        </span>
-                                        <span class="button-text">Read More</span>
-                                    </button>
-                                </a>
+                                        <button class="read-more">
+                                            <span class="circle" aria-hidden="true">
+                                                <span class="icon arrow"></span>
+                                            </span>
+                                            <span class="button-text">Read More</span>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
 
@@ -546,13 +564,13 @@
                                             dedicated teams.</p>
                                     </div>
                                     <a class="tip" href="services.html#service_outsourcing">
-                                    <button class="read-more">
-                                        <span class="circle" aria-hidden="true">
-                                            <span class="icon arrow"></span>
-                                        </span>
-                                        <span class="button-text">Read More</span>
-                                    </button>
-                                </a>
+                                        <button class="read-more">
+                                            <span class="circle" aria-hidden="true">
+                                                <span class="icon arrow"></span>
+                                            </span>
+                                            <span class="button-text">Read More</span>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
 
@@ -571,20 +589,20 @@
                                         </p>
                                     </div>
                                     <a class="tip" href="services.html#service_ai">
-                                    <button class="read-more">
-                                        <span class="circle" aria-hidden="true">
-                                            <span class="icon arrow"></span>
-                                        </span>
-                                        <span class="button-text">Read More</span>
-                                    </button>
-                                </a>
+                                        <button class="read-more">
+                                            <span class="circle" aria-hidden="true">
+                                                <span class="icon arrow"></span>
+                                            </span>
+                                            <span class="button-text">Read More</span>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Toggle button -->
                         <div class="toggle-btn">
-                            <span id="toggleArrow">▼ Show More</span>
+                            <!-- <span id="toggleArrow">▼ Show More</span> -->
                         </div>
                     </div>
                 </div>
@@ -601,15 +619,17 @@
                     </p>
 
                     <!-- Scroller -->
-                    <div class="scroller" >
+                    <div class="scroller">
                         <div class="scroller__inner">
                             <!-- Logos -->
                             <div class="logo-item">
                                 <img src="https://cdn.worldvectorlogo.com/logos/adobe-2.svg" alt="Adobe logo" />
                             </div>
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/loom-1.svg" alt="Loom logo" />
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/loom.svg" alt="Loom"
+                                    style="filter: invert(41%) sepia(96%) saturate(749%) hue-rotate(205deg) brightness(97%) contrast(96%);" />
                             </div>
+
                             <div class="logo-item">
                                 <img src="https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg"
                                     alt="Google Analytics logo" />
@@ -626,9 +646,13 @@
                                 <img src="https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg"
                                     alt="Google Analytics logo" />
                             </div>
+
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/spotify-1.svg" alt="Spotify logo" />
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/spotify.svg" alt="Spotify"
+                                    style="filter: invert(48%) sepia(88%) saturate(390%) hue-rotate(86deg) brightness(95%) contrast(95%);" />
                             </div>
+
+
                             <div class="logo-item">
                                 <img src="https://cdn.worldvectorlogo.com/logos/dropbox-3.svg" alt="Dropbox logo" />
                             </div>
@@ -881,34 +905,100 @@
             </section>
 
             <!-- ======= Footer =======-->
-            <footer class="footer pt-5 pb-5">
-                <div class="container">
-                    <div class="row credits pt-3">
-                        <div class="col-12 col-xl-8 mb-3 mb-xl-0">
-                            &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
-                            emsyne.com | Developed and Designed By
-                            <strong>Emsyne Technologies Private Limited</strong>.
+            <footer class="site-footer">
+                <div class="footer-container">
+
+                    <!-- Brand Info -->
+                    <div class="footer-column">
+                        <h3 class="footer-logo">Emsyne technologies</h3>
+                        <p class="footer-desc">
+                            We provide reliable digital solutions to help businesses grow and succeed online.
+                        </p>
+                        <p class="footer-copy">© 2026 Emsyne Technologies Private Limited. All rights reserved.</p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact & Newsletter -->
+                    <div class="footer-column">
+                        <h4>Contact Us</h4>
+
+                        <!-- Row 1: Email | Phone | Empty -->
+                        <div class="d-flex gap-3 mb-3">
+                            <div class="flex-fill">
+                                <small>Email</small><br />
+                                <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
+                            </div>
+
+                            <div class="flex-fill">
+                                <small>Phone</small><br />
+                                <a href="tel:+911234567890">+91 12345 67890</a>
+                            </div>
+
+                            <div class="flex-fill"></div>
                         </div>
 
-                        <div class="col-12 col-xl-4 d-flex justify-content-xl-end">
-                            <div class="rounded-social-buttons">
-                                <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i
-                                        class="fab fa-linkedin"></i></a>
+                        <!-- Row 2: Addresses (3 sections, minimized text) -->
+                        <div class="d-flex gap-3 footer-address-row">
+                            <div class="flex-fill">
+                                <small class="fw-bold">LULU Cyber Tower 1</small>
+                                <small>
+                                    Infopark, Kakkanad<br />
+                                    Kochi – 682042, Kerala
+                                </small>
+                            </div>
 
-                                <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
-                                        class="fab fa-instagram"></i></a>
+                            <div class="flex-fill">
+                                <small class="fw-bold">LULU Cyber Tower 2</small>
+                                <small>
+                                    Infopark, Kakkanad<br />
+                                    Kochi – 682042, Kerala
+                                </small>
+                            </div>
+
+                            <div class="flex-fill">
+                                <small class="fw-bold">Thapasya Infopark</small>
+                                <small>
+                                    Infopark, Kakkanad<br />
+                                    Kochi – 682042, Kerala
+                                </small>
                             </div>
                         </div>
+
+                        <!-- Social Links -->
+                        <div class="social-links mt-3">
+                            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a>
+
+                            <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
+
+
+                </div>
+
+                <!-- Legal Links -->
+                <div class="footer-bottom">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Cookie Policy</a>
                 </div>
             </footer>
+
         </main>
     </div>
 
@@ -933,99 +1023,153 @@
     <!-- End JavaScripts-->
 </body>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const counter = document.getElementById("counter");
-    if (!counter) return;
+    document.addEventListener("DOMContentLoaded", () => {
+        const counter = document.getElementById("counter");
+        if (!counter) return;
 
-    const target = 20;
-    const speed = 180;
-    let started = false;
+        const target = 20;
+        const speed = 180;
+        let started = false;
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !started) {
-                    started = true;
-                    let value = 0;
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !started) {
+                        started = true;
+                        let value = 0;
 
-                    const timer = setInterval(() => {
-                        value++;
-                        counter.textContent = value;
-                        if (value >= target) clearInterval(timer);
-                    }, speed);
-                }
-            });
-        },
-        {
-            root: null,
-            threshold: 0.4
-        }
-    );
+                        const timer = setInterval(() => {
+                            value++;
+                            counter.textContent = value;
+                            if (value >= target) clearInterval(timer);
+                        }, speed);
+                    }
+                });
+            },
+            {
+                root: null,
+                threshold: 0.4
+            }
+        );
 
-    observer.observe(counter);
-});
+        observer.observe(counter);
+    });
 
 
 </script>
 <script>
-const heading = document.querySelector('.sticky1-heading');
+    const heading = document.querySelector('.sticky1-heading');
 
-if (heading) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const letters = heading.querySelectorAll('span');
+    if (heading) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const letters = heading.querySelectorAll('span');
 
-        if (entry.isIntersecting) {
-          // Entering viewport → trigger animation
-          letters.forEach((letter, index) => {
-            letter.style.setProperty('--i', index); // set stagger index
-            letter.classList.add('animate');
-          });
-        } else {
-          // Leaving viewport → reset for next time
-          letters.forEach((letter) => {
-            letter.classList.remove('animate');
-            // Optional: force reset opacity/transform immediately
-            // (helps in some browsers if animation was interrupted)
-            letter.style.opacity = '0';
-            letter.style.transform = 'translateX(0)';
-          });
-        }
-      });
-    },
-    {
-      threshold: 0.1,                    // start when ~10% visible
-      rootMargin: "0px 0px -10% 0px"     // trigger a bit earlier (adjust to taste)
+                    if (entry.isIntersecting) {
+                        // Entering viewport → trigger animation
+                        letters.forEach((letter, index) => {
+                            letter.style.setProperty('--i', index); // set stagger index
+                            letter.classList.add('animate');
+                        });
+                    } else {
+                        // Leaving viewport → reset for next time
+                        letters.forEach((letter) => {
+                            letter.classList.remove('animate');
+                            // Optional: force reset opacity/transform immediately
+                            // (helps in some browsers if animation was interrupted)
+                            letter.style.opacity = '0';
+                            letter.style.transform = 'translateX(0)';
+                        });
+                    }
+                });
+            },
+            {
+                threshold: 0.1,                    // start when ~10% visible
+                rootMargin: "0px 0px -10% 0px"     // trigger a bit earlier (adjust to taste)
+            }
+        );
+
+        observer.observe(heading);
     }
-  );
-
-  observer.observe(heading);
-}
 </script>
 
 <script>
-  const track = document.querySelector(".offer-track");
-  const prevBtn = document.querySelector(".slider-btn.prev");
-  const nextBtn = document.querySelector(".slider-btn.next");
+    const track = document.querySelector(".offer-track");
+    const prevBtn = document.querySelector(".slider-btn.prev");
+    const nextBtn = document.querySelector(".slider-btn.next");
 
-  let index = 0;
-  const cardWidth = 156; // card width + gap
-  const maxIndex = track.children.length - 2;
+    let index = 0;
+    const cardWidth = 156; // card width + gap
+    const maxIndex = track.children.length - 2;
 
-  nextBtn.addEventListener("click", () => {
-    if (index < maxIndex) {
-      index++;
-      track.style.transform = `translateX(-${index * cardWidth}px)`;
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            if (index < maxIndex) {
+                index++;
+                track.style.transform = `translateX(-${index * cardWidth}px)`;
+            }
+        });
     }
-  });
 
-  prevBtn.addEventListener("click", () => {
-    if (index > 0) {
-      index--;
-      track.style.transform = `translateX(-${index * cardWidth}px)`;
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            if (index > 0) {
+                index--;
+                track.style.transform = `translateX(-${index * cardWidth}px)`;
+            }
+        });
     }
-  });
+
+
+
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const track = document.querySelector(".offer-track");
+        const cards = Array.from(document.querySelectorAll(".offer-card"));
+        const prevBtn = document.querySelector(".nav-btn.prev");
+        const nextBtn = document.querySelector(".nav-btn.next");
+
+        const total = cards.length;
+        let currentIndex = 0;
+
+        const getIndex = (i) => (i + total) % total;
+
+        function updateCarousel() {
+            cards.forEach(card =>
+                card.classList.remove("active", "prev", "next")
+            );
+
+            const prevIndex = getIndex(currentIndex - 1);
+            const nextIndex = getIndex(currentIndex + 1);
+
+            cards[currentIndex].classList.add("active");
+            cards[prevIndex].classList.add("prev");
+            cards[nextIndex].classList.add("next");
+
+            const cardWidth = cards[0].offsetWidth + 12; // gap = 12
+            const centerOffset =
+                (track.parentElement.offsetWidth / 2) - (cardWidth / 2);
+
+            track.style.transform =
+                `translateX(${centerOffset - (currentIndex * cardWidth)}px)`;
+        }
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = getIndex(currentIndex + 1);
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            currentIndex = getIndex(currentIndex - 1);
+            updateCarousel();
+        });
+
+        /* 👇 IMPORTANT: first render already circular */
+        updateCarousel();
+    });
 </script>
 
 
