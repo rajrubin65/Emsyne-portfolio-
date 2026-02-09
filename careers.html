@@ -27,56 +27,15 @@
   <link href="assets/css/navbar.css" rel="stylesheet" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/navbar-loader.js"></script>
 
   
 </head>
 
 <body>
-  <header class="custom-navbar" id="mainNavbar">
-        <div class="navbar-inner">
-                <!-- Logo Left -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/emsyne-logo.png" alt="Logo" class="logo-img" />
-
-                </a>
-
-                <!-- Desktop Menu -->
-                <nav class="desktop-menu">
-                    <a href="index.html">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="services.html">Services</a>
-                    <a href="insights.html">Insights</a>
-                    <a href="contactsus.html">Contact</a>
-                    <a href="careers.html">Careers</a>
-                    <a href="http://172.17.17.201:8010/blogs.html" target="_blank" rel="noopener noreferrer">Blog <i
-                            class="bi bi-box-arrow-up-right" style="font-size: 1em; vertical-align: middle;"></i></a>
-                </nav>
-
-                <!-- Hamburger Icon -->
-                <div class="hamburger-icon" id="icon">
-                    <div class="bar bar1"></div>
-                    <div class="bar bar2"></div>
-                    <div class="bar bar3"></div>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="insights.html">Insights</a></li>
-                    <li><a href="contactsus.html">Contact</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="http://172.17.17.201:8010/blogs.html" target="_blank" rel="noopener noreferrer">Blog <i
-                                class="bi bi-box-arrow-up-right"
-                                style="font-size: 1em; vertical-align: middle;"></i></a></li>
-                </ul>
-            </nav>
+  <!-- Navbar will be loaded here by navbar-loader.js -->
+  <div id="navbar-container"></div>
 
             <!-- Overlay -->
     <div class="dark-overlay" id="overlay"></div>
@@ -283,33 +242,9 @@
     </div>
   </main>
   </div>
-  <footer class="footer pt-5 pb-5">
-    <div class="container">
-      <div class="row credits pt-3">
-        <div class="col-12 col-xl-8 mb-3 mb-xl-0">
-          &copy;
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          emsyne.com | Developed and Designed By
-          <strong>Emsyne Technologies Private Limited</strong>.
-        </div>
-        <div class="col-12 col-xl-4 d-flex justify-content-xl-end">
-          <div class="rounded-social-buttons">
-            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
-                class="fab fa-facebook-f"></i></a>
-            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i
-                class="fab fa-twitter"></i></a>
-            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i
-                class="fab fa-linkedin"></i></a>
-            <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
-                class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="assets/js/custom.js"></script>
+  
+  <!-- Footer will be loaded here by footer-loader.js -->
+  <div id="footer-container"></div>
   <script src="assets/js/navbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>

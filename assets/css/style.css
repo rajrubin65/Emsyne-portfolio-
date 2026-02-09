@@ -14,11 +14,12 @@
 */
 
 body {
-  font: 1rem/1.7 "Inter", sans-serif;
+  font: 0.95rem/1.6 "Poppins", sans-serif;
   background-color: var(--bs-body-bg);
   color: var(--bs-body-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
 }
 
 .site-wrap {
@@ -171,8 +172,9 @@ body {
 }
 .fbs__net-navbar .navbar-brand {
   color: var(--bs-white);
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 .fbs__net-navbar .navbar-brand .logo.dark {
   display: none;
@@ -186,11 +188,13 @@ body {
   padding-bottom: 22px;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 0.9375rem;
+  font-size: 0.9rem;
   color: rgba(var(--bs-white-rgb), 1);
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
   position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 @media (max-width: 991.98px) {
   .fbs__net-navbar .navbar-nav > li > .nav-link {
@@ -636,28 +640,33 @@ body {
   display: inline-block;
   padding: 5px 12px;
   border-radius: 7px;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
   margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 .hero__v6 .hero-title {
-  font-size: 48px;
+  font-size: 42px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 1199.98px) {
   .hero__v6 .hero-title {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 @media (max-width: 991.98px) {
   .hero__v6 .hero-title {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 .hero__v6 .logos .logos-title {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 1px;
   color: color-mix(in srgb, var(--bs-primary), transparent 10%);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 .hero__v6 .logos img {
@@ -923,15 +932,17 @@ body {
 }
 
 .experience-count {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 2.8rem;
+  font-weight: 700;
   color: #002a74;
+  font-family: "Poppins", sans-serif;
 }
 
 .experience-text {
   margin-top: 6px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #002a74;
@@ -1063,18 +1074,21 @@ body {
 }
 
 .machine .count {
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 700;
   color: #58ea01;
   line-height: 1;
+  font-family: "Poppins", sans-serif;
 }
 
 .machine .label {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 1.6px;
   color: #fff;
   opacity: 0.85;
   margin-top: 6px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 @keyframes cw {
@@ -1338,58 +1352,61 @@ body {
 .spacer {
   width: 15px;
 }
-
-/* Animation styles — only active when .animate is present */
-.left-letter.animate {
-  opacity: 1;
-  animation: slideFromLeft 1s forwards;
-  animation-delay: calc(var(--i) * 0.1s);
+/* Wrapper */
+.sticky-heading {
+  text-align: center;
 }
 
-.right-letter.animate {
-  opacity: 1;
+/* Lines */
+.sticky-heading .line {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* Common word animation */
+.sticky-heading .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Fade-up animation */
+.sticky-heading.animate .word {
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: calc(0.15s * var(--i));
+}
+
+/* WHAT */
+.sticky-heading .what {
+  color: #222;
+  font-weight: 800;
+}
+
+/* WE */
+.sticky-heading .we {
+  color: #222;
+  font-weight: 800;
+}
+
+/* OFFER */
+.sticky-heading .offer {
   color: #3173dc;
-  animation: slideFromRight 1s forwards;
-  animation-delay: calc(var(--i) * 0.1s + 0.5s);
+  font-weight: 900;
+  letter-spacing: 0.05em;
 }
 
-/* Keyframes – added initial opacity for safety */
-@keyframes slideFromLeft {
-  0% {
-    transform: translateX(-200px);
+/* Fade-up keyframes */
+@keyframes fadeUp {
+  from {
     opacity: 0;
+    transform: translateY(30px);
   }
-  50% {
-    transform: translateX(50px);
+  to {
     opacity: 1;
-  }
-  70% {
-    transform: translateX(-10px);
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-@keyframes slideFromRight {
-  0% {
-    transform: translateX(200px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(-50px);
-    opacity: 1;
-  }
-  70% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 
 /* what we offer */
 /* ================= CAROUSEL WRAPPER ================= */
@@ -1402,7 +1419,7 @@ body {
     max-width: 330px;
     width: 100%;
 
-    margin: 35% auto 0;        /* center horizontally */
+     margin: 24px auto 0;       /* center horizontally */
     padding: 0 16px;           /* equal left & right padding */
     box-sizing: border-box;
 }
@@ -1547,7 +1564,8 @@ body {
     background: #002a74; /* Primary color */
     color: #cbd5e1;
     padding: 60px 20px 20px;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 
 /* Footer Layout */
@@ -1559,17 +1577,46 @@ body {
     gap: 40px;
 }
 
+/* Footer Column Base Styles */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Logo & Description */
 .footer-logo {
     color: #ffffff; /* default text */
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Make first letter green */
 .footer-logo::first-letter {
     color: #58ea01; /* Secondary color */
-    font-weight: bold;
+    font-weight: 700;
+}
+
+/* Footer Description */
+.footer-desc {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+/* Footer Copyright */
+.footer-copy {
+    color: #cbd5e1;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 
 /* Footer column headings */
@@ -1684,9 +1731,62 @@ body {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+    
+    .footer-logo {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    
+    .footer-desc {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    .footer-copy {
+        font-size: 11px;
+    }
+    
+    .footer-column h4 {
+        margin-bottom: 12px;
+    }
+    
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-bottom {
+        margin-top: 30px;
+        padding-top: 12px;
+    }
+    
+    .footer-bottom a {
+        display: block;
+        margin: 8px 0;
+    }
 }
 .mt-custom {
   margin-top: 120px; /* increase as needed */
 }
 
 
+
+
+.sticky-heading.sticky-offer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.sticky-heading.sticky-offer > .line-top {
+    display: flex !important;
+    gap: 12px !important;
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+.sticky-heading.sticky-offer > .line-bottom {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 6px !important;
+}

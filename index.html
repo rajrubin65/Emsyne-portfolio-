@@ -28,62 +28,21 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/custom_styles.css" rel="stylesheet" />
     <link href="assets/css/navbar.css" rel="stylesheet" />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="assets/js/navbar-loader.js"></script>
+    <script src="assets/js/footer-loader.js"></script>
 
 </head>
 
 <body>
     <!-- ======= Site Wrap =======-->
     <div class="site-wrap">
-        <header class="custom-navbar" id="mainNavbar">
-            <div class="navbar-inner">
-                <!-- Logo Left -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/emsyne-logo.png" alt="Logo" class="logo-img" />
-
-                </a>
-
-                <!-- Desktop Menu -->
-                <nav class="desktop-menu">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="services.html">Services</a>
-                    <a href="insights.html">Insights</a>
-                    <a href="#contact">Contact</a>
-                    <a href="careers.html">Careers</a>
-                    <a href="http://172.17.17.201:8010/blogs.html" target="_blank" rel="noopener noreferrer">Blog <i
-                            class="bi bi-box-arrow-up-right" style="font-size: 1em; vertical-align: middle;"></i></a>
-                </nav>
-
-                <!-- Hamburger Icon -->
-                <div class="hamburger-icon" id="icon">
-                    <div class="bar bar1"></div>
-                    <div class="bar bar2"></div>
-                    <div class="bar bar3"></div>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="insights.html">Insights</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="http://172.17.17.201:8010/blogs.html" target="_blank" rel="noopener noreferrer">Blog <i
-                                class="bi bi-box-arrow-up-right"
-                                style="font-size: 1em; vertical-align: middle;"></i></a></li>
-                </ul>
-            </nav>
-
-            <!-- Overlay -->
-            <div class="dark-overlay" id="overlay"></div>
-        </header>
+        <!-- Navbar will be loaded here by navbar-loader.js -->
+        <div id="navbar-container"></div>
         <main>
             <!-- HERO SECTION -->
             <section class="hero__v6 section" id="home">
@@ -100,11 +59,11 @@
                             <h1 class="hero-title mb-3" data-aos="fade-up" data-aos-delay="100">
                                 Innovative, Reliable, and Future-Ready Software Solutions
                             </h1>
-                            <p class="hero-description mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="200">
+                            <h6 class="hero-description mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="200">
                                 Experience cutting-edge technology, industry expertise,
                                 and customer-focused services to transform your business
                                 into a success story.
-                            </p>
+                            </h6>
                         </div>
                     </div>
                 </div>
@@ -114,19 +73,13 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
-                            <h1 class="sticky1-heading">
-                                <span class="left-letter">A</span>
-                                <span class="left-letter">B</span>
-                                <span class="left-letter">O</span>
-                                <span class="left-letter">U</span>
-                                <span class="left-letter">T</span>
-                                <span class="spacer"></span>
-                                <span class="right-letter">U</span>
-                                <span class="right-letter">S</span>
-                            </h1>
+                            <div class="sticky-heading animate">
+                                <span class="left-word" style="--i:0">ABOUT</span>
+                                <span class="right-word" style="--i:1">US</span>
+                            </div>
 
                             <div class="tip" data-animate>
-                                <p class="subheading">
+                                <p class="subheading1">
                                     <strong>Emsyne Technologies</strong>, the IT arm of The Muthoot Group, delivers ERP,
                                     CRM, IT infrastructure, workflow automation, and end-to-end digital solutions. Based
                                     in <strong>Infopark, Kochi</strong>, we help businesses drive digital transformation
@@ -178,14 +131,14 @@
                             <h2 class="fw-bold mb-3">
                                 Driving Business Transformation with Technology
                             </h2>
-                            <p class="subheading">
+                            <p class="subheading1">
                                 <strong>Emsyne Technologies Private Limited</strong>, the IT
                                 division of <strong>The Muthoot Group</strong>, specializes in
                                 ERP, CRM, and workflow automation solutions. Based at
                                 Infopark, Kochi, we help businesses adapt to change, embrace
                                 innovation, and transform digitally.
                             </p>
-                            <p class="subheading">
+                            <p class="subheading1">
                                 Our mission is to deliver
                                 <strong>cost-effective, flexible, end-to-end IT and business
                                     services</strong>
@@ -196,18 +149,132 @@
                 </div>
             </section>
 
+            <!-- AI Section with Advanced Animations -->
+            <section class="ai-section section" id="ai">
+                <div class="ai-container">
+                    <div class="ai-wrapper">
+                        <div class="ai-header" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="sticky-heading animate">
+                                <span class="left-word" style="--i:0">ARTIFICIAL</span>
+                                <span class="right-word" style="--i:1">INTELLIGENCE</span>
+                            </div>
+                            <p class="subheading ai-subtitle" data-aos="fade-up" data-aos-delay="200">
+                                Harness the power of AI-driven automation and intelligent solutions to transform your business operations
+                            </p>
+                        </div>
+
+                        <div class="ai-content" data-aos="fade-up" data-aos-delay="300">
+                            <div class="ai-cards-wrapper">
+                                <!-- AI Card 1 -->
+                                <div class="ai-card" data-aos="flip-left" data-aos-delay="100">
+                                    <div class="ai-card-icon">
+                                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="24" cy="24" r="20" stroke="#002a74" stroke-width="2"/>
+                                            <path d="M16 24L22 30L32 18" stroke="#58ea01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ai-card-content">
+                                        <h4 class="ai-card-title">Intelligent Automation</h4>
+                                        <p class="ai-card-description">Automate repetitive tasks and workflows with AI-powered systems that learn and adapt to your business needs.</p>
+                                    </div>
+                                </div>
+
+                                
+                                
+
+                                <!-- AI Card 3 -->
+                                <div class="ai-card" data-aos="flip-left" data-aos-delay="200">
+                                    <div class="ai-card-icon">
+                                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="24" cy="24" r="20" stroke="#002a74" stroke-width="2"/>
+                                            <path d="M16 24H32M24 16V32" stroke="#58ea01" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ai-card-content">
+                                        <h4 class="ai-card-title">Natural Language Processing</h4>
+                                        <p class="ai-card-description">Unlock the power of language understanding for chatbots, sentiment analysis, and content classification.</p>
+                                    </div>
+                                </div>
+
+                                <!-- AI Card 4 -->
+                                <div class="ai-card" data-aos="flip-left" data-aos-delay="250">
+                                    <div class="ai-card-icon">
+                                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="24" cy="24" r="20" stroke="#002a74" stroke-width="2"/>
+                                            <circle cx="18" cy="20" r="2" fill="#58ea01"/>
+                                            <circle cx="30" cy="20" r="2" fill="#58ea01"/>
+                                            <path d="M20 28C22 30 26 30 28 28" stroke="#58ea01" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ai-card-content">
+                                        <h4 class="ai-card-title">Computer Vision Solutions</h4>
+                                        <p class="ai-card-description">Leverage image recognition and object detection for quality control, security, and automation.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ai-features">
+                                <div class="ai-feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Faster Time-to-Market</h5>
+                                        <p>Accelerate development and deployment with AI-assisted tools and automation frameworks</p>
+                                    </div>
+                                </div>
+
+                                <div class="ai-feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Enhanced Security</h5>
+                                        <p>Protect your business with AI-powered threat detection and anomaly identification</p>
+                                    </div>
+                                </div>
+
+                                <div class="ai-feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-coins"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Cost Optimization</h5>
+                                        <p>Reduce operational expenses through intelligent automation and resource optimization</p>
+                                    </div>
+                                </div>
+
+                                <div class="ai-feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Continuous Learning</h5>
+                                        <p>AI systems that adapt and improve over time, learning from new data and patterns</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button class="learn-more" onclick="window.location.href='about.html'">
+                                    <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">Learn More</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="portfolio section" id="portfolio">
                 <div class="container">
-                    <div class="sticky-heading" data-animate>
-                        <span style="--i: 0">M</span><span style="--i: 1">A</span><span style="--i: 2">J</span><span
-                            style="--i: 3">O</span><span style="--i: 4">R</span><span
-                            class="line-break">&nbsp;</span><span style="--i: 6; color: #3173dc">P</span><span
-                            style="--i: 7; color: #3173dc">O</span><span style="--i: 8; color: #3173dc">R</span><span
-                            style="--i: 9; color: #3173dc">T</span><span style="--i: 10; color: #3173dc">F</span><span
-                            style="--i: 11; color: #3173dc">O</span><span style="--i: 12; color: #3173dc">L</span><span
-                            style="--i: 13; color: #3173dc">I</span><span style="--i: 14; color: #3173dc">O</span><span
-                            style="--i: 15; color: #3173dc">S</span>
+                    <div class="sticky-heading animate">
+                        <span class="left-word" style="--i:0">MAJOR</span>
+                        <span class="right-word" style="--i:1">PORTFOLIOS</span>
                     </div>
+
                     <div class="tip" data-animate>
                         <p class="subheading tip">
                             Explore our Major Portfolios, showcasing innovative projects and
@@ -319,47 +386,63 @@
             <section class="services" id="services">
                 <div class="container">
                     <div class="left">
-                        <div class="sticky-heading" data-animate>
-                            <span style="--i: 0">W</span><span style="--i: 1">H</span><span style="--i: 2">A</span><span
-                                style="--i: 3">T</span><span style="--i: 3">&nbsp;</span> <span
-                                style="--i: 4">W</span><span style="--i: 5">E</span>
+                        <div class="sticky-heading animate sticky-offer" data-animate>
+                            <div class="line line-top">
+                                <span class="word what" style="--i:0">WHAT</span>
+                                <span class="word we" style="--i:1">WE</span>
+                            </div>
 
-                            <br />
-                            <!-- force line break -->
-
-                            <span style="--i: 6; color: #3173dc">O</span><span
-                                style="--i: 7; color: #3173dc">F</span><span
-                                style="--i: 8; color: #3173dc">F</span><span
-                                style="--i: 9; color: #3173dc">E</span><span style="--i: 10; color: #3173dc">R</span>
+                            <div class="line line-bottom">
+                                <span class="word offer" style="--i:2">OFFER</span>
+                            </div>
                         </div>
 
 
-                        <div class="offer-carousel">
+
+
+
+                        <div class="offer-carousel" >
                             <button class="nav-btn prev">‹</button>
 
                             <div class="offer-gallery">
                                 <div class="offer-track">
-                                    <div class="offer-card">
+                                    <div class="offer-card" data-service="web">
                                         <img src="assets/images/webdvlp1.jpg" alt="Web Apps">
                                         <span>Web Apps</span>
                                     </div>
-                                    <div class="offer-card">
+                                    <div class="offer-card" data-service="mobile">
                                         <img src="assets/images/mobileapp.jpg" alt="Mobile Apps">
                                         <span>Mobile Apps</span>
                                     </div>
-                                    <div class="offer-card">
+                                    <div class="offer-card" data-service="integration">
                                         <img src="assets/images/appintegration.jpg" alt="Cloud">
                                         <span>App Integ</span>
                                     </div>
-                                    <div class="offer-card">
+                                    <div class="offer-card" data-service="cloud">
                                         <img src="assets/images/cloudservice.jpg" alt="Cloud">
                                         <span>Cloud</span>
                                     </div>
-                                    <div class="offer-card">
+
+                                    <div class="offer-card" data-service="erp">
                                         <img src="assets/images/erpservice.jpg" alt="ERP">
                                         <span>ERP</span>
                                     </div>
-                                    <div class="offer-card">
+                                    <div class="offer-card" data-service="financial">
+                                        <img src="assets/images/financial.jpg" alt="Financial Solutions">
+                                        <span>Finance</span>
+                                    </div>
+
+                                    <div class="offer-card" data-service="database">
+                                        <img src="assets/images/databaseservice.jpg" alt="Database Services">
+                                        <span>Database</span>
+                                    </div>
+
+                                    <div class="offer-card" data-service="outsourcing">
+                                        <img src="assets/images/outsource.jpg" alt="Outsourcing Services">
+                                        <span>Outsourcing</span>
+                                    </div>
+
+                                    <div class="offer-card" data-service="ai">
                                         <img src="assets/images/ai.jpg" alt="AI">
                                         <span>AI</span>
                                     </div>
@@ -374,7 +457,7 @@
 
                     <div class="right">
                         <!-- 01 Web Application Development -->
-                        <div class="servicoe tip" data-animate>
+                        <div class="extra-services" data-animate data-service="web">
                             <div class="service-image tip">
                                 <img src="assets/images/webdvlp1.jpg" alt="Web Application Development" />
                             </div>
@@ -404,14 +487,14 @@
                         </div>
 
                         <!-- 02 Mobility Services -->
-                        <div class="extra-services" data-animate>
+                        <div class="extra-services" data-animate data-service="mobile">
                             <div class="service-image tip">
                                 <img src="assets/images/mobileapp.jpg" alt="Mobility Services" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">02</div>
-                                <div class="title tip">Mobility Services</div>
-                                <div class="description tip">
+                                <h4 class="fw-bold mb-3">Mobility Services</h4>
+                                <div>
                                     <p>
                                         Custom mobile apps across Android, iOS, and Windows with
                                         real-time features.
@@ -430,14 +513,14 @@
                         </div>
 
                         <!-- 03 Application Integration -->
-                        <div class="extra-services" data-animate>
+                        <div class="extra-services" data-animate data-service="integration">
                             <div class="service-image tip">
                                 <img src="assets/images/appintegration.jpg" alt="Application Integration" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">03</div>
-                                <div class="title tip">Application Integration</div>
-                                <div class="description tip">
+                                <h4 class="fw-bold mb-3">Application Integration</h4>
+                                <div>
                                     <p>
                                         Seamless middleware and BPI solutions to connect enterprise
                                         systems efficiently. </p>
@@ -455,14 +538,14 @@
                         </div>
 
                         <!-- 04 Cloud Computing -->
-                        <div class="extra-services" data-animate>
+                        <div class="extra-services" data-animate data-service="cloud">
                             <div class="service-image tip">
                                 <img src="assets/images/cloudservice.jpg" alt="Cloud Computing" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">04</div>
-                                <div class="title tip">Cloud Computing</div>
-                                <div class="description tip">
+                                <h4 class="fw-bold mb-3">Cloud Computing</h4>
+                                <div>
                                     <p>
                                         Scalable cloud solutions with big data, BI, and future-ready
                                         architectures. </p>
@@ -477,128 +560,128 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="extra-services">
-                            <!-- 05 ERP Solutions -->
-                            <div class="service tip" data-animate>
-                                <div class="service-image tip">
-                                    <img src="assets/images/erpservice.jpg" alt="ERP Solutions" />
-                                </div>
-                                <div class="service-content tip">
-                                    <div class="number-tip">05</div>
-                                    <div class="title tip">ERP Solutions</div>
-                                    <div class="description tip">
-                                        <p>
-                                            Performance-driven ERP modules for supply chain, CRM, and
-                                            business growth.</p>
-                                    </div>
-                                    <a class="tip" href="services.html#service_erp">
-                                        <button class="read-more">
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
-                                            </span>
-                                            <span class="button-text">Read More</span>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
 
-                            <!-- 06 Financial Solutions -->
-                            <div class="service tip" data-animate>
-                                <div class="service-image tip">
-                                    <img src="assets/images/financial.jpg" alt="Financial Solutions" />
-                                </div>
-                                <div class="service-content tip">
-                                    <div class="number-tip">06</div>
-                                    <div class="title tip">Financial Solutions</div>
-                                    <div class="description tip">
-                                        <p>
-                                            Secure end-to-end financial software for banking and
-                                            non-banking services.</p>
-                                    </div>
-                                    <a class="tip" href="services.html#service_financial">
-                                        <button class="read-more">
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
-                                            </span>
-                                            <span class="button-text">Read More</span>
-                                        </button>
-                                    </a>
-                                </div>
+                        <!-- 05 ERP Solutions -->
+                        <div class="extra-services" data-animate data-service="erp">
+                            <div class="service-image tip">
+                                <img src="assets/images/erpservice.jpg" alt="ERP Solutions" />
                             </div>
-
-                            <!-- 07 Database Services -->
-                            <div class="service tip" data-animate>
-                                <div class="service-image tip">
-                                    <img src="assets/images/databaseservice.jpg" alt="Database Services" />
+                            <div class="service-content tip">
+                                <div class="number-tip">05</div>
+                                <h4 class="fw-bold mb-3">ERP Solutions</h4>
+                                <div>
+                                    <p>
+                                        Performance-driven ERP modules for supply chain, CRM, and
+                                        business growth.</p>
                                 </div>
-                                <div class="service-content tip">
-                                    <div class="number-tip">07</div>
-                                    <div class="title tip">Database Services</div>
-                                    <div class="description tip">
-                                        <p>
-                                            Reliable Oracle and SQL database setup, monitoring, and
-                                            performance tuning.</p>
-                                    </div>
-                                    <a class="tip" href="services.html#service_database">
-                                        <button class="read-more">
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
-                                            </span>
-                                            <span class="button-text">Read More</span>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- 08 Outsourcing Services -->
-                            <div class="service tip" data-animate>
-                                <div class="service-image tip">
-                                    <img src="assets/images/outsource.jpg" alt="Outsourcing Services" />
-                                </div>
-                                <div class="service-content tip">
-                                    <div class="number-tip">08</div>
-                                    <div class="title tip">Outsourcing Services</div>
-                                    <div class="description tip">
-                                        <p>
-                                            Cost-effective onsite and offshore outsourcing with
-                                            dedicated teams.</p>
-                                    </div>
-                                    <a class="tip" href="services.html#service_outsourcing">
-                                        <button class="read-more">
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
-                                            </span>
-                                            <span class="button-text">Read More</span>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- 09 AI Solutions -->
-                            <div class="service tip" data-animate>
-                                <div class="service-image tip">
-                                    <img src="assets/images/ai.jpg" alt="AI Solutions" />
-                                </div>
-                                <div class="service-content tip">
-                                    <div class="number-tip">09</div>
-                                    <div class="title tip">AI Solutions</div>
-                                    <div class="description tip">
-                                        <p>
-                                            Intelligent AI-driven solutions including chatbots,
-                                            analytics, and automation.
-                                        </p>
-                                    </div>
-                                    <a class="tip" href="services.html#service_ai">
-                                        <button class="read-more">
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
-                                            </span>
-                                            <span class="button-text">Read More</span>
-                                        </button>
-                                    </a>
-                                </div>
+                                <a class="tip" href="services.html#service_erp">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
                             </div>
                         </div>
+
+                        <!-- 06 Financial Solutions -->
+                        <div class="extra-services" data-animate data-service="financial">
+                            <div class="service-image tip">
+                                <img src="assets/images/financial.jpg" alt="Financial Solutions" />
+                            </div>
+                            <div class="service-content tip">
+                                <div class="number-tip">06</div>
+                                <h4 class="fw-bold mb-3">Financial Solutions</h4>
+                                <div>
+                                    <p>
+                                        Secure end-to-end financial software for banking and
+                                        non-banking services.</p>
+                                </div>
+                                <a class="tip" href="services.html#service_financial">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 07 Database Services -->
+                        <div class="extra-services" data-animate data-service="database">
+                            <div class="service-image tip">
+                                <img src="assets/images/databaseservice.jpg" alt="Database Services" />
+                            </div>
+                            <div class="service-content tip">
+                                <div class="number-tip">07</div>
+                                <h4 class="fw-bold mb-3">Database Services</h4>
+                                <div>
+                                    <p>
+                                        Reliable Oracle and SQL database setup, monitoring, and
+                                        performance tuning.</p>
+                                </div>
+                                <a class="tip" href="services.html#service_database">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 08 Outsourcing Services -->
+                        <div class="extra-services" data-animate data-service="outsourcing">
+                            <div class="service-image tip">
+                                <img src="assets/images/outsource.jpg" alt="Outsourcing Services" />
+                            </div>
+                            <div class="service-content tip">
+                                <div class="number-tip">08</div>
+                                <h4 class="fw-bold mb-3">Outsourcing Services</h4>
+                                <div>
+                                    <p>
+                                        Cost-effective onsite and offshore outsourcing with
+                                        dedicated teams.</p>
+                                </div>
+                                <a class="tip" href="services.html#service_outsourcing">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 09 AI Solutions -->
+                        <div class="extra-services" data-animate data-service="ai">
+                            <div class="service-image tip">
+                                <img src="assets/images/ai.jpg" alt="AI Solutions" />
+                            </div>
+                            <div class="service-content tip">
+                                <div class="number-tip">09</div>
+                                <h4 class="fw-bold mb-3">AI Solutions</h4>
+                                <div>
+                                    <p>
+                                        Intelligent AI-driven solutions including chatbots,
+                                        analytics, and automation.
+                                    </p>
+                                </div>
+                                <a class="tip" href="services.html#service_ai">
+                                    <button class="read-more">
+                                        <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                        </span>
+                                        <span class="button-text">Read More</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
 
                         <!-- Toggle button -->
                         <div class="toggle-btn">
@@ -674,123 +757,137 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row g-4" data-masonry='{"percentPosition": true }'>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-                            <div class="testimonial rounded-4 p-4">
-                                <blockquote class="mb-3 subheading">
-                                    &ldquo; This platform has completely transformed the way I
-                                    manage my business finances. The real-time transaction
-                                    tracking and seamless payment options have saved me so much
-                                    time and effort! &rdquo;
-                                </blockquote>
-                                <div class="testimonial-author d-flex gap-3 align-items-center">
-                                    <div class="author-img">
-                                        <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
-                                            alt="FreeBootstrap.net image placeholder" />
+
+                    <div class="testimonials-swiper" data-aos="fade-up" data-aos-delay="250">
+                        <div class="swiper-container testimonials-swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testimonial rounded-4 p-4">
+                                        <blockquote class="mb-3 subheading">
+                                            &ldquo; This platform has completely transformed the way I
+                                            manage my business finances. The real-time transaction
+                                            tracking and seamless payment options have saved me so much
+                                            time and effort! &rdquo;
+                                        </blockquote>
+                                        <div class="testimonial-author d-flex gap-3 align-items-center">
+                                            <div class="author-img">
+                                                <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
+                                                    alt="John Davis" />
+                                            </div>
+                                            <div class="lh-base">
+                                                <strong class="d-block">John Davis</strong><span>Small Business Owner</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="lh-base">
-                                        <strong class="d-block">John Davis</strong><span>Small Business Owner</span>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial rounded-4 p-4">
+                                        <blockquote class="mb-3 subheading">
+                                            &ldquo; As a freelancer, managing my finances can be
+                                            overwhelming. The budgeting tools and personalized insights
+                                            have made it so much easier to stay on top of my expenses
+                                            and plan for the future. &rdquo;
+                                        </blockquote>
+                                        <div class="testimonial-author d-flex gap-3 align-items-center">
+                                            <div class="author-img">
+                                                <img class="rounded-circle img-fluid" src="assets/images/person-sq-1-min.jpg"
+                                                    alt="Emily Smith" />
+                                            </div>
+                                            <div class="lh-base">
+                                                <strong class="d-block">Emily Smith</strong><span>Freelancer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial rounded-4 p-4">
+                                        <blockquote class="mb-3 subheading">
+                                            &ldquo; The investment options and portfolio management
+                                            tools on this platform are top-notch. The variety of choices
+                                            caters to all types of investors, from conservative to
+                                            aggressive. I especially appreciate how the tailored
+                                            recommendations align perfectly with my financial goals.
+                                            It’s a game-changer for anyone serious about growing their
+                                            wealth. &rdquo;
+                                        </blockquote>
+                                        <div class="testimonial-author d-flex gap-3 align-items-center">
+                                            <div class="author-img">
+                                                <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
+                                                    alt="Michael Rodriguez" />
+                                            </div>
+                                            <div class="lh-base">
+                                                <strong class="d-block">Michael Rodriguez</strong><span>Investor</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial rounded-4 p-4">
+                                        <blockquote class="mb-3 subheading">
+                                            &ldquo; I never thought managing money could be this simple!
+                                            The user-friendly interface and secure transaction process
+                                            give me the confidence to handle my finances independently.
+                                            &rdquo;
+                                        </blockquote>
+                                        <div class="testimonial-author d-flex gap-3 align-items-center">
+                                            <div class="author-img">
+                                                <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
+                                                    alt="Sarah Lee" />
+                                            </div>
+                                            <div class="lh-base">
+                                                <strong class="d-block">Sarah Lee</strong><span>College Student</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial rounded-4 p-4">
+                                        <blockquote class="mb-3 subheading">
+                                            &ldquo; The security features are outstanding. Knowing that
+                                            my financial data is protected gives me peace of mind, and
+                                            the platform's efficiency makes it a pleasure to use.
+                                            &rdquo;
+                                        </blockquote>
+                                        <div class="testimonial-author d-flex gap-3 align-items-center">
+                                            <div class="author-img">
+                                                <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
+                                                    alt="James Kim" />
+                                            </div>
+                                            <div class="lh-base">
+                                                <strong class="d-block">James Kim</strong><span>IT Consultant</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="testimonial rounded-4 p-4">
+                                        <blockquote class="mb-3 subheading">
+                                            &ldquo; The platform’s intuitive design and robust features
+                                            have been a game-changer for my startup. It’s helped me
+                                            streamline operations and focus on growing my business.
+                                            &rdquo;
+                                        </blockquote>
+                                        <div class="testimonial-author d-flex gap-3 align-items-center">
+                                            <div class="author-img">
+                                                <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
+                                                    alt="Laura Brown" />
+                                            </div>
+                                            <div class="lh-base">
+                                                <strong class="d-block">Laura Brown</strong><span>Entrepreneur</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="testimonial rounded-4 p-4">
-                                <blockquote class="mb-3 subheading">
-                                    &ldquo; As a freelancer, managing my finances can be
-                                    overwhelming. The budgeting tools and personalized insights
-                                    have made it so much easier to stay on top of my expenses
-                                    and plan for the future. &rdquo;
-                                </blockquote>
-                                <div class="testimonial-author d-flex gap-3 align-items-center">
-                                    <div class="author-img">
-                                        <img class="rounded-circle img-fluid" src="assets/images/person-sq-1-min.jpg"
-                                            alt="FreeBootstrap.net image placeholder" />
-                                    </div>
-                                    <div class="lh-base">
-                                        <strong class="d-block">Emily Smith</strong><span>Freelancer</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="testimonial rounded-4 p-4">
-                                <blockquote class="mb-3 subheading">
-                                    &ldquo; The investment options and portfolio management
-                                    tools on this platform are top-notch. The variety of choices
-                                    caters to all types of investors, from conservative to
-                                    aggressive. I especially appreciate how the tailored
-                                    recommendations align perfectly with my financial goals.
-                                    It’s a game-changer for anyone serious about growing their
-                                    wealth. &rdquo;
-                                </blockquote>
-                                <div class="testimonial-author d-flex gap-3 align-items-center">
-                                    <div class="author-img">
-                                        <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
-                                            alt="FreeBootstrap.net image placeholder" />
-                                    </div>
-                                    <div class="lh-base">
-                                        <strong class="d-block">Michael Rodriguez</strong><span>Investor</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="testimonial rounded-4 p-4">
-                                <blockquote class="mb-3 subheading">
-                                    &ldquo; I never thought managing money could be this simple!
-                                    The user-friendly interface and secure transaction process
-                                    give me the confidence to handle my finances independently.
-                                    &rdquo;
-                                </blockquote>
-                                <div class="testimonial-author d-flex gap-3 align-items-center">
-                                    <div class="author-img">
-                                        <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
-                                            alt="FreeBootstrap.net image placeholder" />
-                                    </div>
-                                    <div class="lh-base">
-                                        <strong class="d-block">Sarah Lee</strong><span>College Student</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                            <div class="testimonial rounded-4 p-4">
-                                <blockquote class="mb-3 subheading">
-                                    &ldquo; The security features are outstanding. Knowing that
-                                    my financial data is protected gives me peace of mind, and
-                                    the platform's efficiency makes it a pleasure to use.
-                                    &rdquo;
-                                </blockquote>
-                                <div class="testimonial-author d-flex gap-3 align-items-center">
-                                    <div class="author-img">
-                                        <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
-                                            alt="FreeBootstrap.net image placeholder" />
-                                    </div>
-                                    <div class="lh-base">
-                                        <strong class="d-block">James Kim</strong><span>IT Consultant</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                            <div class="testimonial rounded-4 p-4">
-                                <blockquote class="mb-3 subheading">
-                                    &ldquo; The platform’s intuitive design and robust features
-                                    have been a game-changer for my startup. It’s helped me
-                                    streamline operations and focus on growing my business.
-                                    &rdquo;
-                                </blockquote>
-                                <div class="testimonial-author d-flex gap-3 align-items-center">
-                                    <div class="author-img">
-                                        <img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg"
-                                            alt="FreeBootstrap.net image placeholder" />
-                                    </div>
-                                    <div class="lh-base">
-                                        <strong class="d-block">Laura Brown</strong><span>Entrepreneur</span>
-                                    </div>
-                                </div>
-                            </div>
+
+                            <!-- Pagination & Navigation -->
+                            <div class="swiper-pagination"></div>
+                            
                         </div>
                     </div>
                 </div>
@@ -803,12 +900,10 @@
                             <!-- <h2 class="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">Contact Us</h2>
                               -->
                             <div class="sticky-heading" data-animate>
-                                <span style="--i: 0">C</span><span style="--i: 1">O</span><span
-                                    style="--i: 2">N</span><span style="--i: 3">T</span><span
-                                    style="--i: 3">A</span><span style="--i: 4">C</span><span style="--i: 5">T</span>
-                                <span style="--i: 6; color: #3173dc">U</span><span
-                                    style="--i: 7; color: #3173dc">S</span>
+                                <span class="left-word" style="--i:0">CONTACT</span>
+                                <span class="right-word" style="--i:1">US</span>
                             </div>
+
                             <p data-aos="fade-up" data-aos-delay="100" class="subheading">
                                 We’d love to hear from you! Reach out to us for inquiries,
                                 collaborations, or support.
@@ -816,13 +911,21 @@
                         </div>
                     </div>
                     <div class="row align-items-stretch tip">
-                        <!-- Company Contact Details -->
+                        <!-- Left Image Section -->
+                        <div class="col-md-6">
+                            <div class="h-100 d-flex align-items-center justify-content-center">
+                                <img src="assets/images/about_2-min.jpg" alt="Contact Us"
+                                    class="img-fluid h-100 w-100 object-fit-cover rounded" />
+                            </div>
+                        </div>
+
+                        <!-- Right Contact Details -->
                         <div class="col-md-6 tip">
                             <div class="contact-tile h-100 d-flex flex-column justify-content-center"
                                 style="background-color: #007bb5; color: #ffffff">
                                 <div class="d-flex gap-5 flex-column">
                                     <!-- Phone -->
-                                    <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="0">
+                                    <div class="d-flex align-items-start gap-3" data-aos="fade-up">
                                         <div class="icon d-block">
                                             <i class="bi bi-telephone"></i>
                                         </div>
@@ -834,7 +937,9 @@
 
                                     <!-- Email -->
                                     <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="100">
-                                        <div class="icon d-block"><i class="bi bi-send"></i></div>
+                                        <div class="icon d-block">
+                                            <i class="bi bi-send"></i>
+                                        </div>
                                         <span>
                                             <span class="d-block">Email</span>
                                             <strong>contact@emsyne.com</strong>
@@ -848,7 +953,7 @@
                                         </div>
                                         <span>
                                             <span class="d-block">Address</span>
-                                            <address class="fw-bold mb-3">
+                                            <address class="fw-bold mb-0">
                                                 Emsyne Technologies Private Limited <br />
                                                 4th Floor, LULU Cyber Tower 1 <br />
                                                 11th Floor, LULU Cyber Tower 2 <br />
@@ -860,144 +965,13 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Contact Form -->
-                        <div class="col-md-6">
-                            <div class="form-wrapper contact-tile h-100" data-aos="fade-up" data-aos-delay="300">
-                                <form id="contactForm" class="h-100 d-flex flex-column">
-                                    <div class="row gap-3 mb-3">
-                                        <div class="col-md-12">
-                                            <label class="mb-2" for="name">Name</label>
-                                            <input class="form-control" id="name" type="text" name="name" required />
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="mb-2" for="email">Email</label>
-                                            <input class="form-control" id="email" type="email" name="email" required />
-                                        </div>
-                                    </div>
-                                    <div class="row gap-3 mb-3">
-                                        <div class="col-md-12">
-                                            <label class="mb-2" for="subject">Subject</label>
-                                            <input class="form-control" id="subject" type="text" name="subject" />
-                                        </div>
-                                    </div>
-                                    <div class="row gap-3 gap-md-0 mb-3 flex-grow-1">
-                                        <div class="col-md-12">
-                                            <label class="mb-2" for="message">Message</label>
-                                            <textarea class="form-control h-80" id="message" name="message" rows="3"
-                                                required></textarea>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-primary fw-semibold w-100 mt-auto" type="submit">
-                                        Send Message
-                                    </button>
-                                </form>
-                                <div class="mt-3 d-none alert alert-success" id="successMessage">
-                                    Message sent successfully!
-                                </div>
-                                <div class="mt-3 d-none alert alert-danger" id="errorMessage">
-                                    Message sending failed. Please try again later.
-                                </div>
-                            </div>
-                        </div>
                     </div>
+
                 </div>
             </section>
 
-            <!-- ======= Footer =======-->
-            <footer class="site-footer">
-                <div class="footer-container">
-
-                    <!-- Brand Info -->
-                    <div class="footer-column">
-                        <h3 class="footer-logo">Emsyne technologies</h3>
-                        <p class="footer-desc">
-                            We provide reliable digital solutions to help businesses grow and succeed online.
-                        </p>
-                        <p class="footer-copy">© 2026 Emsyne Technologies Private Limited. All rights reserved.</p>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div class="footer-column">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                    <!-- Contact & Newsletter -->
-                    <div class="footer-column">
-                        <h4>Contact Us</h4>
-
-                        <!-- Row 1: Email | Phone | Empty -->
-                        <div class="d-flex gap-3 mb-3">
-                            <div class="flex-fill">
-                                <small>Email</small><br />
-                                <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
-                            </div>
-
-                            <div class="flex-fill">
-                                <small>Phone</small><br />
-                                <a href="tel:+911234567890">+91 12345 67890</a>
-                            </div>
-
-                            <div class="flex-fill"></div>
-                        </div>
-
-                        <!-- Row 2: Addresses (3 sections, minimized text) -->
-                        <div class="d-flex gap-3 footer-address-row">
-                            <div class="flex-fill">
-                                <small class="fw-bold">LULU Cyber Tower 1</small>
-                                <small>
-                                    Infopark, Kakkanad<br />
-                                    Kochi – 682042, Kerala
-                                </small>
-                            </div>
-
-                            <div class="flex-fill">
-                                <small class="fw-bold">LULU Cyber Tower 2</small>
-                                <small>
-                                    Infopark, Kakkanad<br />
-                                    Kochi – 682042, Kerala
-                                </small>
-                            </div>
-
-                            <div class="flex-fill">
-                                <small class="fw-bold">Thapasya Infopark</small>
-                                <small>
-                                    Infopark, Kakkanad<br />
-                                    Kochi – 682042, Kerala
-                                </small>
-                            </div>
-                        </div>
-
-                        <!-- Social Links -->
-                        <div class="social-links mt-3">
-                            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i
-                                    class="fab fa-linkedin"></i></a>
-
-                            <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <!-- Legal Links -->
-                <div class="footer-bottom">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Cookie Policy</a>
-                </div>
-            </footer>
+            <!-- Footer will be loaded here by footer-loader.js -->
+            <div id="footer-container"></div>
 
         </main>
     </div>
@@ -1174,3 +1148,43 @@
 
 
 </html>
+<script>
+    // Testimonials Swiper init (placed at end to ensure Swiper JS is loaded)
+    (function () {
+        if (typeof Swiper === 'undefined') return;
+        document.addEventListener('DOMContentLoaded', function () {
+            const testimonialsSwiper = new Swiper('.testimonials-swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 }
+                }
+            });
+
+            // Pause autoplay on hover, resume on mouse leave
+            const swiperContainer = document.querySelector('.testimonials-swiper-container');
+            if (swiperContainer) {
+                swiperContainer.addEventListener('mouseenter', () => {
+                    testimonialsSwiper.autoplay.stop();
+                });
+                swiperContainer.addEventListener('mouseleave', () => {
+                    testimonialsSwiper.autoplay.start();
+                });
+            }
+        });
+    })();
+</script>

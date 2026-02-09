@@ -12,9 +12,11 @@
 
       .subheading {
         /* Corrected from .hero-subtitle to match your HTML */
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         color: var(--text-muted);
         max-width: 450px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
       }
 
       /* --- Commitment Section --- */
@@ -24,18 +26,21 @@
       }
 
       .commitment-heading {
-        font-size: 4rem;
-        font-weight: 400;
+        font-size: 2.5rem;
+        font-weight: 600;
         line-height: 1.1;
         letter-spacing: -2px;
         margin-bottom: 40px;
+        font-family: "Poppins", sans-serif;
       }
 
       .commitment-text {
         color: var(--text-muted);
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.8;
         margin-bottom: 40px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
       }
 
       .plus-list {
@@ -44,10 +49,11 @@
       }
 
       .plus-list li {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 500;
         margin-bottom: 15px;
         padding-left: 30px;
+        font-family: "Poppins", sans-serif;
         position: relative;
       }
 

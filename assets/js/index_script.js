@@ -149,3 +149,96 @@ document.addEventListener("touchend", (e) => {
 });
 // Initialize carousel correctly
 updateCrewCarousel(0);
+
+/* ================= Service Carousel Content Switcher ================= */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector(".offer-track");
+  const cards = Array.from(document.querySelectorAll(".offer-card"));
+  const prevBtn = document.querySelector(".nav-btn.prev");
+  const nextBtn = document.querySelector(".nav-btn.next");
+  const rightContainer = document.querySelector('.right');
+  
+  if (!rightContainer || !cards.length) return;
+  
+  const serviceContainers = rightContainer.querySelectorAll('[data-service]');
+  
+  // Function to show specific service and hide others
+  function showService(serviceName) {
+    // Hide all service content
+    serviceContainers.forEach(container => {
+      container.classList.remove('active');
+    });
+    
+    // Show the selected service
+    const activeService = rightContainer.querySelector(`[data-service="${serviceName}"]`);
+    if (activeService) {
+      activeService.classList.add('active');
+    }
+    
+    // Update offer card styling
+    cards.forEach(card => {
+      if (card.getAttribute('data-service') === serviceName) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+  }
+  
+  const total = cards.length;
+  let currentIndex = 0;
+  
+  const getIndex = (i) => (i + total) % total;
+  
+  function updateCarouselAndService() {
+    cards.forEach(card =>
+      card.classList.remove("active", "prev", "next")
+    );
+
+    const prevIndex = getIndex(currentIndex - 1);
+    const nextIndex = getIndex(currentIndex + 1);
+
+    cards[currentIndex].classList.add("active");
+    cards[prevIndex].classList.add("prev");
+    cards[nextIndex].classList.add("next");
+
+    const cardWidth = cards[0].offsetWidth + 12; // gap = 12
+    const centerOffset =
+      (track.parentElement.offsetWidth / 2) - (cardWidth / 2);
+
+    track.style.transform =
+      `translateX(${centerOffset - (currentIndex * cardWidth)}px)`;
+    
+    // Show corresponding service content
+    const serviceName = cards[currentIndex].getAttribute('data-service');
+    showService(serviceName);
+  }
+
+  // Navigation button handlers
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      currentIndex = getIndex(currentIndex + 1);
+      updateCarouselAndService();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      currentIndex = getIndex(currentIndex - 1);
+      updateCarouselAndService();
+    });
+  }
+
+  // Add click handlers to offer cards
+  cards.forEach((card, i) => {
+    card.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = i;
+      updateCarouselAndService();
+    });
+  });
+  
+  // Initialize with first service (web) visible on page load
+  updateCarouselAndService();
+});

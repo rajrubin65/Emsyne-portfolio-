@@ -36,9 +36,11 @@ scroll-margin-top: 0px;
 /* Make inputs visibly taller */
 .contact__v2 .form-control {
     padding: 14px 16px;     /* inner space */
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.5;       /* IMPORTANT */
     min-height: 52px;       /* THIS fixes small height */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 
 /* Textarea needs separate control */
