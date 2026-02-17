@@ -1074,6 +1074,7 @@ button.learn-more:hover .button-text {
 
     .hero__v6 .container {
         padding: 0 15px;
+        height: 50vh;
     }
 
     .section {
@@ -2064,7 +2065,7 @@ button.learn-more:hover .button-text {
 .scroller__inner {
     display: flex;
     flex-wrap: nowrap;
-    gap: 1.5rem;
+    gap: .1rem;
     animation: scroll 25s linear infinite;
     width: fit-content;
 }
@@ -2112,7 +2113,7 @@ button.learn-more:hover .button-text {
 @media (max-width: 1024px) {
     .partners-container {
         max-width: 90%;
-        padding: 1.5rem;
+        padding: .1rem;
     }
 
     .partners-heading {
@@ -2200,7 +2201,7 @@ button.learn-more:hover .button-text {
     /* Regular weight */
     line-height: 1.6;
     /* Readability */
-    color: gray !important;
+    /* color: gray !important; */
     /* Force gray if Bootstrap overrides */
 }
 
@@ -2324,13 +2325,14 @@ button.learn-more:hover .button-text {
     margin-bottom: 60px;
 }
 
-.ai-subtitle {
+.min-subtitle {
     font-size: 18px;
     color: #555;
     margin-top: 20px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 /* AI Cards Wrapper */
@@ -2413,7 +2415,7 @@ button.learn-more:hover .button-text {
 
 .ai-card-description {
     font-size: 15px;
-    color: #666;
+    /* color: #666; */
     line-height: 1.6;
     margin: 0;
 }
@@ -2466,7 +2468,7 @@ button.learn-more:hover .button-text {
 
 .feature-content p {
     font-size: 14px;
-    color: #666;
+    /* color: #666; */
     margin: 0;
     line-height: 1.5;
 }
@@ -2505,7 +2507,7 @@ button.learn-more:hover .button-text {
         margin-bottom: 40px;
     }
 
-    .ai-subtitle {
+    .min-subtitle {
         font-size: 16px;
     }
 

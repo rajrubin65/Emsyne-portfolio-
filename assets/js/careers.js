@@ -140,32 +140,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   popupContent.addEventListener("click", (e) => {
-    const li = e.target.closest("li");
-    const btn = e.target.closest(".toggle-btn");
-    if (btn) {
-      e.preventDefault();
-      const title = btn.dataset.title;
-      const parentLi = btn.closest("li");
-      const isExpanded = parentLi.classList.contains("expanded");
-      if (!isExpanded) {
-        parentLi.classList.add("expanded");
-        const icon = btn.querySelector("i");
-        icon.classList.remove("bi-plus");
-        icon.classList.add("bi-dash");
-        parentLi.innerHTML = `<strong>${title}</strong><div>${parentLi.dataset.details.replace(
-          /\n/g,
-          "<br>"
-        )}</div><button class="toggle-btn" data-title="${title}"><i class="bi bi-dash"></i></button>`;
-      } else {
-        parentLi.classList.remove("expanded");
-        const icon = btn.querySelector("i");
-        icon.classList.remove("bi-dash");
-        icon.classList.add("bi-plus");
-        parentLi.innerHTML = `<strong>${title}</strong> <button class="toggle-btn" data-title="${title}"><i class="bi bi-plus"></i></button>`;
-      }
-      e.stopPropagation();
+  const btn = e.target.closest(".toggle-btn");
+  if (!btn) return;
+
+  e.preventDefault();
+
+  const parentLi = btn.closest("li");
+  const title = btn.dataset.title;
+
+  // 🔹 Close any already expanded item (except current)
+  const expandedItems = popupContent.querySelectorAll("li.expanded");
+  expandedItems.forEach((item) => {
+    if (item !== parentLi) {
+      item.classList.remove("expanded");
+      item.innerHTML = `
+        <strong>${item.querySelector("strong").textContent}</strong>
+        <p>${careerData[
+          popupContent.querySelector("h3").textContent.replace(" Careers", "")
+        ].find(c => c.title === item.querySelector("strong").textContent)?.desc || ""}</p>
+        <button class="toggle-btn" data-title="${item.querySelector("strong").textContent}">
+          <i class="bi bi-plus"></i>
+        </button>
+      `;
     }
   });
+
+  const isExpanded = parentLi.classList.contains("expanded");
+
+  if (!isExpanded) {
+    parentLi.classList.add("expanded");
+    parentLi.innerHTML = `
+      <strong>${title}</strong>
+      <div>${parentLi.dataset.details.replace(/\n/g, "<br>")}</div>
+      <button class="toggle-btn" data-title="${title}">
+        <i class="bi bi-dash"></i>
+      </button>
+    `;
+  } else {
+    parentLi.classList.remove("expanded");
+    parentLi.innerHTML = `
+      <strong>${title}</strong>
+      <button class="toggle-btn" data-title="${title}">
+        <i class="bi bi-plus"></i>
+      </button>
+    `;
+  }
+
+  e.stopPropagation();
+});
+
   closeBtn.addEventListener("click", () => {
     popup.style.display = "none";
     popupContent.innerHTML = "";
@@ -199,3 +222,50 @@ document.addEventListener("DOMContentLoaded", () => {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("assets/json/jobs.json")
+    .then(response => response.json())
+    .then(data => {
+      const carouselInner = document.getElementById("carousel-inner");
+
+      const email = "contact@emsyne.com";
+
+      data.forEach((job, index) => {
+
+        // ✅ Create subject dynamically for each job
+        const subject = encodeURIComponent(`Application for ${job.title}`);
+
+        const body = encodeURIComponent(
+          `Dear Hiring Team,\n\nI would like to apply for the ${job.title} position.\n\nRegards,\n`
+        );
+
+        const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+
+        const itemDiv = document.createElement("div");
+        itemDiv.className = "carousel-item" + (index === 0 ? " active" : "");
+
+        itemDiv.innerHTML = `
+          <img src="${job.image}" class="d-block w-100" alt="${job.title}" />
+          <div class="carousel-overlay">
+            <h3>${job.title}</h3>
+            <p>Experience: ${job.experience}</p>
+            <p>${job.description}</p>
+            <a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="${mailtoLink}">
+              <span class="icons">
+                <i class="icon-1 bi bi-arrow-right-short"></i>
+                <i class="icon-2 bi bi-arrow-right-short"></i>
+              </span>
+              <span>Apply Now</span>
+            </a>
+          </div>
+        `;
+
+        carouselInner.appendChild(itemDiv);
+      });
+    })
+    .catch(error => console.error("Error loading jobs:", error));
+});
+

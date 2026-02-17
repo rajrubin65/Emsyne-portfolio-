@@ -869,7 +869,7 @@ body {
 }
 
 .services__v3 .icon {
-  color: var(--bs-primary) !important;
+  color: #002a74;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -885,7 +885,7 @@ body {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: rgba(var(--bs-secondary-rgb), 1);
+  background-color: #99ff5e;
   z-index: -1;
 }
 
@@ -1563,19 +1563,23 @@ body {
 .site-footer {
     background: #002a74; /* Primary color */
     color: #cbd5e1;
-    padding: 60px 20px 20px;
+    padding: 30px 20px 20px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
 }
 
-/* Footer Layout */
 .footer-container {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: 30% 25% 45%;
-    gap: 40px;
+    grid-template-columns: 
+        minmax(0, 30%)
+        minmax(0, 20%)
+        minmax(0, 50%);
+    gap: 20px;
+    padding: 0 1rem; /* prevents edge overflow */
 }
+
 
 /* Footer Column Base Styles */
 .footer-column {
@@ -1587,9 +1591,11 @@ body {
 .footer-logo {
     color: #ffffff; /* default text */
     font-size: 22px;
+    margin-top: 20px;
     margin-bottom: 10px;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
+    padding-left: 8px;
 }
 
 /* Make first letter green */
@@ -1607,6 +1613,7 @@ body {
     margin-top: 10px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
+    padding-left: 8px;
 }
 
 /* Footer Copyright */
@@ -1623,6 +1630,7 @@ body {
 .footer-column h4 {
     color: #ffffff;
     margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 /* Make first letter of headings green */
@@ -1661,6 +1669,52 @@ body {
     line-height: 1.4;
     display: block;
 }
+.footer-address-row-wrapper {
+    position: relative;
+    padding-top: 2rem;
+}
+
+/* split border line */
+.footer-address-row-wrapper::before,
+.footer-address-row-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: calc(50% - 18px);
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+
+.footer-address-row-wrapper::before {
+    left: 0;
+}
+
+.footer-address-row-wrapper::after {
+    right: 0;
+}
+
+/* center icon */
+.line-icon {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+     /* footer bg */
+    padding: 4px 6px;
+    border-radius: 50%;
+}
+
+.line-icon i {
+    color: #58ea01;
+    font-size: 18px;
+}
+
+.contact_icon {
+    color: #58ea01;
+    font-size: 18px;
+}
+
 
 /* Newsletter */
 .newsletter-form {
@@ -1707,18 +1761,27 @@ body {
     color: #002a74;
 }
 
-/* Footer Bottom */
 .footer-bottom {
-    border-top: 1px solid #58ea01;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
     margin-top: 40px;
     padding-top: 15px;
-    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px; /* 👈 desktop left padding */
+}
+
+.footer-right {
+    padding-right: 50px; /* pushes right side inward */
 }
 
 .footer-bottom a {
-    margin: 0 10px;
+    margin-left: 15px;
     font-size: 13px;
     color: #cbd5e1;
+    text-decoration: none;
 }
 
 .footer-bottom a:hover {
@@ -1754,14 +1817,35 @@ body {
         margin-bottom: 8px;
     }
     
-    .footer-bottom {
-        margin-top: 30px;
-        padding-top: 12px;
-    }
     
-    .footer-bottom a {
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 30px;
+        gap: 8px;
+    }
+
+    /* each item under the other */
+    .footer-bottom > * {
         display: block;
-        margin: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-bottom a {
+        display: block;   /* 🔥 ensures new line */
+        margin: 4px 0;
+    }
+
+    /* remove desktop push */
+    .footer-right {
+        padding-right: 0;
     }
 }
 .mt-custom {
@@ -1790,3 +1874,4 @@ body {
     width: 100% !important;
     margin-top: 6px !important;
 }
+

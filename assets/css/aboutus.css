@@ -2,14 +2,14 @@
 
     /* Page-specific overrides can remain below (e.g., .container sizing) */
 
-    body::-webkit-scrollbar {
+    /* body::-webkit-scrollbar {
       display: none;
-    }
+    } */
 
-    html {
+    /* html {
       -ms-overflow-style: none;
       scrollbar-width: none;
-    }
+    } */
 
     .main-container {
       background-color: #fff;
@@ -114,13 +114,14 @@
       color: #333;
       margin-bottom: 15px;
       line-height: 1.6;
-      
+      font-weight: 500;
       text-align: justify;
     }
 
-    .container-text {
+    /* .container-text {
       color: #6a6a6a;
-    }
+    } */
+     
 
     h2 {
       font-size: 24px;

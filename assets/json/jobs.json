@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Angular Developer",
+    "experience": "3 - 5 years",
+    "description": "Develop dynamic web applications using Angular framework.",
+    "image": "assets/photos/ai_image.jpg"
+    
+  },
+  {
+    "title": "Microservices Developer (.Net)",
+    "experience": "3 - 5 years",
+    "description": "Build scalable microservices with .Net technology.",
+    "image": "assets/photos/ai_image.jpg"
+    
+  },
+  {
+    "title": "Application Support Engineer",
+    "experience": "3 - 5 years",
+    "description": "Provide technical support for application systems.",
+    "image": "assets/photos/ai_image.jpg"
+  
+  }
+]

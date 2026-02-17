@@ -35,12 +35,12 @@
       }
 
       .commitment-text {
-        color: var(--text-muted);
+        /* color: var(--text-muted); */
         font-size: 1rem;
         line-height: 1.8;
         margin-bottom: 40px;
         font-family: "Poppins", sans-serif;
-        font-weight: 400;
+        font-weight: 500;
       }
 
       .plus-list {
@@ -97,7 +97,7 @@
 
       .qa-header p {
         font-size: 1.1rem;
-        color: var(--text-muted);
+        /* color: var(--text-muted); */
         max-width: 800px;
         margin: 0 auto;
       }
@@ -123,7 +123,7 @@
       }
 
       .qa-item p {
-        color: var(--text-muted);
+        /* color: var(--text-muted); */
         line-height: 1.7;
       }
 
@@ -200,7 +200,7 @@
 
       .tech-card .tech-item-desc {
         font-size: 1rem;
-        color: #4a5568;
+        /* color: #4a5568; */
         line-height: 1.6;
         min-height: 95px;
       }

@@ -247,7 +247,7 @@
       padding-top: 30px;
       font-size: 1.2rem;
       font-weight: 500;
-      color: #555;
+      /* color: #555; */
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-top: 10px;
@@ -333,3 +333,40 @@
 .fab, .fa-brands {
   font-family: "Font Awesome 6 Brands" !important;
 }
+
+.footer-address-row {
+    align-items: flex-start;
+}
+
+/* left */
+.adds_left {
+    text-align: left;
+}
+
+/* center */
+.adds_center {
+    text-align: center;
+}
+
+/* right */
+.adds_right {
+    text-align: right;
+}
+
+.logo-wrapper {
+  background: rgb(243, 243, 243);
+  padding: 0 6px 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px; /* rectangle with soft edges */
+  width: fit-content;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.logo-img {
+  width: 150px;   /* adjust logo size here */
+  height: auto;
+}
+

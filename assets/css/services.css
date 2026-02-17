@@ -1,14 +1,14 @@
  /* Base body styles moved to assets/css/common.css */
 
 
-    body::-webkit-scrollbar {
+    /* body::-webkit-scrollbar {
       display: none;
     }
 
     html {
       -ms-overflow-style: none;
       scrollbar-width: none;
-    }
+    } */
 
     .container {
       width: 100%;
@@ -133,7 +133,7 @@
     }
 
       .col-text p  {
-  color: #6c757d; /* A good, neutral dark gray */
+  /* color: #6c757d;  */
   font-size: 1.1rem; /* Slightly larger than standard body text */
   font-weight: 400; /* Regular weight */
   line-height: 1.6; /* For good readability */
