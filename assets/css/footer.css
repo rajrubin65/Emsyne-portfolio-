@@ -364,9 +364,12 @@
   margin-bottom: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
+.brand-info {
+    padding-top: 20px;
+}
 
 .logo-img {
-  width: 150px;   /* adjust logo size here */
+  width: 100px;   /* adjust logo size here */
   height: auto;
 }
 

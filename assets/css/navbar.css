@@ -2,7 +2,8 @@
     position: fixed;
     top: 20px;
     left: 50%;
-    transform: translate(-50%, -20px); /* start slightly above */
+    transform: translate(-50%, -20px);
+    /* start slightly above */
     width: 90%;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
@@ -11,8 +12,10 @@
     /* padding: 10px 20px; */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     z-index: 999;
-    opacity: 0; /* start invisible */
-    transition: transform 0.6s ease, opacity 0.6s ease; /* smoother animation */
+    opacity: 0;
+    /* start invisible */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    /* smoother animation */
 }
 
 /* When navbar is shown (on page load fade-in) */
@@ -34,16 +37,16 @@
     align-items: center;
 }
 
-/* image height and nav*/ 
+/* image height and nav*/
 
 .logo-img {
-    height: 70px;
+    height: 50px;
 }
 
 /* Desktop Menu */
 .desktop-menu {
     display: flex;
-    gap: 2rem;
+    gap: 1.25rem;
     font-size: 0.85rem;
     font-weight: 500;
     font-display: swap;
