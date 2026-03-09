@@ -8,14 +8,25 @@
         <!-- Desktop Menu -->
         <nav class="desktop-menu">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="index.html#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="services.html">Services</a>
             <a href="insights.html">Insights</a>
-            <a href="contactsus.html">Contact</a>
-            <a href="life-at-emsyne.html">Careers</a>
-            <a href="http://172.17.17.201:8010/blogs.html" target="_blank" rel="noopener noreferrer">Blog <i
-                    class="bi bi-box-arrow-up-right" style="font-size: 1em; vertical-align: middle;"></i></a>
+            <a href="#contact">Contact</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Join Us</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item">
+                        <a href="life-at-emsyne.html">Life @ Emsyne</a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </div>
+            </div>
+            <a href="http://172.17.17.201:8010/blogs.html" target="_blank" rel="noopener noreferrer">
+                Blog <i class="bi bi-box-arrow-up-right"></i>
+            </a>
         </nav>
 
         <!-- Hamburger Icon -->
@@ -31,11 +42,16 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="insights.html">Insights</a></li>
-            <li><a href="life-at-emsyne.html">Life @Emsyne</a></li>
-            <li><a href="careers.html">Careers</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-dropdown-toggle">Join Us</a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="life-at-emsyne.html">Life @ Emsyne</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </li>
             <li><a href="http://172.17.17.201:8010/blogs.html" target="_blank" rel="noopener noreferrer">Blog <i
                         class="bi bi-box-arrow-up-right" style="font-size: 1em; vertical-align: middle;"></i></a></li>
         </ul>

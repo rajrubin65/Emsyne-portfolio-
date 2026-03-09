@@ -180,6 +180,89 @@
     opacity: 0.9;
 }
 
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(15px) !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 8px 0 !important;
+
+    width: auto !important;
+    /* remove fixed width */
+    min-width: max-content !important;
+    /* fit text exactly */
+
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown .dropdown-toggle:focus+.dropdown-menu {
+    display: block !important;
+}
+
+/* Adjust hover effect for dropdown items */
+.dropdown-menu a {
+    color: #333 !important;
+    /* Darker text for better readability */
+    padding: 4px 0 !important;
+    /* Reduced padding to minimize space */
+    margin: 0 !important;
+    /* Remove any default margins */
+    text-decoration: none !important;
+    display: inline-block !important;
+    /* Ensure the hover effect fits the text */
+    font-size: 12px !important;
+    /* Professional font size */
+    box-sizing: border-box !important;
+    /* Ensure padding and borders are included in width */
+    white-space: nowrap !important;
+    /* Prevent text wrapping and remove extra space */
+    position: relative;
+    /* Ensure underline alignment */
+}
+
+.dropdown-menu a:hover {
+    background-color: transparent !important;
+    /* Remove background color on hover */
+}
+
+.dropdown-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    /* Single thin blue line */
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.dropdown-menu a:hover::after {
+    width: 100%;
+    /* Expand underline on hover */
+}
+
+.dropdown-toggle {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    appearance: none !important;
+}
+
+.dropdown-toggle::after {
+    content: none !important;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .desktop-menu {
@@ -201,6 +284,40 @@
     .logo-img {
         display: block !important;
         height: 40px;
+    }
+
+    /* Mobile Dropdown styles */
+    .mobile-dropdown-menu {
+        display: none;
+        list-style: none;
+        padding-left: 25px !important;
+        margin: 0;
+        background: transparent;
+    }
+
+    .mobile-dropdown-menu.active {
+        display: block;
+    }
+
+    .mobile-dropdown-menu li {
+        margin: 0 0 2px 0 !important;
+    }
+
+    .mobile-dropdown-menu li a {
+        padding: 6px 12px !important;
+        font-size: 15px !important;
+    }
+
+    .mobile-dropdown-toggle {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-dropdown-toggle::after {
+        content: '▼';
+        font-size: 10px;
+        margin-left: 5px;
     }
 }
 
