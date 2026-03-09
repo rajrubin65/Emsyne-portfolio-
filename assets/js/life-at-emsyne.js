@@ -9,7 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
 
+    // Lightbox elements
+    const galleryLightbox = document.getElementById('galleryLightbox');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxProgress = document.getElementById('lightboxProgress');
+
     let galleryData = {};
+    let cardAutoScrollIntervals = []; // Store intervals for each card
+
+    // Lightbox State
+    let currentLightboxImages = [];
+    let currentLightboxIndex = 0;
 
     // Year Selector Nav
     const yearPrevBtn = document.getElementById('yearPrevBtn');
@@ -48,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load Gallery for a specific year
     function loadGallery(year) {
         galleryTrack.innerHTML = '';
+        clearCardIntervals(); // Stop old intervals
         const images = galleryData[year] || [];
 
         images.forEach((item, index) => {
@@ -56,12 +71,35 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryItem.setAttribute('data-aos', 'fade-up');
             galleryItem.setAttribute('data-aos-delay', (index * 100).toString());
 
-            galleryItem.innerHTML = `
-                <img src="${item.url}" alt="${item.caption}">
-                <div class="gallery-item-info">
-                    <h5>${item.caption}</h5>
-                </div>
-            `;
+            const urls = item.urls || [item.url];
+
+            // Create image element
+            const imgElement = document.createElement('img');
+            imgElement.src = urls[0];
+            imgElement.alt = item.caption;
+
+            // Caption overlay
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'gallery-item-info';
+            infoDiv.innerHTML = `<h5>${item.caption}</h5>`;
+
+            galleryItem.appendChild(imgElement);
+            galleryItem.appendChild(infoDiv);
+
+            // Item active internal auto-scroll logic
+            if (urls.length > 1) {
+                let imgIndex = 0;
+                const interval = setInterval(() => {
+                    imgIndex = (imgIndex + 1) % urls.length;
+                    imgElement.src = urls[imgIndex];
+                }, 2000);
+                cardAutoScrollIntervals.push(interval);
+            }
+
+            // On click, open lightbox
+            galleryItem.addEventListener('click', () => {
+                openLightbox(item.caption, urls);
+            });
 
             galleryTrack.appendChild(galleryItem);
         });
@@ -72,6 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         galleryTrack.scrollLeft = 0;
         updateScrollProgress();
+    }
+
+    function clearCardIntervals() {
+        cardAutoScrollIntervals.forEach(interval => clearInterval(interval));
+        cardAutoScrollIntervals = [];
     }
 
     // Year Navigation Logic
@@ -129,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Custom Scroll Controls (Gallery)
+    // Custom Scroll Controls (Gallery track manual navigation)
     nextBtn.addEventListener('click', () => {
         const itemWidth = galleryTrack.querySelector('.gallery-item')?.clientWidth || 400;
         galleryTrack.scrollBy({ left: itemWidth + 20, behavior: 'smooth' });
@@ -142,6 +185,92 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Track Scroll
     galleryTrack.addEventListener('scroll', updateScrollProgress);
+
+
+    // ==========================================
+    // Lightbox Logic (Single Image View)
+    // ==========================================
+    function openLightbox(caption, urls) {
+        if (!galleryLightbox) return;
+
+        currentLightboxImages = urls;
+        currentLightboxIndex = 0;
+
+        lightboxTitle.textContent = caption;
+        updateLightboxView();
+
+        galleryLightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // prevent background scrolling
+    }
+
+    function updateLightboxView() {
+        if (!lightboxImage || currentLightboxImages.length === 0) return;
+        lightboxImage.src = currentLightboxImages[currentLightboxIndex];
+
+        // Hide navigation arrows if only 1 image
+        if (currentLightboxImages.length <= 1) {
+            lightboxPrev.style.display = 'none';
+            lightboxNext.style.display = 'none';
+            if (lightboxProgress) lightboxProgress.style.width = '100%';
+        } else {
+            lightboxPrev.style.display = 'flex';
+            lightboxNext.style.display = 'flex';
+            updateLightboxProgress();
+        }
+    }
+
+    function changeLightboxImage(direction) {
+        if (currentLightboxImages.length <= 1) return;
+
+        currentLightboxIndex += direction;
+
+        // Loop around
+        if (currentLightboxIndex < 0) {
+            currentLightboxIndex = currentLightboxImages.length - 1;
+        } else if (currentLightboxIndex >= currentLightboxImages.length) {
+            currentLightboxIndex = 0;
+        }
+
+        updateLightboxView();
+    }
+
+    function closeLightbox() {
+        if (!galleryLightbox) return;
+        galleryLightbox.classList.remove('active');
+        document.body.style.overflow = ''; // restore scrolling
+    }
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    if (galleryLightbox) {
+        const overlay = galleryLightbox.querySelector('.lightbox-overlay');
+        if (overlay) {
+            overlay.addEventListener('click', closeLightbox);
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (!galleryLightbox || !galleryLightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+        if (e.key === 'ArrowRight') changeLightboxImage(1);
+    });
+
+    if (lightboxNext) {
+        lightboxNext.addEventListener('click', () => changeLightboxImage(1));
+    }
+    if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', () => changeLightboxImage(-1));
+    }
+
+    function updateLightboxProgress() {
+        if (!lightboxProgress || currentLightboxImages.length <= 1) return;
+        const total = currentLightboxImages.length - 1;
+        const progress = (currentLightboxIndex / total) * 100;
+        lightboxProgress.style.width = `${progress}%`;
+    }
 
     // Initial load
     fetchMoments();
