@@ -34,7 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.addEventListener("click", closeMenu);
 
     nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", closeMenu);
+      link.addEventListener("click", (e) => {
+        if (link.classList.contains("mobile-dropdown-toggle")) {
+          e.preventDefault(); // Prevent default link behavior
+          const menu = link.nextElementSibling;
+          if (menu) {
+            menu.classList.toggle("active");
+            // Optional: Toggle an 'open' class on the toggle to change arrow direction
+            link.classList.toggle("open");
+          }
+          return;
+        }
+        closeMenu();
+      });
     });
   }
 

@@ -62,7 +62,18 @@ function initializeNavbar() {
     overlay.addEventListener("click", closeMenu);
 
     nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", closeMenu);
+      link.addEventListener("click", (e) => {
+        if (link.classList.contains("mobile-dropdown-toggle")) {
+          e.preventDefault(); // Prevent default link behavior
+          const menu = link.nextElementSibling;
+          if (menu) {
+            menu.classList.toggle("active");
+            link.classList.toggle("open");
+          }
+          return;
+        }
+        closeMenu();
+      });
     });
   }
 }
