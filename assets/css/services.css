@@ -148,11 +148,14 @@
       .col-number {
         width: 100%;
         padding: 0 0 0.5rem 0;
+        padding-left: 25px;
+        padding-right: 25px;
       }
 
       .col-text {
         width: 100%;
-        padding-right: 0;
+        padding-left: 25px;
+        padding-right: 25px;
         order: 1;
       }
 
@@ -160,6 +163,8 @@
         width: 100%;
         order: 2;
         margin-top: 1.5rem;
+        padding-left: 25px;
+        padding-right: 25px;
       }
 
       .heading_h1 {
