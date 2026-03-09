@@ -1,143 +1,240 @@
 {
     "2025": [
         {
-            "url": "assets/images/portfolio/pexels-photo-3184291.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184291.jpeg",
+                "assets/images/portfolio/pexels-photo-3183197.jpeg",
+                "assets/images/portfolio/pexels-photo-3184292.jpeg"
+            ],
             "caption": "New Year Kickoff 2025"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3183197.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3183197.jpeg",
+                "assets/images/portfolio/pexels-photo-3183150.jpeg"
+            ],
             "caption": "Tech Summit 2025"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3184292.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184292.jpeg",
+                "assets/images/portfolio/pexels-photo-3184291.jpeg"
+            ],
             "caption": "Innovation Lab Opening"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3183150.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3183150.jpeg",
+                "assets/images/portfolio/pexels-photo-3184296.jpeg"
+            ],
             "caption": "Collaboration Spaces"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3184296.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184296.jpeg",
+                "assets/images/portfolio/pexels-photo-3184292.jpeg"
+            ],
             "caption": "Future Ready Teams"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-5239879.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-5239879.jpeg",
+                "assets/images/portfolio/pexels-photo-3183197.jpeg"
+            ],
             "caption": "Global Connections"
         }
     ],
     "2024": [
         {
-            "url": "assets/images/life-at-emsyne-hero.png",
+            "urls": [
+                "assets/images/life-at-emsyne-hero.png",
+                "assets/images/life-at-emsyne-culture-1.png"
+            ],
             "caption": "Office Expansion 2024"
         },
         {
-            "url": "assets/images/life-at-emsyne-culture-1.png",
+            "urls": [
+                "assets/images/life-at-emsyne-culture-1.png",
+                "assets/images/life-at-emsyne-culture-2.png"
+            ],
             "caption": "Employee Wellness Day"
         },
         {
-            "url": "assets/images/life-at-emsyne-culture-2.png",
+            "urls": [
+                "assets/images/life-at-emsyne-culture-2.png",
+                "assets/images/life-at-emsyne-hero.png"
+            ],
             "caption": "Brainstorming Excellence"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3184291.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184291.jpeg",
+                "assets/images/portfolio/pexels-photo-3183197.jpeg"
+            ],
             "caption": "Annual Meet 2024"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3183197.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3183197.jpeg",
+                "assets/images/portfolio/pexels-photo-3184292.jpeg"
+            ],
             "caption": "Project Success Celebs"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3184292.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184292.jpeg",
+                "assets/images/portfolio/pexels-photo-3184291.jpeg"
+            ],
             "caption": "Client Appreciation night"
         }
     ],
     "2023": [
         {
-            "url": "assets/images/portfolio/pexels-photo-3183150.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3183150.jpeg",
+                "assets/images/portfolio/pexels-photo-3184296.jpeg"
+            ],
             "caption": "Workspace Upgrades 2023"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3184296.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184296.jpeg",
+                "assets/images/portfolio/pexels-photo-5239879.jpeg"
+            ],
             "caption": "Team Bonding"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-5239879.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-5239879.jpeg",
+                "assets/images/life-at-emsyne-culture-1.png"
+            ],
             "caption": "Tech Expo 2023"
         },
         {
-            "url": "assets/images/life-at-emsyne-culture-1.png",
+            "urls": [
+                "assets/images/life-at-emsyne-culture-1.png",
+                "assets/images/life-at-emsyne-culture-2.png"
+            ],
             "caption": "Coffee & Code"
         },
         {
-            "url": "assets/images/life-at-emsyne-culture-2.png",
+            "urls": [
+                "assets/images/life-at-emsyne-culture-2.png",
+                "assets/images/portfolio/pexels-photo-3183150.jpeg"
+            ],
             "caption": "Strategic Planning"
         }
     ],
     "2022": [
         {
-            "url": "assets/images/portfolio/pexels-photo-3184291.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184291.jpeg",
+                "assets/images/portfolio/pexels-photo-3183197.jpeg"
+            ],
             "caption": "Remote Work Transition"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3183197.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3183197.jpeg",
+                "assets/images/portfolio/pexels-photo-3184292.jpeg"
+            ],
             "caption": "Virtual Town Hall"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3184292.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184292.jpeg",
+                "assets/images/portfolio/pexels-photo-3183150.jpeg"
+            ],
             "caption": "Quality Award 2022"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3183150.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3183150.jpeg",
+                "assets/images/portfolio/pexels-photo-3184296.jpeg"
+            ],
             "caption": "Service Milestone"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3184296.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184296.jpeg",
+                "assets/images/portfolio/pexels-photo-3184291.jpeg"
+            ],
             "caption": "Learning & Development"
         }
     ],
     "2021": [
         {
-            "url": "assets/images/portfolio/pexels-photo-5239879.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-5239879.jpeg",
+                "assets/images/life-at-emsyne-culture-1.png"
+            ],
             "caption": "Digital Transformation Hub"
         },
         {
-            "url": "assets/images/life-at-emsyne-culture-1.png",
+            "urls": [
+                "assets/images/life-at-emsyne-culture-1.png",
+                "assets/images/life-at-emsyne-culture-2.png"
+            ],
             "caption": "15 Years Celebration"
         },
         {
-            "url": "assets/images/life-at-emsyne-culture-2.png",
+            "urls": [
+                "assets/images/life-at-emsyne-culture-2.png",
+                "assets/images/life-at-emsyne-hero.png"
+            ],
             "caption": "Agile Training"
         },
         {
-            "url": "assets/images/life-at-emsyne-hero.png",
+            "urls": [
+                "assets/images/life-at-emsyne-hero.png",
+                "assets/images/portfolio/pexels-photo-5239879.jpeg"
+            ],
             "caption": "Global Expansion"
         }
     ],
     "2020": [
         {
-            "url": "assets/images/portfolio/pexels-photo-3184291.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184291.jpeg",
+                "assets/images/portfolio/pexels-photo-3183197.jpeg"
+            ],
             "caption": "Innovation Drive 2020"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3183197.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3183197.jpeg",
+                "assets/images/portfolio/pexels-photo-3184292.jpeg"
+            ],
             "caption": "Team Resilience"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3184292.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184292.jpeg",
+                "assets/images/portfolio/pexels-photo-3184291.jpeg"
+            ],
             "caption": "New Tech Stack Adoption"
         }
     ],
     "2019": [
         {
-            "url": "assets/images/portfolio/pexels-photo-3184291.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184291.jpeg",
+                "assets/images/portfolio/pexels-photo-3183197.jpeg"
+            ],
             "caption": "Innovation Drive 2020"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3183197.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3183197.jpeg",
+                "assets/images/portfolio/pexels-photo-3184292.jpeg"
+            ],
             "caption": "Team Resilience"
         },
         {
-            "url": "assets/images/portfolio/pexels-photo-3184292.jpeg",
+            "urls": [
+                "assets/images/portfolio/pexels-photo-3184292.jpeg",
+                "assets/images/portfolio/pexels-photo-3184291.jpeg"
+            ],
             "caption": "New Tech Stack Adoption"
         }
     ]
