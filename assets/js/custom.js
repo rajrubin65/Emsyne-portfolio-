@@ -167,8 +167,15 @@ function horizontalLoop(items, config) {
 
 // ======= Navbar Scroll =======
 document.addEventListener("DOMContentLoaded", function () {
-  logoMarqueeInit();
-  navbarInit();
+
+  if (typeof logoMarqueeInit === "function") {
+    logoMarqueeInit();
+  }
+
+  if (typeof navbarInit === "function") {
+    navbarInit();
+  }
+
   window.addEventListener("scroll", navbarScrollInit);
 });
 
