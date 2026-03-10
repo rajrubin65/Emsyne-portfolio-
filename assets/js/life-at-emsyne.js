@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lightbox elements
     const galleryLightbox = document.getElementById('galleryLightbox');
     const lightboxClose = document.getElementById('lightboxClose');
-    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxCaptionList = document.getElementById('lightboxCaptionList');
     const lightboxImage = document.getElementById('lightboxImage');
     const lightboxPrev = document.getElementById('lightboxPrev');
     const lightboxNext = document.getElementById('lightboxNext');
@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardAutoScrollIntervals = []; // Store intervals for each card
 
     // Lightbox State
-    let currentLightboxImages = [];
+    let currentGalleryImages = []; // Stores all items for the active year
+    let currentLightboxImages = []; // Stores urls for the active caption
     let currentLightboxIndex = 0;
 
     // Year Selector Nav
@@ -98,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // On click, open lightbox
             galleryItem.addEventListener('click', () => {
-                openLightbox(item.caption, urls);
+                openLightbox(images, index);
             });
 
             galleryTrack.appendChild(galleryItem);
@@ -190,17 +191,62 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // Lightbox Logic (Single Image View)
     // ==========================================
-    function openLightbox(caption, urls) {
+    function openLightbox(imagesData, startIndex) {
         if (!galleryLightbox) return;
 
-        currentLightboxImages = urls;
-        currentLightboxIndex = 0;
-
-        lightboxTitle.textContent = caption;
-        updateLightboxView();
+        currentGalleryImages = imagesData;
+        populateCaptionList();
+        selectLightboxItem(startIndex);
 
         galleryLightbox.classList.add('active');
         document.body.style.overflow = 'hidden'; // prevent background scrolling
+    }
+
+    const lightboxCaptionPrev = document.getElementById('lightboxCaptionPrev');
+    const lightboxCaptionNext = document.getElementById('lightboxCaptionNext');
+
+    function populateCaptionList() {
+        if (!lightboxCaptionList) return;
+        lightboxCaptionList.innerHTML = '';
+        currentGalleryImages.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.textContent = item.caption;
+            // Removed click listener since they are navigated via arrows now
+            lightboxCaptionList.appendChild(li);
+        });
+    }
+
+    function selectLightboxItem(index) {
+        if (index < 0) index = currentGalleryImages.length - 1;
+        if (index >= currentGalleryImages.length) index = 0;
+
+        // Ensure we store index to know which caption is active
+        // Let's use a module-level variable to store current active caption index
+        window.currentLightboxCaptionIndex = index; 
+
+        const item = currentGalleryImages[index];
+        currentLightboxImages = item.urls || [item.url];
+        currentLightboxIndex = 0;
+
+        // Update active class on captions and slide the list
+        if (lightboxCaptionList) {
+            // Slide the caption list to show the active index
+            lightboxCaptionList.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        updateLightboxView();
+    }
+
+    if (lightboxCaptionPrev) {
+        lightboxCaptionPrev.addEventListener('click', () => {
+            selectLightboxItem(window.currentLightboxCaptionIndex - 1);
+        });
+    }
+
+    if (lightboxCaptionNext) {
+        lightboxCaptionNext.addEventListener('click', () => {
+            selectLightboxItem(window.currentLightboxCaptionIndex + 1);
+        });
     }
 
     function updateLightboxView() {
