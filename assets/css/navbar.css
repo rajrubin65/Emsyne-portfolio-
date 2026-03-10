@@ -60,6 +60,11 @@
     transition: color 0.3s ease;
 }
 
+.emsyne-blog-icon-mobile {
+    font-size: 1em;
+    vertical-align: middle;
+}
+
 .desktop-menu a:hover {
     color: #002a74;
 }

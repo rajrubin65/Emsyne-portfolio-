@@ -688,6 +688,22 @@ header {
   font-family: 'Poppins', sans-serif !important;
 }
 
+.emsyne-panel-0 {
+    left: 0px;
+}
+.emsyne-panel-1 {
+    left: 305px;
+}
+.emsyne-panel-2 {
+    left: 610px;
+}
+.emsyne-panel-3 {
+    left: 915px;
+}
+.emsyne-panel-4 {
+    left: 1220px;
+}
+
     /* Override Bootstrap container width at large breakpoints for About Us page */
     @media (min-width: 1200px) {
       .container, .container-lg, .container-md, .container-sm, .container-xl {

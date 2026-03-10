@@ -660,6 +660,26 @@
     .carousel-section .partners-subheading {
       text-align: center;
     }
+
+    .emsyne-pad-left-25 {
+      padding-left: 25px;
+    }
+
+    .emsyne-icon-display {
+      display: inline-block;
+      font-size: 32px;
+    }
+
+    .emsyne-z-index-4 {
+      z-index: 4;
+    }
+
+    .emsyne-hide-scrollbar {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      overflow: auto;
+    }
+
   * {
   font-family: 'Poppins', sans-serif !important;
 }
