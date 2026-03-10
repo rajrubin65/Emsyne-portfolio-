@@ -666,11 +666,55 @@
     color: #58ea01;
 }
 
-.lightbox-title {
-    color: #fff;
-    text-align: center;
+.lightbox-caption-list-container {
+    width: 100%;
     margin-bottom: 20px;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.lightbox-caption-window {
+    overflow: hidden;
+    /* Adjust width based on needs, can be a fixed width or auto */
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.lightbox-caption-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox-caption-list li {
+    /* Each li takes full width of the window to show one at a time */
+    flex: 0 0 100%;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    user-select: none;
+}
+
+.lightbox-caption-nav {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0 10px;
+}
+
+.lightbox-caption-nav:hover {
+    color: #fff;
 }
 
 .lightbox-gallery-container {

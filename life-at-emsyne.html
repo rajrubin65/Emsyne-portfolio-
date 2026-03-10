@@ -267,8 +267,13 @@
         <div class="lightbox-overlay"></div>
         <div class="lightbox-content">
             <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
-            <h4 class="lightbox-title" id="lightboxTitle"></h4>
-
+            <div class="lightbox-caption-list-container">
+                <button class="lightbox-caption-nav prev" id="lightboxCaptionPrev"><i class="fas fa-chevron-left"></i></button>
+                <div class="lightbox-caption-window">
+                    <ul class="lightbox-caption-list" id="lightboxCaptionList"></ul>
+                </div>
+                <button class="lightbox-caption-nav next" id="lightboxCaptionNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
             <div class="lightbox-gallery-container">
                 <button class="lightbox-nav prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
                 <div class="lightbox-image-wrapper">
