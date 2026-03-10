@@ -61,7 +61,7 @@
 }
 
 .desktop-menu a:hover {
-    color: #007bff;
+    color: #002a74;
 }
 
 .desktop-menu a::after {
@@ -71,7 +71,7 @@
     height: 2px;
     left: 0;
     bottom: -4px;
-    background-color: #007bff;
+    background-color: #002a74;
     transition: width 0.3s ease;
 }
 

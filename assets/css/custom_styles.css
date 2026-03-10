@@ -795,7 +795,8 @@ button.learn-more:hover .button-text {
 }
 
 .crew-arrow:hover {
-    background: rgba(34, 68, 219, 0.9);
+    background:#002a74;
+    color: #58ea01;
 }
 
 .crew-left {
