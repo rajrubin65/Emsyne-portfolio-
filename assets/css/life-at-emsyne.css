@@ -61,6 +61,11 @@
     font-weight: 400;
 }
 
+.emsyne-heading {
+    color: #002a74;
+    font-weight: bold;
+}
+
 .btn-join {
     display: inline-block;
     padding: 15px 35px;

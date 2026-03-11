@@ -1083,80 +1083,83 @@
 </script>
 
 <script>
-    const track = document.querySelector(".offer-track");
-    const prevBtn = document.querySelector(".slider-btn.prev");
-    const nextBtn = document.querySelector(".slider-btn.next");
-
-    let index = 0;
-    const cardWidth = 156; // card width + gap
-    const maxIndex = track.children.length - 2;
-
-    if (nextBtn) {
-        nextBtn.addEventListener("click", () => {
-            if (index < maxIndex) {
-                index++;
-                track.style.transform = `translateX(-${index * cardWidth}px)`;
-            }
-        });
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener("click", () => {
-            if (index > 0) {
-                index--;
-                track.style.transform = `translateX(-${index * cardWidth}px)`;
-            }
-        });
-    }
-
-
-
-
-</script>
-<script>
     document.addEventListener("DOMContentLoaded", () => {
         const track = document.querySelector(".offer-track");
-        const cards = Array.from(document.querySelectorAll(".offer-card"));
+        if (!track) return;
+
+        const originalCards = Array.from(track.querySelectorAll(".offer-card"));
         const prevBtn = document.querySelector(".nav-btn.prev");
         const nextBtn = document.querySelector(".nav-btn.next");
+        const total = originalCards.length;
 
-        const total = cards.length;
-        let currentIndex = 0;
+        // Clone cards for infinite effect (3 on each side for buffer)
+        const clonesToBegin = originalCards.slice(-3).map(card => card.cloneNode(true));
+        const clonesToEnd = originalCards.slice(0, 3).map(card => card.cloneNode(true));
 
-        const getIndex = (i) => (i + total) % total;
+        clonesToBegin.reverse().forEach(clone => track.insertBefore(clone, track.firstChild));
+        clonesToEnd.forEach(clone => track.appendChild(clone));
 
-        function updateCarousel() {
-            cards.forEach(card =>
-                card.classList.remove("active", "prev", "next")
-            );
+        let cards = Array.from(track.querySelectorAll(".offer-card"));
+        let currentIndex = 3; // Start at the first original card
+        let isTransitioning = false;
 
-            const prevIndex = getIndex(currentIndex - 1);
-            const nextIndex = getIndex(currentIndex + 1);
+        function updateCarousel(instant = false) {
+            if (instant) {
+                track.style.transition = "none";
+            } else {
+                track.style.transition = "transform 0.4s ease";
+            }
 
-            cards[currentIndex].classList.add("active");
-            cards[prevIndex].classList.add("prev");
-            cards[nextIndex].classList.add("next");
+            const cardWidth = originalCards[0].offsetWidth + 12; // width + gap
+            const galleryWidth = track.parentElement.offsetWidth;
+            const centerOffset = (galleryWidth / 2) - (cardWidth / 2);
 
-            const cardWidth = cards[0].offsetWidth + 12; // gap = 12
-            const centerOffset =
-                (track.parentElement.offsetWidth / 2) - (cardWidth / 2);
+            const position = centerOffset - (currentIndex * cardWidth);
+            track.style.transform = `translateX(${position}px)`;
 
-            track.style.transform =
-                `translateX(${centerOffset - (currentIndex * cardWidth)}px)`;
+            // Highlight active, prev, next
+            cards.forEach((card, i) => {
+                card.classList.remove("active", "prev", "next");
+                if (i === currentIndex) card.classList.add("active");
+                if (i === currentIndex - 1) card.classList.add("prev");
+                if (i === currentIndex + 1) card.classList.add("next");
+            });
+
+            if (instant) {
+                // Force repaint
+                track.offsetHeight;
+            }
         }
 
+        function handleLoop() {
+            isTransitioning = false;
+            if (currentIndex <= 2) {
+                currentIndex = currentIndex + total;
+                updateCarousel(true);
+            } else if (currentIndex >= total + 3) {
+                currentIndex = currentIndex - total;
+                updateCarousel(true);
+            }
+        }
+
+        track.addEventListener("transitionend", handleLoop);
+
         nextBtn.addEventListener("click", () => {
-            currentIndex = getIndex(currentIndex + 1);
+            if (isTransitioning) return;
+            isTransitioning = true;
+            currentIndex++;
             updateCarousel();
         });
 
         prevBtn.addEventListener("click", () => {
-            currentIndex = getIndex(currentIndex - 1);
+            if (isTransitioning) return;
+            isTransitioning = true;
+            currentIndex--;
             updateCarousel();
         });
 
-        /* 👇 IMPORTANT: first render already circular */
-        updateCarousel();
+        // Initialize
+        updateCarousel(true);
     });
 </script>
 
