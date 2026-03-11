@@ -366,3 +366,39 @@
           * {
   font-family: 'Poppins', sans-serif !important;
 }
+
+
+/* AI */
+.fa-brain { color: #8e44ad; }          /* AI purple */
+.fa-robot { color: #00bcd4; }          /* automation cyan */
+.fa-python { color: #3776AB; }         /* official python */
+.fa-microchip { color: #ff9800; }      /* ML orange */
+.fa-database { color: #4caf50; }       /* data green */
+.fa-chart-line { color: #2196f3; }     /* analytics blue */
+.fa-comment-dots { color: #9c27b0; }   /* NLP purple */
+
+/* Security */
+.fa-shield-halved { color: #e53935; }  /* security red */
+.fa-lock { color: #ff9800; }           /* encryption orange */
+.fa-user-shield { color: #3949ab; }    /* identity blue */
+.fa-bug { color: #8bc34a; }            /* bug detection green */
+.fa-network-wired { color: #00acc1; }  /* network cyan */
+
+/* Automation */
+.fa-gear { color: #607d8b; }
+.fa-gears { color: #455a64; }
+.fa-bolt { color: #ffc107; }
+.fa-diagram-project { color: #3f51b5; }
+
+/* Application Modernization */
+.fa-cloud { color: #42a5f5; }
+.fa-layer-group { color: #7e57c2; }
+.fa-code { color: #26a69a; }
+.fa-arrows-rotate { color: #ff7043; }
+.fa-server { color: #546e7a; }
+
+/* Digital Transformation */
+.fa-chart-simple { color: #1e88e5; }
+.fa-cloud-arrow-up { color: #29b6f6; }
+.fa-mobile-screen { color: #66bb6a; }
+.fa-lightbulb { color: #fdd835; }
