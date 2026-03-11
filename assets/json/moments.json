@@ -2,32 +2,57 @@
     "2025": [
         {
             "urls": [
-                "assets/images/portfolio/pexels-photo-3184291.jpeg",
-                "assets/images/portfolio/pexels-photo-3183197.jpeg",
-                "assets/images/portfolio/pexels-photo-3184292.jpeg"
-            ],
-            "caption": "New Year Kickoff 2025"
+                "assets/images/life-at-emsyne/xmas and new_year/DSC03470.JPG",
+                "assets/images/life-at-emsyne/xmas and new_year/DSC03475.JPG",
+                "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.43 PM.jpeg",
+                "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.44 PM (1).jpeg",
+                "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.44 PM.jpeg",
+                "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.46 PM (1).jpeg",
+                "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.46 PM (2).jpeg",
+                "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.46 PM.jpeg",
+                "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.47 PM.jpeg",
+                "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.48 PM.jpeg",
+                "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.49 PM.jpeg"
+                ],
+            "caption": "Xmas & New Year Celebration 2025"
         },
         {
             "urls": [
-                "assets/images/portfolio/pexels-photo-3183197.jpeg",
-                "assets/images/portfolio/pexels-photo-3183150.jpeg"
+                "assets/images/life-at-emsyne/Onam 2025/DSC02979.JPG",
+                "assets/images/life-at-emsyne/Onam 2025/DSC02982.JPG",
+                "assets/images/life-at-emsyne/Onam 2025/DSC02983.JPG",
+                "assets/images/life-at-emsyne/Onam 2025/IMG_6618.jpg",
+                "assets/images/life-at-emsyne/Onam 2025/IMG_6734.jpg",
+                "assets/images/life-at-emsyne/Onam 2025/IMG_6775.jpg",
+                "assets/images/life-at-emsyne/Onam 2025/IMG_7009.jpg",
+                "assets/images/life-at-emsyne/Onam 2025/IMG_7033.jpg",
+                "assets/images/life-at-emsyne/Onam 2025/IMG_7040.jpg"           
             ],
-            "caption": "Tech Summit 2025"
+            "caption": "Onam Celebration 2025"
         },
         {
             "urls": [
-                "assets/images/portfolio/pexels-photo-3184292.jpeg",
-                "assets/images/portfolio/pexels-photo-3184291.jpeg"
+                "assets/images/life-at-emsyne/Trip/1000100195.jpg",
+                "assets/images/life-at-emsyne/Trip/1000102677.jpg"
             ],
-            "caption": "Innovation Lab Opening"
+            "caption": "Trip"
         },
         {
             "urls": [
-                "assets/images/portfolio/pexels-photo-3183150.jpeg",
-                "assets/images/portfolio/pexels-photo-3184296.jpeg"
+                "assets/images/life-at-emsyne/Medical Camp/WhatsApp Image 2025-12-29 at 3.56.22 PM (1).jpeg",
+                "assets/images/life-at-emsyne/Medical Camp/WhatsApp Image 2025-12-29 at 3.56.22 PM.jpeg",
+                "assets/images/life-at-emsyne/Medical Camp/WhatsApp Image 2025-12-29 at 3.56.23 PM (1).jpeg",
+                "assets/images/life-at-emsyne/Medical Camp/WhatsApp Image 2025-12-29 at 3.56.23 PM (2).jpeg",
+                "assets/images/life-at-emsyne/Medical Camp/WhatsApp Image 2025-12-29 at 3.56.24 PM (2).jpeg",
+                "assets/images/life-at-emsyne/Medical Camp/WhatsApp Image 2025-12-29 at 3.56.23 PM.jpeg"
             ],
-            "caption": "Collaboration Spaces"
+            "caption": "Medical Camp"
+        },
+        {
+            "urls": [
+                "assets/images/life-at-emsyne/Freshers Training/1000101617.jpg"
+            ],
+            "caption": "Freshers Training"
         },
         {
             "urls": [
@@ -45,13 +70,7 @@
         }
     ],
     "2024": [
-        {
-            "urls": [
-                "assets/images/life-at-emsyne-hero.png",
-                "assets/images/life-at-emsyne-culture-1.png"
-            ],
-            "caption": "Office Expansion 2024"
-        },
+        
         {
             "urls": [
                 "assets/images/life-at-emsyne-culture-1.png",

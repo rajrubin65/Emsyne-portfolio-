@@ -63,6 +63,12 @@
   background-color: #002a74;
 }
 
+.sbm {
+  background-color: #002a74 !important;
+  border-color: #002a74!important;
+  color: #fff !important;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .contact-img {

@@ -88,3 +88,8 @@ scroll-margin-top: 0px;
   width: 100%;
 }
  
+.sbm {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
