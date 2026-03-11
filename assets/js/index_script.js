@@ -158,24 +158,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = document.querySelector(".nav-btn.prev");
   const nextBtn = document.querySelector(".nav-btn.next");
   const rightContainer = document.querySelector('.right');
-  
+
   if (!rightContainer || !cards.length) return;
-  
+
   const serviceContainers = rightContainer.querySelectorAll('[data-service]');
-  
+
   // Function to show specific service and hide others
   function showService(serviceName) {
     // Hide all service content
     serviceContainers.forEach(container => {
       container.classList.remove('active');
     });
-    
+
     // Show the selected service
     const activeService = rightContainer.querySelector(`[data-service="${serviceName}"]`);
     if (activeService) {
       activeService.classList.add('active');
     }
-    
+
     // Update offer card styling
     cards.forEach(card => {
       if (card.getAttribute('data-service') === serviceName) {
@@ -185,12 +185,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  
+
   const total = cards.length;
   let currentIndex = 0;
-  
+
   const getIndex = (i) => (i + total) % total;
-  
+
   function updateCarouselAndService() {
     cards.forEach(card =>
       card.classList.remove("active", "prev", "next")
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     track.style.transform =
       `translateX(${centerOffset - (currentIndex * cardWidth)}px)`;
-    
+
     // Show corresponding service content
     const serviceName = cards[currentIndex].getAttribute('data-service');
     showService(serviceName);
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
       updateCarouselAndService();
     });
   });
-  
-  // Initialize with first service (web) visible on page load
+
+  // Initialize with first service (enterprise) visible on page load
   updateCarouselAndService();
 });

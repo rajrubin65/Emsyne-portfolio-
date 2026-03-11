@@ -1,0 +1,187 @@
+/* 
+   blog.css - Custom styles for the Coming Soon page with Unique White Theme
+*/
+
+.blog-coming-soon {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    /* Pure white background */
+    padding-top: 100px;
+}
+
+/* Unique White Textures / Pattern */
+.blog-coming-soon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(#f0f0f0 1px, transparent 1px),
+        radial-gradient(#f0f0f0 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.animation-container {
+    text-align: center;
+    z-index: 5;
+    position: relative;
+}
+
+/* Floating White-on-White Glass Elements */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 2;
+    background: #f8f9fa;
+    /* Very subtle off-white */
+    opacity: 0.8;
+    animation: float 15s infinite alternate ease-in-out;
+}
+
+.shape-1 {
+    width: 500px;
+    height: 500px;
+    top: -150px;
+    left: -150px;
+}
+
+.shape-2 {
+    width: 450px;
+    height: 450px;
+    bottom: -150px;
+    right: -150px;
+    animation-delay: -4s;
+}
+
+.shape-3 {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    right: 15%;
+    animation-duration: 20s;
+    background: #f1f3f5;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(60px, 40px) rotate(10deg);
+    }
+}
+
+/* Typography Styles */
+.coming-soon-title {
+    font-size: clamp(3.5rem, 12vw, 7rem);
+    font-weight: 800;
+    color: #002147;
+    /* Dark navy for contrast on white */
+    margin-bottom: 24px;
+    line-height: 0.9;
+    letter-spacing: -3px;
+    text-shadow: 0 10px 30px rgba(0, 33, 71, 0.05);
+}
+
+.coming-soon-title span {
+    display: inline-block;
+}
+
+.blog-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 650px;
+    margin: 0 auto 48px;
+    opacity: 0;
+    transform: translateY(20px);
+    font-weight: 400;
+}
+
+/* Subtle Animated Divider */
+.animation-accent {
+    width: 100px;
+    height: 2px;
+    background: #002147;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.animation-accent::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: sweep 3s infinite ease-in-out;
+}
+
+@keyframes sweep {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Bottom Tagline */
+.stay-tuned {
+    font-weight: 600;
+    color: #58ea01;
+    /* Secondary brand color */
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    display: block;
+    opacity: 1;
+}
+
+/* Glassmorphism Card (Optional Container) */
+.glass-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 70vh;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-coming-soon {
+        min-height: 70vh;
+    }
+
+    .coming-soon-title {
+        font-size: 4rem;
+        letter-spacing: -1px;
+    }
+
+    .shape {
+        width: 300px;
+        height: 300px;
+    }
+}
