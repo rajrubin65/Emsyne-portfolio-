@@ -311,6 +311,33 @@ document.addEventListener('DOMContentLoaded', () => {
         lightboxPrev.addEventListener('click', () => changeLightboxImage(-1));
     }
 
+    // Touch event listeners for swipe navigation on mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    if (lightboxImage) {
+        lightboxImage.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        lightboxImage.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+    }
+
+    function handleSwipe() {
+        const threshold = 50; // Minimum pixel distance to be considered a swipe
+        if (touchEndX < touchStartX - threshold) {
+            // Swiped left
+            changeLightboxImage(1);
+        }
+        if (touchEndX > touchStartX + threshold) {
+            // Swiped right
+            changeLightboxImage(-1);
+        }
+    }
+
     function updateLightboxProgress() {
         if (!lightboxProgress || currentLightboxImages.length <= 1) return;
         const total = currentLightboxImages.length - 1;

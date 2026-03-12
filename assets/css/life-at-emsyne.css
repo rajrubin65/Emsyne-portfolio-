@@ -826,20 +826,23 @@ body {
     }
 
     .lightbox-gallery-container {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
     .lightbox-image-wrapper {
         height: 55vw;
         max-height: 340px;
         width: 100%;
+        order: -1;
     }
 
     .lightbox-single-image {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .lightbox-nav {
