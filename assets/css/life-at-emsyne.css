@@ -1,5 +1,13 @@
 /* life-at-emsyne.css */
 
+/* Prevent horizontal scroll */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
 .life-at-emsyne-hero {
     position: relative;
     padding: 100px 0 60px;
@@ -790,5 +798,24 @@
 
     .life-at-emsyne-hero p {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .life-at-emsyne-hero h1 {
+        font-size: 1.8rem;
+        letter-spacing: -1px;
+    }
+
+    .life-at-emsyne-hero p {
+        font-size: 1rem;
+    }
+
+    .emsyne-bento-tile {
+        height: 280px;
+    }
+
+    .gallery-item {
+        height: 220px;
     }
 }

@@ -1,6 +1,11 @@
     /* Base body styles moved to assets/css/common.css */
 
-    /* Page-specific overrides can remain below (e.g., .container sizing) */
+    /* Prevent horizontal scroll */
+    html,
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
 
     /* body::-webkit-scrollbar {
       display: none;
@@ -81,7 +86,7 @@
       font-size: 50px;
       font-weight: 200;
       color: gray;
-      
+
     }
 
     .subheading {
@@ -121,7 +126,7 @@
     /* .container-text {
       color: #6a6a6a;
     } */
-     
+
 
     h2 {
       font-size: 24px;
@@ -143,7 +148,7 @@
       padding-left: 40px;
       border-left: 4px solid #58ea01;
       background-color: #f5f5f5;
-      
+
     }
 
     .blockquote {
@@ -336,98 +341,105 @@
       object-fit: cover;
     }
 
-   #conTest {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px 8px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: none;
-  position: relative;
-}
+    #conTest {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px 8px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: none;
+      position: relative;
+    }
 
-/* Container – no zoom on hover anymore */
-.carousel-container {
-  position: relative;
-  width: 1100px;
-  margin: 30px auto;
-  height: 250px;
-}
+    /* Container – no zoom on hover anymore */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      margin: 30px auto;
+      height: 250px;
+      overflow: hidden;
+    }
 
-#conTest .carousel {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  /* Removed transform: scale() from here */
-}
+    #conTest .carousel {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      /* Removed transform: scale() from here */
+    }
 
-/* Each panel gets its own hover zoom */
-#conTest .panel {
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 300px;
-  margin-right: 5px;
-  transition: transform 0.35s ease;
-  will-change: transform, left;
-}
+    /* Each panel gets its own hover zoom */
+    #conTest .panel {
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      box-sizing: border-box;
+      width: 300px;
+      margin-right: 5px;
+      transition: transform 0.35s ease;
+      will-change: transform, left;
+    }
 
-/* Zoom happens ONLY when hovering THIS specific panel */
-#conTest .panel:hover {
-  transform: scale(1.08);     /* adjust 1.06 – 1.12 depending on desired strength */
-  z-index: 5;                 /* bring hovered image slightly above others */
-}
+    /* Zoom happens ONLY when hovering THIS specific panel */
+    #conTest .panel:hover {
+      transform: scale(1.08);
+      /* adjust 1.06 – 1.12 depending on desired strength */
+      z-index: 5;
+      /* bring hovered image slightly above others */
+    }
 
-/* Optional: extra zoom inside the image for more depth */
-#conTest .panel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-  border-radius: 12px;   /* adjust value as needed */
-}
-#conTest .panel:hover img {
-  transform: scale(1.12);     /* inner image zooms a bit more → nice parallax-like feel */
-}
+    /* Optional: extra zoom inside the image for more depth */
+    #conTest .panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      border-radius: 12px;
+      /* adjust value as needed */
+    }
 
-/* ── Buttons ── */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-}
+    #conTest .panel:hover img {
+      transform: scale(1.12);
+      /* inner image zooms a bit more → nice parallax-like feel */
+    }
 
-.carousel-btn:hover {
-  background-color:#002a74;
-  transform: translateY(-50%) scale(1.1);
-}
+    /* ── Buttons ── */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
 
-.carousel-btn.prev {
-  left: -25px;
-}
+    .carousel-btn:hover {
+      background-color: #002a74;
+      transform: translateY(-50%) scale(1.1);
+    }
 
-.carousel-btn.next {
-  right: -25px;
-}
+    .carousel-btn.prev {
+      left: -25px;
+    }
 
-.carousel-btn:active {
-  transform: translateY(-50%) scale(0.95);
-}
+    .carousel-btn.next {
+      right: -25px;
+    }
+
+    .carousel-btn:active {
+      transform: translateY(-50%) scale(0.95);
+    }
 
     /* Tablets (<=992px) */
     @media (max-width: 992px) {
@@ -652,65 +664,112 @@
       }
     }
 
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      .heading_h1 {
+        font-size: 36px !important;
+        line-height: 1.2;
+      }
+
+      .heading_h2 {
+        font-size: 18px !important;
+      }
+
+      .subheading {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+
+      .containerwho {
+        padding: 0.75rem 15px;
+      }
+
+      .blockquote {
+        margin: 1.5rem 15px;
+      }
+
+      .carousel-container {
+        height: 180px;
+      }
+    }
+
     /* Reduce gap below About Us heading */
-.hero-title {
-  margin-bottom: 1.5rem !important;
-}
+    .hero-title {
+      margin-bottom: 1.5rem !important;
+    }
 
-header {
-  margin-bottom: 2rem; /* Reduce from 4rem */
-}
+    header {
+      margin-bottom: 2rem;
+      /* Reduce from 4rem */
+    }
 
-.first {
-  padding-top: 24px !important; /* Reduce from 80px */
-}
+    .first {
+      padding-top: 24px !important;
+      /* Reduce from 80px */
+    }
 
-@media (max-width: 768px) {
-   .hero-title {
-    font-size: 2.5rem !important;
-    line-height: 1.2;
-    font-weight: 700;
-  }
-  .first {
-    padding-top: 12px !important;
-  }
-   .first,
-  .first .h1who,
-  .first p,
-  .first .lead,
-  .first .container-text {
-    /* padding-left: 10px !important; */
-    text-align: left;
-  }
-}
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      .first {
+        padding-top: 12px !important;
+      }
+
+      .first,
+      .first .h1who,
+      .first p,
+      .first .lead,
+      .first .container-text {
+        /* padding-left: 10px !important; */
+        text-align: left;
+      }
+    }
 
     * {
-  font-family: 'Poppins', sans-serif !important;
-}
+      font-family: 'Poppins', sans-serif !important;
+    }
 
-.emsyne-panel-0 {
-    left: 0px;
-}
-.emsyne-panel-1 {
-    left: 305px;
-}
-.emsyne-panel-2 {
-    left: 610px;
-}
-.emsyne-panel-3 {
-    left: 915px;
-}
-.emsyne-panel-4 {
-    left: 1220px;
-}
+    .emsyne-panel-0 {
+      left: 0px;
+    }
+
+    .emsyne-panel-1 {
+      left: 305px;
+    }
+
+    .emsyne-panel-2 {
+      left: 610px;
+    }
+
+    .emsyne-panel-3 {
+      left: 915px;
+    }
+
+    .emsyne-panel-4 {
+      left: 1220px;
+    }
 
     /* Override Bootstrap container width at large breakpoints for About Us page */
     @media (min-width: 1200px) {
-      .container, .container-lg, .container-md, .container-sm, .container-xl {
+
+      .container,
+      .container-lg,
+      .container-md,
+      .container-sm,
+      .container-xl {
         max-width: 1200px !important;
       }
     }
 
-.sec_2{
-  padding-top: 30px ;
-}
+    .sec_2 {
+      padding-top: 30px;
+    }

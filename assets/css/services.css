@@ -1,14 +1,11 @@
  /* Base body styles moved to assets/css/common.css */
 
-
- /* body::-webkit-scrollbar {
-      display: none;
-    }
-
-    html {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    } */
+ /* Prevent horizontal scroll */
+ html,
+ body {
+   overflow-x: hidden;
+   width: 100%;
+ }
 
  .container {
    width: 100%;

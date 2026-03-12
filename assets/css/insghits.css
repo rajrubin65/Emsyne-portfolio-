@@ -8,7 +8,11 @@
       }
 
       /* Base body styles moved to assets/css/common.css; keep page variables in this file */
-
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+      }
 
       .subheading {
         /* Corrected from .hero-subtitle to match your HTML */
@@ -58,7 +62,7 @@
       }
 
       .plus-list li::before {
-        content: "○"; 
+        content: "○";
         position: absolute;
         left: 0;
         font-weight: 600;
@@ -355,6 +359,7 @@
           min-height: unset;
         }
       }
+
       .container {
         width: 100%;
         max-width: 1280px;
@@ -363,42 +368,142 @@
         padding: 20px 25px;
       }
 
-          * {
-  font-family: 'Poppins', sans-serif !important;
-}
+      * {
+        font-family: 'Poppins', sans-serif !important;
+      }
 
 
-/* AI */
-.fa-brain { color: #8e44ad; }          /* AI purple */
-.fa-robot { color: #00bcd4; }          /* automation cyan */
-.fa-python { color: #3776AB; }         /* official python */
-.fa-microchip { color: #ff9800; }      /* ML orange */
-.fa-database { color: #4caf50; }       /* data green */
-.fa-chart-line { color: #2196f3; }     /* analytics blue */
-.fa-comment-dots { color: #9c27b0; }   /* NLP purple */
+      /* AI */
+      .fa-brain {
+        color: #8e44ad;
+      }
 
-/* Security */
-.fa-shield-halved { color: #e53935; }  /* security red */
-.fa-lock { color: #ff9800; }           /* encryption orange */
-.fa-user-shield { color: #3949ab; }    /* identity blue */
-.fa-bug { color: #8bc34a; }            /* bug detection green */
-.fa-network-wired { color: #00acc1; }  /* network cyan */
+      /* AI purple */
+      .fa-robot {
+        color: #00bcd4;
+      }
 
-/* Automation */
-.fa-gear { color: #607d8b; }
-.fa-gears { color: #455a64; }
-.fa-bolt { color: #ffc107; }
-.fa-diagram-project { color: #3f51b5; }
+      /* automation cyan */
+      .fa-python {
+        color: #3776AB;
+      }
 
-/* Application Modernization */
-.fa-cloud { color: #42a5f5; }
-.fa-layer-group { color: #7e57c2; }
-.fa-code { color: #26a69a; }
-.fa-arrows-rotate { color: #ff7043; }
-.fa-server { color: #546e7a; }
+      /* official python */
+      .fa-microchip {
+        color: #ff9800;
+      }
 
-/* Digital Transformation */
-.fa-chart-simple { color: #1e88e5; }
-.fa-cloud-arrow-up { color: #29b6f6; }
-.fa-mobile-screen { color: #66bb6a; }
-.fa-lightbulb { color: #fdd835; }
+      /* ML orange */
+      .fa-database {
+        color: #4caf50;
+      }
+
+      /* data green */
+      .fa-chart-line {
+        color: #2196f3;
+      }
+
+      /* analytics blue */
+      .fa-comment-dots {
+        color: #9c27b0;
+      }
+
+      /* NLP purple */
+
+      /* Security */
+      .fa-shield-halved {
+        color: #e53935;
+      }
+
+      /* security red */
+      .fa-lock {
+        color: #ff9800;
+      }
+
+      /* encryption orange */
+      .fa-user-shield {
+        color: #3949ab;
+      }
+
+      /* identity blue */
+      .fa-bug {
+        color: #8bc34a;
+      }
+
+      /* bug detection green */
+      .fa-network-wired {
+        color: #00acc1;
+      }
+
+      /* network cyan */
+
+      /* Automation */
+      .fa-gear {
+        color: #607d8b;
+      }
+
+      .fa-gears {
+        color: #455a64;
+      }
+
+      .fa-bolt {
+        color: #ffc107;
+      }
+
+      .fa-diagram-project {
+        color: #3f51b5;
+      }
+
+      /* Application Modernization */
+      .fa-cloud {
+        color: #42a5f5;
+      }
+
+      .fa-layer-group {
+        color: #7e57c2;
+      }
+
+      .fa-code {
+        color: #26a69a;
+      }
+
+      .fa-arrows-rotate {
+        color: #ff7043;
+      }
+
+      .fa-server {
+        color: #546e7a;
+      }
+
+      /* Digital Transformation */
+      .fa-chart-simple {
+        color: #1e88e5;
+      }
+
+      .fa-cloud-arrow-up {
+        color: #29b6f6;
+      }
+
+      .fa-mobile-screen {
+        color: #66bb6a;
+      }
+
+      .fa-lightbulb {
+        color: #fdd835;
+      }
+
+      /* Extra Small (<=480px) */
+      @media (max-width: 480px) {
+        .commitment-heading {
+          font-size: 2rem;
+          letter-spacing: -1px;
+        }
+
+        .tech-stack-heading {
+          font-size: 1.5rem;
+        }
+
+        .commitment-image {
+          min-height: 220px;
+        }
+      }
