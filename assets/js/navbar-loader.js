@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetch the navbar HTML
     const response = await fetch("components/navbar.html");
     if (!response.ok) throw new Error(`Failed to load navbar: ${response.statusText}`);
-    
+
     const navbarHtml = await response.text();
-    
+
     // Create a placeholder element if it doesn't exist
     let navbarContainer = document.getElementById("navbar-container");
     if (!navbarContainer) {
@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       navbarContainer.id = "navbar-container";
       document.body.insertBefore(navbarContainer, document.body.firstChild);
     }
-    
+
     // Insert the navbar HTML
     navbarContainer.innerHTML = navbarHtml;
-    
+
     // Initialize navbar functionality (hamburger menu, overlay, etc.)
     initializeNavbar();
   } catch (error) {

@@ -1,7 +1,6 @@
  /* Base body styles moved to assets/css/common.css */
 
  /* Prevent horizontal scroll */
- html,
  body {
    overflow-x: hidden;
    width: 100%;

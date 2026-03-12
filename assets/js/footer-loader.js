@@ -1,6 +1,6 @@
 /**
  * Footer Loader
- * Dynamically loads the footer component from components/footer.html
+ * Dynamically loads the footer component and cookie popup
  * into pages that use it.
  */
 
@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Insert the footer HTML
     footerContainer.innerHTML = footerHtml;
 
+    // Load Cookie Popup
+    loadCookiePopup();
+
     // Initialize Legal Modals
     setupLegalModal("open-terms-modal", "close-terms-modal", "terms-modal");
     setupLegalModal("open-privacy-modal", "close-privacy-modal", "privacy-modal");
@@ -41,6 +44,44 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error loading footer:", error);
   }
 });
+
+/**
+ * Loads the cookie consent popup dynamically
+ */
+async function loadCookiePopup() {
+  try {
+    // 1. Inject CSS
+    const cssId = 'cookie-popup-css';
+    if (!document.getElementById(cssId)) {
+      const link = document.createElement('link');
+      link.id = cssId;
+      link.rel = 'stylesheet';
+      link.href = 'assets/css/cookie_popup.css';
+      document.head.appendChild(link);
+    }
+
+    // 2. Fetch and Inject HTML
+    const response = await fetch("components/cookie_popup.html");
+    if (response.ok) {
+      const popupHtml = await response.text();
+      const popupContainer = document.createElement("div");
+      popupContainer.innerHTML = popupHtml;
+      document.body.appendChild(popupContainer);
+
+      // 3. Load Script and Initialize
+      const script = document.createElement('script');
+      script.src = 'assets/js/cookie_manager.js';
+      script.onload = () => {
+        if (typeof window.initCookiePopup === 'function') {
+          window.initCookiePopup();
+        }
+      };
+      document.body.appendChild(script);
+    }
+  } catch (error) {
+    console.error("Error loading cookie popup:", error);
+  }
+}
 
 /**
  * Setup Legal Modal functionality
