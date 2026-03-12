@@ -799,6 +799,72 @@ body {
     .life-at-emsyne-hero p {
         font-size: 1.1rem;
     }
+
+    /* Gallery: show 2 cards on tablet */
+    .gallery-item {
+        flex: 0 0 calc((100% - 25px) / 2);
+        height: 240px;
+    }
+
+    /* Lightbox: full-screen popup on mobile */
+    .lightbox-content {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 12px;
+    }
+
+    .lightbox-close {
+        top: 16px;
+        right: 16px;
+        font-size: 1.6rem;
+        position: fixed;
+        z-index: 10001;
+    }
+
+    .lightbox-gallery-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .lightbox-image-wrapper {
+        height: 55vw;
+        max-height: 340px;
+        width: 100%;
+    }
+
+    .lightbox-single-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .lightbox-nav {
+        display: none;
+        /* hide side navs on mobile — use swipe or caption nav */
+    }
+
+    .lightbox-caption-list-container {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .lightbox-caption-window {
+        max-width: 80%;
+    }
+
+    .lightbox-caption-list li {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .lightbox-progress-wrapper {
+        width: 140px;
+        margin-top: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -811,11 +877,42 @@ body {
         font-size: 1rem;
     }
 
+    /* Gallery: show 1 card per view on very small phones */
+    .gallery-item {
+        flex: 0 0 calc(100% - 10px);
+        height: 220px;
+    }
+
+    .gallery-track {
+        gap: 15px;
+        padding: 15px 5px 0;
+    }
+
+    /* Lightbox popup adjustments for small phones */
+    .lightbox-image-wrapper {
+        height: 50vw;
+        max-height: 260px;
+    }
+
+    .lightbox-caption-list li {
+        font-size: 0.85rem;
+    }
+
+    .lightbox-caption-window {
+        max-width: 100%;
+    }
+
+    .lightbox-gallery-container {
+        gap: 6px;
+    }
+
     .emsyne-bento-tile {
         height: 280px;
     }
 
-    .gallery-item {
-        height: 220px;
+    /* Forward/back inline caption nav buttons — keep visible */
+    .lightbox-caption-nav {
+        font-size: 1.2rem;
+        padding: 0 6px;
     }
 }
