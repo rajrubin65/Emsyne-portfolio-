@@ -94,6 +94,15 @@ body::before {
 
 
 
+/* ===== Mission & Vision – mobile heading alignment ===== */
+@media (max-width: 767.98px) {
+    .vision .col-md-6 h5,
+    .vision .col-md-6 h2,
+    .vision .col-md-6 p {
+        text-align: center;
+    }
+}
+
 /* Hero section */
 .hero__v6 {
     position: relative;

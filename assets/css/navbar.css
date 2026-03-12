@@ -41,6 +41,8 @@
 
 .logo-img {
     height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Desktop Menu */
@@ -300,6 +302,8 @@
     .logo-img {
         display: block !important;
         height: 40px;
+        width: auto;
+        object-fit: contain;
     }
 
     /* Mobile Dropdown styles */
