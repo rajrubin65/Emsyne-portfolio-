@@ -173,14 +173,14 @@ updateCrewCarousel(0);
 
 /* ================= Service Carousel Content Switcher ================= */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initServiceCarousel() {
   const track = document.querySelector(".offer-track");
   const cards = Array.from(document.querySelectorAll(".offer-card"));
   const prevBtn = document.querySelector(".nav-btn.prev");
   const nextBtn = document.querySelector(".nav-btn.next");
   const rightContainer = document.querySelector('.right');
 
-  if (!rightContainer || !cards.length) return;
+  if (!rightContainer || !cards.length || !track) return;
 
   const serviceContainers = rightContainer.querySelectorAll('[data-service]');
 
@@ -233,18 +233,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Real index (accounting for clones at the start)
     const activeIndex = currentIndex + cloneCount;
-    allCards[activeIndex].classList.add("active");
-    allCards[activeIndex - 1].classList.add("prev");
-    allCards[activeIndex + 1].classList.add("next");
+    
+    if (allCards[activeIndex]) {
+      allCards[activeIndex].classList.add("active");
+      if (allCards[activeIndex - 1]) allCards[activeIndex - 1].classList.add("prev");
+      if (allCards[activeIndex + 1]) allCards[activeIndex + 1].classList.add("next");
 
-    const cardWidth = cards[0].offsetWidth + 12; // gap = 12
-    const centerOffset = (track.parentElement.offsetWidth / 2) - (cardWidth / 2);
+      const cardWidth = cards[0].offsetWidth + 12; // gap = 12
+      const centerOffset = (track.parentElement.offsetWidth / 2) - (cardWidth / 2);
 
-    track.style.transform = `translateX(${centerOffset - (activeIndex * cardWidth)}px)`;
+      track.style.transform = `translateX(${centerOffset - (activeIndex * cardWidth)}px)`;
 
-    // Show corresponding service content
-    const serviceName = allCards[activeIndex].getAttribute('data-service');
-    showService(serviceName);
+      // Show corresponding service content
+      const serviceName = allCards[activeIndex].getAttribute('data-service');
+      showService(serviceName);
+    }
 
     if (instant) {
       // Force repaint
@@ -303,7 +306,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
   // Initialize
   updateCarouselAndService(true);
-});
+}
+
+// Handle initialization safely regardless of when script loads
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initServiceCarousel);
+} else {
+  initServiceCarousel();
+}
