@@ -4,6 +4,12 @@
 /* General body styling */
 /* Base body styles moved to assets/css/common.css; retaining background overlay below */
 
+/* Prevent horizontal scroll globally */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
 
 body::before {
     content: "";
@@ -28,7 +34,19 @@ body::before {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.4rem;
+}
 
+@media (max-width: 991.98px) {
+    .sticky-heading {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sticky-heading {
+        font-size: 28px;
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* Common span behavior */
@@ -97,8 +115,10 @@ body::before {
     z-index: 1;
     color: white;
     height: 100%;
-    display: flex;
+    display: flex !important;
+    /* Keep hero container as flex regardless of media query */
     align-items: center;
+    /* Override block display that the media query sets */
 }
 
 /* General section styling */
@@ -106,17 +126,36 @@ body::before {
     padding: 50px 0 50px 0;
 }
 
-.container {
-    display: flex;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+@media (min-width: 992px) {
+    .container {
+        display: flex;
+        gap: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .left,
+    .right {
+        flex: 1;
+    }
 }
 
-.left,
-.right {
-    flex: 1;
+@media (max-width: 991.98px) {
+    .container {
+        display: block;
+        /* Let Bootstrap or standard block layout take over */
+        padding: 0 20px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        margin-bottom: 30px;
+    }
 }
 
 /* LEFT SIDE */
@@ -795,7 +834,7 @@ button.learn-more:hover .button-text {
 }
 
 .crew-arrow:hover {
-    background:#002a74;
+    background: #002a74;
     color: #58ea01;
 }
 
@@ -1030,23 +1069,13 @@ button.learn-more:hover .button-text {
 
 /* Tablet and below (max-width: 900px) */
 @media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-        gap: 30px;
-        padding: 0 15px;
-    }
 
+    /* DO NOT re-enable flex on .container here — already handled above */
     .left,
     .right {
         flex: unset;
         width: 100%;
     }
-
-    .right {
-        gap: 80px;
-        margin-top: 60px;
-    }
-
 
     .title {
         font-size: 32px;
@@ -1058,10 +1087,8 @@ button.learn-more:hover .button-text {
     }
 
     .section {
-        padding: 80px 0 100px 0;
+        padding: 60px 0 80px 0;
     }
-
-
 
     .about__v4 {
         padding: 40px 15px;
@@ -1070,28 +1097,24 @@ button.learn-more:hover .button-text {
     .about__v4 h2 {
         font-size: 3rem;
     }
-
-
 }
 
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
 
     .hero__v6 .container {
-        padding: 0 15px;
-        height: 50vh;
+        padding: 0 15px !important;
     }
 
     .section {
-        padding: 60px 0 80px 0;
+        padding: 50px 0 60px 0;
     }
 
     .container {
-        gap: 20px;
-        padding: 0 10px;
+        display: block !important;
+        /* Ensure block layout on mobile */
+        padding: 0 10px !important;
     }
-
-
 
     .title {
         font-size: 28px;
@@ -1105,21 +1128,13 @@ button.learn-more:hover .button-text {
         font-size: 18px;
     }
 
-    .right {
-        gap: 60px;
-    }
-
-
     .about__v4 {
         padding: 30px 10px;
     }
 
     .about__v4 h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
-
-
-
 }
 
 /* Make sure portfolio section layout doesn't inherit "about" styles */
@@ -1161,6 +1176,28 @@ button.learn-more:hover .button-text {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+@media (max-width: 991.98px) {
+    .services .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .services .left,
+    .services .right {
+        width: 100%;
+        flex: none;
+    }
+
+    .services .left {
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
+    .services .right {
+        gap: 20px;
+    }
 }
 
 /* Left & Right Columns */
@@ -1511,14 +1548,16 @@ button.learn-more:hover .button-text {
 }
 
 /* ================================
-   Global Container Adjustments
+   Global Container Adjustments (Desktop only)
 =================================*/
-.container:not(.testimonials__v2 .container):not(.contact__v2 .container):not(.footer .container) {
-    display: flex;
-    gap: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+@media (min-width: 992px) {
+    .container:not(.testimonials__v2 .container):not(.contact__v2 .container):not(.footer .container) {
+        display: flex;
+        gap: 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 }
 
 /* ================================
