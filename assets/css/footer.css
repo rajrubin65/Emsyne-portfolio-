@@ -173,6 +173,7 @@
 
 /* Tablet + Mobile ≤ 991px */
 @media (max-width: 991px) {
+
   /* Stack credits text and social buttons */
   .footer .credits {
     flex-direction: column;
@@ -188,6 +189,7 @@
 
 /* Mobile ≤ 767px */
 @media (max-width: 767px) {
+
   .footer .col-md-4,
   .footer .col-md-5,
   .footer .col-md-7,
@@ -215,110 +217,110 @@
 }
 
 
-    header h1 {
-      font-size: 4.5rem;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-    }
+header h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
 
-    .heading_h1 {
-      margin: 0;
-      font-size: 116px;
-      font-weight: 500;
-      line-height: 94%;
-      padding-left: 25px;
-      padding-top: 30px;
-    }
+.heading_h1 {
+  margin: 0;
+  font-size: 116px;
+  font-weight: 500;
+  line-height: 94%;
+  padding-left: 25px;
+  padding-top: 30px;
+}
 
-    .heading_h1 span {
-      color: gray;
-    }
+.heading_h1 span {
+  color: gray;
+}
 
-    .heading_h2 {
-      margin: 0;
-      font-size: 50px;
-      font-weight: 200;
-      color: gray;
-      
-    }
+.heading_h2 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: 200;
+  color: gray;
 
-    .subheading {
-      padding-top: 30px;
-      font-size: 1.2rem;
-      font-weight: 500;
-      /* color: #555; */
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-top: 10px;
-      display: inline-block;
-      padding-left: 25px;
-    }
+}
 
-    .main_heading {
-      padding-top: 40px;
-      padding-bottom: 1px;
-    }
+.subheading {
+  padding-top: 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* color: #555; */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  display: inline-block;
+  padding-left: 25px;
+}
 
-     /* --- Breadcrumb styles --- */
-        .breadcrumb-link {
-            color: #888888;
-            transition: color 0.3s ease;
-            text-decoration: none;
-        }
+.main_heading {
+  padding-top: 40px;
+  padding-bottom: 1px;
+}
 
-        .breadcrumb-link:hover {
-            color: #111111;
-        }
+/* --- Breadcrumb styles --- */
+.breadcrumb-link {
+  color: #888888;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
 
-        .breadcrumb-separator {
-            color: #888888;
-            font-size: 0.8rem;
-            margin: 0 5px;
-        }
+.breadcrumb-link:hover {
+  color: #111111;
+}
 
-        .breadcrumb-item.active {
-            font-weight: 500;
-            color: #000000;
-        }
+.breadcrumb-separator {
+  color: #888888;
+  font-size: 0.8rem;
+  margin: 0 5px;
+}
 
-        .breadcrumb-item+.breadcrumb-item::before {
-            display: none;
-        }
+.breadcrumb-item.active {
+  font-weight: 500;
+  color: #000000;
+}
 
-         /* --- Hero Section --- */
-        .hero {
-            background-color: #fff;
-        }
+.breadcrumb-item+.breadcrumb-item::before {
+  display: none;
+}
 
-        .hero-title {
-            font-size: 4rem;
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -3px;
-        }
+/* --- Hero Section --- */
+.hero {
+  background-color: #fff;
+}
 
-        .hero-title .color {
-            color: #a0a0a0;
-        }
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -3px;
+}
+
+.hero-title .color {
+  color: #a0a0a0;
+}
 
 
-          /* --- Responsive Design --- */
-        @media (max-width: 991px) {
+/* --- Responsive Design --- */
+@media (max-width: 991px) {
 
-            .hero-title {
-                font-size: 4rem;
-                letter-spacing: -2px;
-            }
-        }
+  .hero-title {
+    font-size: 4rem;
+    letter-spacing: -2px;
+  }
+}
 
-        @media (max-width: 767px) {
+@media (max-width: 767px) {
 
-            .hero-title {
-                font-size: 3rem;
-            }
+  .hero-title {
+    font-size: 3rem;
+  }
 
-        }
+}
 
 .fa,
 .fas,
@@ -330,27 +332,28 @@
   font-family: "Font Awesome 6 Free" !important;
 }
 
-.fab, .fa-brands {
+.fab,
+.fa-brands {
   font-family: "Font Awesome 6 Brands" !important;
 }
 
 .footer-address-row {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 /* left */
 .adds_left {
-    text-align: left;
+  text-align: left;
 }
 
 /* center */
 .adds_center {
-    text-align: center;
+  text-align: center;
 }
 
 /* right */
 .adds_right {
-    text-align: right;
+  text-align: right;
 }
 
 .logo-wrapper {
@@ -359,17 +362,183 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px; /* rectangle with soft edges */
+  border-radius: 20px;
+  /* rectangle with soft edges */
   width: fit-content;
   margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
+
 .brand-info {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .logo-img {
-  width: 100px;   /* adjust logo size here */
+  width: 100px;
+  /* adjust logo size here */
   height: auto;
 }
 
+/* ================================
+   Terms & Conditions Modal
+=================================*/
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-modal.active {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.modal-content-wrapper {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalReveal 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes modalReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 25px 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  z-index: 2;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #002147;
+}
+
+.close-btn {
+  background: #f8f9fa;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #002147;
+}
+
+.close-btn:hover {
+  background: #002147;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 35px;
+  overflow-y: auto;
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+}
+
+.modal-body h4 {
+  color: #002147;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.modal-body p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.modal-body ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.modal-body li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.effective-date {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* Scrollbar Styling for Modal */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+@media (max-width: 576px) {
+  .modal-content-wrapper {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .modal-header {
+    padding: 20px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+}

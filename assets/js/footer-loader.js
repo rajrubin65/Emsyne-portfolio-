@@ -9,19 +9,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetch the footer HTML
     const response = await fetch("components/footer.html");
     if (!response.ok) throw new Error(`Failed to load footer: ${response.statusText}`);
-    
+
     const footerHtml = await response.text();
-    
+
     // Create a placeholder element if it doesn't exist
     let footerContainer = document.getElementById("footer-container");
     if (!footerContainer) {
       footerContainer = document.createElement("div");
       footerContainer.id = "footer-container";
-      
+
       // Insert footer before the back-to-top button or at the end of main
       const main = document.querySelector("main");
       const backToTop = document.getElementById("back-to-top");
-      
+
       if (backToTop) {
         backToTop.parentElement.insertBefore(footerContainer, backToTop);
       } else if (main) {
@@ -30,10 +30,45 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.body.appendChild(footerContainer);
       }
     }
-    
+
     // Insert the footer HTML
     footerContainer.innerHTML = footerHtml;
+
+    // Initialize Legal Modals
+    setupLegalModal("open-terms-modal", "close-terms-modal", "terms-modal");
+    setupLegalModal("open-privacy-modal", "close-privacy-modal", "privacy-modal");
   } catch (error) {
     console.error("Error loading footer:", error);
   }
 });
+
+/**
+ * Setup Legal Modal functionality
+ * @param {string} openId - ID of the button to open the modal
+ * @param {string} closeId - ID of the button to close the modal
+ * @param {string} modalId - ID of the modal container
+ */
+function setupLegalModal(openId, closeId, modalId) {
+  const openBtn = document.getElementById(openId);
+  const closeBtn = document.getElementById(closeId);
+  const modal = document.getElementById(modalId);
+  const overlay = modal?.querySelector(".modal-overlay");
+
+  if (!openBtn || !modal) return;
+
+  const toggleModal = (show) => {
+    modal.classList.toggle("active", show);
+    document.body.classList.toggle("no-scroll", show);
+  };
+
+  openBtn.addEventListener("click", () => toggleModal(true));
+  closeBtn?.addEventListener("click", () => toggleModal(false));
+  overlay?.addEventListener("click", () => toggleModal(false));
+
+  // Close on ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      toggleModal(false);
+    }
+  });
+}
