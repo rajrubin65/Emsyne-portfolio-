@@ -86,12 +86,16 @@ const leftBtn = document.querySelector(".crew-left");
 const rightBtn = document.querySelector(".crew-right");
 let crewIndex = 0;
 let crewAnimating = false;
+
 function updateCrewCarousel(newIndex) {
   if (crewAnimating) return;
   crewAnimating = true;
-  crewIndex = (newIndex + crewCards.length) % crewCards.length;
+
+  const total = crewCards.length;
+  // Handle continuous loop in both directions
+  crewIndex = (newIndex % total + total) % total;
+
   crewCards.forEach((card, i) => {
-    const offset = (i - crewIndex + crewCards.length) % crewCards.length;
     card.classList.remove(
       "center",
       "left-1",
@@ -100,45 +104,62 @@ function updateCrewCarousel(newIndex) {
       "right-2",
       "hidden"
     );
-    if (offset === 0) card.classList.add("center");
-    else if (offset === 1) card.classList.add("right-1");
-    else if (offset === 2) card.classList.add("right-2");
-    else if (offset === crewCards.length - 1)
-      card.classList.add("left-1");
-    else if (offset === crewCards.length - 2)
-      card.classList.add("left-2");
-    else card.classList.add("hidden");
-    // Set proper opacity and visibility
-    if (!card.classList.contains("hidden")) {
+
+    // Calculate distance forward and backward to find shortest path in the ring
+    let distForward = (i - crewIndex + total) % total;
+    let distBackward = (crewIndex - i + total) % total;
+
+    if (distForward === 0) {
+      card.classList.add("center");
       card.style.opacity = 1;
       card.style.visibility = "visible";
+    } else if (distForward === 1) {
+      card.classList.add("right-1");
+      card.style.opacity = 1;
+      card.style.visibility = "visible";
+    } else if (distForward === 2) {
+      card.classList.add("right-2");
+      card.style.opacity = 0.6; // Keep visible but faded per CSS
+      card.style.visibility = "visible";
+    } else if (distBackward === 1) {
+      card.classList.add("left-1");
+      card.style.opacity = 1;
+      card.style.visibility = "visible";
+    } else if (distBackward === 2) {
+      card.classList.add("left-2");
+      card.style.opacity = 0.6;
+      card.style.visibility = "visible";
     } else {
+      card.classList.add("hidden");
       card.style.opacity = 0;
       card.style.visibility = "hidden";
     }
   });
+
   setTimeout(() => {
     crewAnimating = false;
   }, 800);
 }
-leftBtn.addEventListener("click", () =>
-  updateCrewCarousel(crewIndex - 1)
-);
-rightBtn.addEventListener("click", () =>
-  updateCrewCarousel(crewIndex + 1)
-);
+
+leftBtn.addEventListener("click", () => updateCrewCarousel(crewIndex - 1));
+rightBtn.addEventListener("click", () => updateCrewCarousel(crewIndex + 1));
+
 crewCards.forEach((card, i) =>
   card.addEventListener("click", () => updateCrewCarousel(i))
 );
+
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") updateCrewCarousel(crewIndex - 1);
   else if (e.key === "ArrowRight") updateCrewCarousel(crewIndex + 1);
 });
+
 let touchStart = 0;
 let touchEnd = 0;
+
 document.addEventListener("touchstart", (e) => {
   touchStart = e.changedTouches[0].screenX;
 });
+
 document.addEventListener("touchend", (e) => {
   touchEnd = e.changedTouches[0].screenX;
   const diff = touchStart - touchEnd;
@@ -188,57 +209,101 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const total = cards.length;
   let currentIndex = 0;
+  let isTransitioning = false;
 
-  const getIndex = (i) => (i + total) % total;
+  // Clone items for infinite loop
+  const cloneCount = 3;
+  for (let i = 0; i < cloneCount; i++) {
+    const firstClone = cards[i].cloneNode(true);
+    const lastClone = cards[total - 1 - i].cloneNode(true);
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, track.firstChild);
+  }
 
-  function updateCarouselAndService() {
-    cards.forEach(card =>
-      card.classList.remove("active", "prev", "next")
-    );
+  const allCards = Array.from(track.querySelectorAll(".offer-card"));
 
-    const prevIndex = getIndex(currentIndex - 1);
-    const nextIndex = getIndex(currentIndex + 1);
+  function updateCarouselAndService(instant = false) {
+    if (instant) {
+      track.style.transition = 'none';
+    } else {
+      track.style.transition = 'transform 0.8s ease';
+    }
 
-    cards[currentIndex].classList.add("active");
-    cards[prevIndex].classList.add("prev");
-    cards[nextIndex].classList.add("next");
+    allCards.forEach(card => card.classList.remove("active", "prev", "next"));
+
+    // Real index (accounting for clones at the start)
+    const activeIndex = currentIndex + cloneCount;
+    allCards[activeIndex].classList.add("active");
+    allCards[activeIndex - 1].classList.add("prev");
+    allCards[activeIndex + 1].classList.add("next");
 
     const cardWidth = cards[0].offsetWidth + 12; // gap = 12
-    const centerOffset =
-      (track.parentElement.offsetWidth / 2) - (cardWidth / 2);
+    const centerOffset = (track.parentElement.offsetWidth / 2) - (cardWidth / 2);
 
-    track.style.transform =
-      `translateX(${centerOffset - (currentIndex * cardWidth)}px)`;
+    track.style.transform = `translateX(${centerOffset - (activeIndex * cardWidth)}px)`;
 
     // Show corresponding service content
-    const serviceName = cards[currentIndex].getAttribute('data-service');
+    const serviceName = allCards[activeIndex].getAttribute('data-service');
     showService(serviceName);
+
+    if (instant) {
+      // Force repaint
+      track.offsetHeight;
+    }
   }
+
+  function handleBoundary() {
+    if (currentIndex >= total) {
+      currentIndex = 0;
+      updateCarouselAndService(true);
+    } else if (currentIndex < 0) {
+      currentIndex = total - 1;
+      updateCarouselAndService(true);
+    }
+  }
+
+  track.addEventListener('transitionend', () => {
+    isTransitioning = false;
+    handleBoundary();
+  });
 
   // Navigation button handlers
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
-      currentIndex = getIndex(currentIndex + 1);
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex++;
       updateCarouselAndService();
     });
   }
 
   if (prevBtn) {
     prevBtn.addEventListener("click", () => {
-      currentIndex = getIndex(currentIndex - 1);
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex--;
       updateCarouselAndService();
     });
   }
 
-  // Add click handlers to offer cards
-  cards.forEach((card, i) => {
+  // Add click handlers to offer cards (including clones)
+  allCards.forEach((card, i) => {
     card.addEventListener('click', (e) => {
+      if (isTransitioning) return;
       e.stopPropagation();
-      currentIndex = i;
+
+      // Calculate the correct actual index, even if a clone is clicked
+      let actualIndex = i - cloneCount;
+      if (actualIndex >= total) actualIndex -= total;
+      if (actualIndex < 0) actualIndex += total;
+
+      currentIndex = actualIndex;
+      isTransitioning = true;
       updateCarouselAndService();
     });
   });
 
-  // Initialize with first service (enterprise) visible on page load
-  updateCarouselAndService();
+
+  // Initialize
+  updateCarouselAndService(true);
 });

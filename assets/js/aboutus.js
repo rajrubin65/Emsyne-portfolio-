@@ -39,20 +39,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!container || !prevBtn || !nextBtn) return;
 
-  const panelWidth = 305;           // width 300px + margin-right 5px
+  let panelWidth = 305;
+  const firstPanel = carouselElement.querySelector('.panel');
+  if (firstPanel) {
+    // Get width + margin-right
+    const style = window.getComputedStyle(firstPanel);
+    const marginRight = parseFloat(style.marginRight) || 0;
+    panelWidth = firstPanel.offsetWidth + marginRight;
+  }
+
   let animationFrameId = null;
   let isHovered = false;
   let isManualActive = false;
   let direction = -1;               // -1 = left (auto), +1 = right
   let speed = 0.5;                  // px per frame – auto speed
 
+  // Initialize panel positions
+  const panels = carouselElement.querySelectorAll('.panel');
+  panels.forEach((panel, index) => {
+    panel.style.left = (index * panelWidth) + 'px';
+  });
+
   function moveCarousel() {
+    // Recalculate panelWidth on resize if needed? 
+    // Usually easier to handle in a separate observer, but for now let's just use the initial or current one.
+    
     // Pause auto-movement when hovered (unless manually dragging)
-    if (isHovered && !isManualActive) return;
+    if (isHovered && !isManualActive) {
+      animationFrameId = requestAnimationFrame(moveCarousel);
+      return;
+    }
 
-    const panels = carouselElement.querySelectorAll('.panel');
+    const currentPanels = carouselElement.querySelectorAll('.panel');
 
-    panels.forEach(panel => {
+    currentPanels.forEach(panel => {
       let currentLeft = parseFloat(panel.style.left) || 0;
       panel.style.left = (currentLeft + (direction * speed)) + 'px';
     });
@@ -63,17 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!first || !last) return;
 
-    // Moving left
+    // Moving left (auto)
     if (direction < 0 && parseFloat(first.style.left) <= -panelWidth) {
-      const newLeft = parseFloat(last.style.left) + panelWidth;
-      first.style.left = newLeft + 'px';
+      const lastLeft = parseFloat(last.style.left);
+      first.style.left = (lastLeft + panelWidth) + 'px';
       carouselElement.appendChild(first);
     }
 
-    // Moving right
-    if (direction > 0 && parseFloat(last.style.left) >= carouselElement.offsetWidth) {
-      const newLeft = parseFloat(first.style.left) - panelWidth;
-      last.style.left = newLeft + 'px';
+    // Moving right (manual)
+    if (direction > 0 && parseFloat(last.style.left) >= carouselElement.offsetWidth + panelWidth) {
+      const firstLeft = parseFloat(first.style.left);
+      last.style.left = (firstLeft - panelWidth) + 'px';
       carouselElement.insertBefore(last, first);
     }
 
