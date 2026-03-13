@@ -915,19 +915,19 @@ button.learn-more:hover .button-text {
     }
 
     .crew-card.right-1 {
-        transform: translateX(160px) scale(0.85);
+        transform: translateX(140px) scale(0.85); /* Reduced from 160 */
     }
 
     .crew-card.right-2 {
-        transform: translateX(320px) scale(0.75);
+        transform: translateX(280px) scale(0.75); /* Reduced from 320 */
     }
 
     .crew-card.left-1 {
-        transform: translateX(-160px) scale(0.85);
+        transform: translateX(-140px) scale(0.85); /* Reduced from 160 */
     }
 
     .crew-card.left-2 {
-        transform: translateX(-320px) scale(0.75);
+        transform: translateX(-280px) scale(0.75); /* Reduced from 320 */
     }
 
     .crew-content h3 {
@@ -1005,23 +1005,25 @@ button.learn-more:hover .button-text {
     }
 
     .crew-card.right-1 {
-        transform: translateX(140px) scale(0.8);
+        transform: translateX(100px) scale(0.8);
         opacity: 0.7;
     }
 
     .crew-card.right-2 {
-        transform: translateX(280px) scale(0.7);
-        opacity: 0.5;
+        transform: translateX(200px) scale(0.7);
+        opacity: 0;
+        visibility: hidden;
     }
 
     .crew-card.left-1 {
-        transform: translateX(-140px) scale(0.8);
+        transform: translateX(-100px) scale(0.8);
         opacity: 0.7;
     }
 
     .crew-card.left-2 {
-        transform: translateX(-280px) scale(0.7);
-        opacity: 0.5;
+        transform: translateX(-200px) scale(0.7);
+        opacity: 0;
+        visibility: hidden;
     }
 
     .crew-content h3 {
@@ -1401,16 +1403,8 @@ button.learn-more:hover .button-text {
 }
 
 /* Responsive Services Section */
-/* Service section responsive styles for tablet and mobile */
+/* Consolidated mobile rules for Services */
 @media (max-width: 900px) {
-    .right .service {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 0.5rem;
-    }
-
     .services .container {
         flex-direction: column;
         gap: 30px;
@@ -1419,66 +1413,48 @@ button.learn-more:hover .button-text {
 
     .services .left,
     .services .right {
-        flex: unset;
         width: 100%;
+        flex: none;
     }
 
-    .services .right {
-        gap: 24px;
-    }
-
-    .service {
+    .extra-services {
+        display: flex;
         flex-direction: column;
-        align-items: stretch;
-        padding: 18px 12px;
-        gap: 14px;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
     }
 
     .service-image {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 1rem auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
     }
 
     .service-image img {
         width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
     }
 
     .service-content {
         width: 100%;
-        text-align: left;
+        text-align: center;
+        align-items: center;
     }
 
     .service-content .title {
         font-size: 18px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
     }
 
     .service-content .description {
         font-size: 14px;
-    }
-}
-
-@media (max-width: 768px) {
-    .offer-carousel {
-        margin-top: 24px;
-        /* remove % based spacing */
-        gap: 6px;
-    }
-
-    .nav-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 20px;
-    }
-
-    .service {
-        padding: 12px 6px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
     }
 }
 
@@ -1488,30 +1464,16 @@ button.learn-more:hover .button-text {
         padding-bottom: 30px;
     }
 
-    .service {
-        padding: 12px 6px;
-    }
-
     .service-image {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto 0.8rem auto;
+        max-width: 260px;
     }
 
     .service-image img {
-        width: 190px;
-        height: 125px;
-        object-fit: contain;
-        display: block;
-    }
-
-    .service-content {
-        width: 100%;
-        text-align: left;
+        max-height: 160px;
     }
 
     .service-content .title {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .service-content .description {

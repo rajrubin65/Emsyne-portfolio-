@@ -35,6 +35,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 /* Heading base styles */
@@ -57,7 +63,11 @@ p {
   font-weight: 500;
 }
 
-.site-wrap { position: relative; }
+.site-wrap { 
+  position: relative; 
+  overflow-x: hidden; 
+  width: 100%;
+}
 
 /* Selection helpers */
 ::-moz-selection { background-color: var(--bs-black); color: var(--bs-white); }
@@ -71,7 +81,21 @@ a:hover { text-decoration: none; }
 h1,h2,h3,h4,h5,h6 { color: var(--bs-heading-color); }
 
 /* Layout */
-.container { max-width: 1200px; }
+.container { 
+  width: 100%;
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 /* Sections */
 .section { padding: 70px 0; scroll-margin-top: 0px; }

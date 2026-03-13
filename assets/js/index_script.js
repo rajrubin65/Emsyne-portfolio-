@@ -306,6 +306,15 @@ function initServiceCarousel() {
     });
   });
 
+  // Handle window resize to keep carousel centered
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      updateCarouselAndService(true);
+    }, 150);
+  });
+
   // Initialize
   updateCarouselAndService(true);
 }
