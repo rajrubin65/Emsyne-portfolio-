@@ -507,3 +507,33 @@
           min-height: 220px;
         }
       }
+      .fa-circle-check {
+        color: #28a745;
+      }
+
+      /* green */
+      .fa-file-invoice {
+        color: #0d6efd;
+      }
+
+      /* blue */
+      .fa-magnifying-glass {
+        color: #17a2b8;
+      }
+
+      /* cyan */
+      .fa-bug {
+        color: #dc3545;
+      }
+
+      /* red */
+      .fa-shuffle {
+        color: #ffc107;
+      }
+
+      /* yellow */
+      .fa-shield-halved {
+        color: #6f42c1;
+      }
+
+      /* purple */
