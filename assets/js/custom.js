@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
-  
+
+
 
   const sections = document.querySelectorAll(".section");
   const navLinks = document.querySelectorAll(".fbs__net-navbar .scroll-link");
@@ -212,7 +212,7 @@ const swiperInit = () => {
 
   const progressCircle = document.querySelector(".autoplay-progress svg");
   const progressContent = document.querySelector(".autoplay-progress span");
-  if (progressCircle && progressContent ) {
+  if (progressCircle && progressContent) {
     var swiper2 = new Swiper(".sliderSwiper", {
       slidesPerView: 1,
       speed: 700,
@@ -449,14 +449,14 @@ const countdownInit = () => {
   const x = setInterval(function () {
 
     const now = new Date().getTime();
-      
+
     const distance = launchDate - now;
-      
+
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
+
     // Output the result in an element with id
     const daysEl = document.getElementById("days");
     const hoursEl = document.getElementById("hours");
@@ -474,7 +474,7 @@ const countdownInit = () => {
     if (secondsEl) {
       secondsEl.innerText = seconds;
     }
-      
+
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
@@ -484,3 +484,28 @@ const countdownInit = () => {
 };
 document.addEventListener('DOMContentLoaded', countdownInit);
 
+// ======= Show More Services =======
+const showMoreServicesInit = () => {
+  const btn = document.getElementById('show-more-services-btn');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const hiddenServices = document.querySelectorAll('.hidden-service');
+      hiddenServices.forEach(service => {
+        service.style.display = 'flex'; // reveal them
+        // re-trigger AOS to animate them in smoothly
+        service.classList.remove('aos-animate');
+        setTimeout(() => {
+          service.classList.add('aos-animate');
+        }, 50);
+      });
+      // hide the button after revealing
+      btn.parentElement.style.display = 'none';
+
+      // refresh AOS globally just in case layout shifted
+      if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+      }
+    });
+  }
+};
+document.addEventListener('DOMContentLoaded', showMoreServicesInit);
