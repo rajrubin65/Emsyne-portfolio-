@@ -54,17 +54,33 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   if (userInput !== captchaText) {
     e.preventDefault();
     error.classList.remove("d-none");
-    success.classList.add("d-none");
+    if (success) success.classList.add("d-none");
     generateCaptcha();
   } else {
     // Captcha correct
+    e.preventDefault();
     error.classList.add("d-none");
-    success.classList.remove("d-none");
+    if (success) success.classList.remove("d-none");
 
-    // Optional: Reset form and captcha after submission
-    // Comment out if using real form submission
-    // e.preventDefault();
-    // this.reset();
-    // generateCaptcha();
+    // Extract form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subjectLine = document.getElementById("subject").value || "Contact Form Submission";
+    const message = document.getElementById("message").value;
+
+    // Construct email
+    const recipient = "contact@emsyne.com";
+    const mailSubject = encodeURIComponent(subjectLine);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+    // Redirect to email client
+    window.location.href = `mailto:${recipient}?subject=${mailSubject}&body=${body}`;
+
+    // Optional: Reset form and captcha after a short delay
+    setTimeout(() => {
+      this.reset();
+      generateCaptcha();
+      if (success) success.classList.add("d-none");
+    }, 2000);
   }
 });
