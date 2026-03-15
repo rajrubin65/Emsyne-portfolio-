@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function moveCarousel() {
     // Recalculate panelWidth on resize if needed? 
     // Usually easier to handle in a separate observer, but for now let's just use the initial or current one.
-    
+
     // Pause auto-movement when hovered (unless manually dragging)
     if (isHovered && !isManualActive) {
       animationFrameId = requestAnimationFrame(moveCarousel);
@@ -150,20 +150,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  prevBtn.addEventListener('mousedown',  () => handlePointerDown(-1));
-  nextBtn.addEventListener('mousedown',  () => handlePointerDown(+1));
+  prevBtn.addEventListener('mousedown', () => handlePointerDown(+1));
+  nextBtn.addEventListener('mousedown', () => handlePointerDown(-1));
 
   prevBtn.addEventListener('touchstart', (e) => {
     e.preventDefault();
-    handlePointerDown(-1);
+    handlePointerDown(+1);
   });
   nextBtn.addEventListener('touchstart', (e) => {
     e.preventDefault();
-    handlePointerDown(+1);
+    handlePointerDown(-1);
   });
 
-  document.addEventListener('mouseup',   handlePointerUp);
-  document.addEventListener('touchend',  handlePointerUp);
+  document.addEventListener('mouseup', handlePointerUp);
+  document.addEventListener('touchend', handlePointerUp);
   // Safety: in case mouse leaves window while holding
   document.addEventListener('mouseleave', handlePointerUp);
 
