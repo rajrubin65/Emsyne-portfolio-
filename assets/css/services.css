@@ -247,9 +247,43 @@
      font-size: 0.9rem;
    }
 
+   /* Reorder: H2 -> Image -> P */
+   .section-item {
+     display: flex !important;
+     flex-direction: column !important;
+   }
+
+   .col-text {
+     display: contents;
+     /* Allows reordering children alongside sibling .col-image */
+   }
+
+   .section-item h2 {
+     order: 1;
+     width: 100% !important;
+     padding: 0 1rem !important;
+     margin-bottom: 1rem !important;
+     text-align: left;
+   }
+
+   .col-image {
+     order: 2 !important;
+     width: 100% !important;
+     padding: 0 1rem !important;
+     margin: 1rem 0 2rem 0 !important;
+   }
+
+   .section-item p {
+     order: 3;
+     width: 100% !important;
+     padding: 0 1rem !important;
+     margin: 0 !important;
+     text-align: left;
+   }
+
    .image-container {
-     height: 100px;
-     min-height: 100px;
+     height: 300px !important;
+     min-height: 300px !important;
    }
  }
 
