@@ -1,8 +1,10 @@
  /* Base body styles moved to assets/css/common.css */
 
  /* Prevent horizontal scroll */
+ html,
  body {
-   overflow-x: hidden;
+   overflow-x: clip;
+   max-width: 100%;
    width: 100%;
  }
 

@@ -5,8 +5,10 @@
 /* Base body styles moved to assets/css/common.css; retaining background overlay below */
 
 /* Prevent horizontal scroll globally */
+html,
 body {
-    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100%;
     width: 100%;
 }
 
@@ -801,12 +803,13 @@ button.learn-more:hover .button-text {
     line-height: 1.2;
 }
 
-.crew-content p, 
+.crew-content p,
 .crew-content .subheading {
     font-size: 0.82rem;
     margin: 0;
     padding: 0;
-    color: #080808 !important; /* Ensure consistency */
+    color: #080808 !important;
+    /* Ensure consistency */
     text-align: center;
     line-height: 1.4;
     width: 100%;
@@ -915,19 +918,23 @@ button.learn-more:hover .button-text {
     }
 
     .crew-card.right-1 {
-        transform: translateX(140px) scale(0.85); /* Reduced from 160 */
+        transform: translateX(140px) scale(0.85);
+        /* Reduced from 160 */
     }
 
     .crew-card.right-2 {
-        transform: translateX(280px) scale(0.75); /* Reduced from 320 */
+        transform: translateX(280px) scale(0.75);
+        /* Reduced from 320 */
     }
 
     .crew-card.left-1 {
-        transform: translateX(-140px) scale(0.85); /* Reduced from 160 */
+        transform: translateX(-140px) scale(0.85);
+        /* Reduced from 160 */
     }
 
     .crew-card.left-2 {
-        transform: translateX(-280px) scale(0.75); /* Reduced from 320 */
+        transform: translateX(-280px) scale(0.75);
+        /* Reduced from 320 */
     }
 
     .crew-content h3 {

@@ -10,7 +10,8 @@
       /* Base body styles moved to assets/css/common.css; keep page variables in this file */
       html,
       body {
-        overflow-x: hidden;
+        overflow-x: clip;
+        max-width: 100%;
         width: 100%;
       }
 
@@ -507,6 +508,7 @@
           min-height: 220px;
         }
       }
+
       .fa-circle-check {
         color: #28a745;
       }

@@ -13,6 +13,12 @@
    ==========================
 */
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 body {
   font: 0.95rem/1.6 "Poppins", sans-serif;
   background-color: var(--bs-body-bg);
@@ -20,10 +26,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
+  overflow-x: clip;
 }
 
 .site-wrap {
   position: relative;
+  overflow-x: clip;
 }
 
 /* Utilities moved to assets/css/common.css (selection, links, headings, container) */
@@ -2039,7 +2047,7 @@ body {
   }
 
   /* each item under the other */
-  .footer-bottom > * {
+  .footer-bottom>* {
     display: block;
     width: 100%;
     text-align: center;
