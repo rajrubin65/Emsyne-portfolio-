@@ -438,23 +438,11 @@ header h1 {
   font-size: 20px;
 }
 
-/* Carousel styles */
+/* Enhanced Premium Carousel styles */
 .carousel-section {
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #f8f9fa;
   position: relative;
-  padding: 100px 0
-}
-
-.carousel-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 1);
-  z-index: 1;
+  padding: 100px 0;
 }
 
 .carousel-section .container {
@@ -465,17 +453,56 @@ header h1 {
   padding: 0 20px;
 }
 
-.carousel-item {
-  position: relative;
-  height: 400px;
+/* Redesigning the carousel structure for a premium card look */
+#carouselExampleControls {
+  padding: 20px 0 60px;
+  /* Space for shadow and controls */
 }
 
+.carousel-item {
+  padding: 10px 0;
+  /* Space for hover transform */
+}
 
-.carousel-item img {
+.job-card-inner {
+  position: relative;
+  height: 450px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 42, 116, 0.08);
+  /* Reduced baseline shadow to prevent jitter */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background-color: #fff;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.job-card-inner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 42, 116, 0.15);
+}
+
+.job-card-inner .img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.job-card-inner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(5px);
+  transition: transform 0.8s ease;
+  filter: brightness(0.7) contrast(1.1);
+  /* Subtle darkening instead of heavy blur */
+}
+
+.job-card-inner:hover img {
+  transform: scale(1.05);
+  /* Smooth zoom on hover */
 }
 
 .carousel-overlay {
@@ -484,31 +511,135 @@ header h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.172);
+  background: rgba(0, 42, 116, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* Align content to center vertically */
   align-items: center;
+  /* Align text center horizontally */
+  padding: 50px;
   color: #fff;
   text-align: center;
+  /* Center the text logic */
   z-index: 3;
 }
 
+.carousel-overlay .content-wrapper {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Ensure contents wrap in center */
+}
+
+.carousel-item.active .content-wrapper,
+.job-card-inner:hover .content-wrapper {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .carousel-overlay h3 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
   color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-overlay p {
-  font-size: 18px;
-  margin-bottom: 5px;
+.carousel-overlay p:nth-of-type(1) {
+  /* Experience label */
+  display: inline-block;
+  background: #58ea01;
+  color: #002a74;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
+.carousel-overlay p:nth-of-type(2) {
+  /* Description text */
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 800px;
+}
+
+/* Override the special-link style specifically for the carousel to make it pop */
+.carousel-overlay .special-link {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 12px 25px;
+  border-radius: 100px;
+  color: #fff !important;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.carousel-overlay .special-link:hover {
+  background: #58ea01;
+  border-color: #58ea01;
+  color: #002a74 !important;
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+.carousel-overlay .special-link:hover .icons .icon-1,
+.carousel-overlay .special-link:hover i.bi-arrow-right,
+.carousel-overlay .special-link:hover i::before {
+  color: #002a74 !important;
+  fill: #002a74 !important;
+}
+
+/* Customizing Carousel Controls */
 .carousel-control-prev,
 .carousel-control-next {
   z-index: 4;
+  width: 60px;
+  height: 60px;
+  background: #002a74 !important;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+  left: -20px;
+}
+
+.carousel-control-next {
+  right: -20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: #002a74;
+  box-shadow: 0 10px 25px rgba(0, 42, 116, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 25px;
+  height: 25px;
+  filter: invert(14%) sepia(21%) saturate(5796%) hue-rotate(205deg) brightness(97%) contrast(105%);
+  /* Blue color */
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(0) invert(1);
+  /* Switch to white on hover */
 }
 
 @media (max-width: 991px) {
@@ -522,8 +653,17 @@ header h1 {
     text-align: left !important;
   }
 
-  .carousel-item {
-    height: 300px;
+  .job-card-inner {
+    height: 400px;
+    width: 95%;
+  }
+
+  .carousel-overlay {
+    padding: 30px;
+  }
+
+  .carousel-overlay h3 {
+    font-size: 2rem;
   }
 }
 
@@ -574,8 +714,12 @@ header h1 {
     overflow: hidden;
   }
 
-  .carousel-item {
-    height: 250px;
+  .job-card-inner {
+    height: 380px;
+  }
+
+  .carousel-overlay {
+    padding: 20px;
   }
 }
 
@@ -628,16 +772,34 @@ header h1 {
     width: 90%;
   }
 
-  .carousel-item {
-    height: 200px;
+  .job-card-inner {
+    height: 380px;
+  }
+
+  .carousel-overlay {
+    padding: 20px;
   }
 
   .carousel-overlay h3 {
-    font-size: 24px;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
-  .carousel-overlay p {
-    font-size: 14px;
+  .carousel-overlay p:nth-of-type(1) {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    margin-bottom: 15px;
+  }
+
+  .carousel-overlay p:nth-of-type(2) {
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .carousel-overlay .special-link {
+    padding: 8px 18px;
+    font-size: 0.9rem;
   }
 }
 

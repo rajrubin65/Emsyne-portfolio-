@@ -3,6 +3,7 @@
         {
             "urls": [
                 "assets/images/life-at-emsyne/xmas and new_year/DSC03470.JPG",
+                "assets/images/life-at-emsyne/xmas and new_year/1000044642.jpeg",
                 "assets/images/life-at-emsyne/xmas and new_year/DSC03475.JPG",
                 "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.43 PM.jpeg",
                 "assets/images/life-at-emsyne/xmas and new_year/WhatsApp Image 2025-12-29 at 3.37.44 PM (1).jpeg",
@@ -18,6 +19,7 @@
         },
         {
             "urls": [
+                "assets/images/life-at-emsyne/Onam 2025/1000044630.jpeg",
                 "assets/images/life-at-emsyne/Onam 2025/DSC02979.JPG",
                 "assets/images/life-at-emsyne/Onam 2025/DSC02982.JPG",
                 "assets/images/life-at-emsyne/Onam 2025/DSC02983.JPG",
@@ -73,24 +75,29 @@
         
         {
             "urls": [
-                "assets/images/life-at-emsyne-culture-1.png",
-                "assets/images/life-at-emsyne-culture-2.png"
+                "assets/images/life-at-emsyne/xmas2024/WhatsApp Image 2026-03-13 at 10.03.22 AM.jpeg",
+                "assets/images/life-at-emsyne/xmas2024/WhatsApp Image 2026-03-13 at 10.04.46 AM.jpeg",
+                "assets/images/life-at-emsyne/xmas2024/IMG_20191219_184011.JPG"
             ],
-            "caption": "Employee Wellness Day"
+            "caption": "Xmas Celebration 2024"
         },
         {
             "urls": [
-                "assets/images/life-at-emsyne-culture-2.png",
-                "assets/images/life-at-emsyne-hero.png"
+                "assets/images/life-at-emsyne/onam2024/IMG_0793.JPG",
+                "assets/images/life-at-emsyne/onam2024/IMG_0793.JPG"
+                
             ],
-            "caption": "Brainstorming Excellence"
+            "caption": "Onam Celebration 2024"
         },
         {
             "urls": [
-                "assets/images/portfolio/pexels-photo-3184291.jpeg",
-                "assets/images/portfolio/pexels-photo-3183197.jpeg"
+                "assets/images/life-at-emsyne/Seminar/IMG_20250208_121032.jpg",
+                "assets/images/life-at-emsyne/Seminar/IMG_20220622_162021.jpg",
+                "assets/images/life-at-emsyne/Seminar/IMG_20220622_163906.jpg",
+                "assets/images/life-at-emsyne/Seminar/IMG_20220701_143615.jpg"
+                
             ],
-            "caption": "Annual Meet 2024"
+            "caption": "Seminar 2024"
         },
         {
             "urls": [

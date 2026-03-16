@@ -140,54 +140,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   popupContent.addEventListener("click", (e) => {
-  const btn = e.target.closest(".toggle-btn");
-  if (!btn) return;
+    const btn = e.target.closest(".toggle-btn");
+    if (!btn) return;
 
-  e.preventDefault();
+    e.preventDefault();
 
-  const parentLi = btn.closest("li");
-  const title = btn.dataset.title;
+    const parentLi = btn.closest("li");
+    const title = btn.dataset.title;
 
-  // 🔹 Close any already expanded item (except current)
-  const expandedItems = popupContent.querySelectorAll("li.expanded");
-  expandedItems.forEach((item) => {
-    if (item !== parentLi) {
-      item.classList.remove("expanded");
-      item.innerHTML = `
+    // 🔹 Close any already expanded item (except current)
+    const expandedItems = popupContent.querySelectorAll("li.expanded");
+    expandedItems.forEach((item) => {
+      if (item !== parentLi) {
+        item.classList.remove("expanded");
+        item.innerHTML = `
         <strong>${item.querySelector("strong").textContent}</strong>
         <p>${careerData[
-          popupContent.querySelector("h3").textContent.replace(" Careers", "")
-        ].find(c => c.title === item.querySelector("strong").textContent)?.desc || ""}</p>
+            popupContent.querySelector("h3").textContent.replace(" Careers", "")
+          ].find(c => c.title === item.querySelector("strong").textContent)?.desc || ""}</p>
         <button class="toggle-btn" data-title="${item.querySelector("strong").textContent}">
           <i class="bi bi-plus"></i>
         </button>
       `;
-    }
-  });
+      }
+    });
 
-  const isExpanded = parentLi.classList.contains("expanded");
+    const isExpanded = parentLi.classList.contains("expanded");
 
-  if (!isExpanded) {
-    parentLi.classList.add("expanded");
-    parentLi.innerHTML = `
+    if (!isExpanded) {
+      parentLi.classList.add("expanded");
+      parentLi.innerHTML = `
       <strong>${title}</strong>
       <div>${parentLi.dataset.details.replace(/\n/g, "<br>")}</div>
       <button class="toggle-btn" data-title="${title}">
         <i class="bi bi-dash"></i>
       </button>
     `;
-  } else {
-    parentLi.classList.remove("expanded");
-    parentLi.innerHTML = `
+    } else {
+      parentLi.classList.remove("expanded");
+      parentLi.innerHTML = `
       <strong>${title}</strong>
       <button class="toggle-btn" data-title="${title}">
         <i class="bi bi-plus"></i>
       </button>
     `;
-  }
+    }
 
-  e.stopPropagation();
-});
+    e.stopPropagation();
+  });
 
   closeBtn.addEventListener("click", () => {
     popup.style.display = "none";
@@ -248,18 +248,21 @@ document.addEventListener("DOMContentLoaded", function () {
         itemDiv.className = "carousel-item" + (index === 0 ? " active" : "");
 
         itemDiv.innerHTML = `
-          <img src="${job.image}" class="d-block w-100" alt="${job.title}" />
-          <div class="carousel-overlay">
-            <h3>${job.title}</h3>
-            <p>Experience: ${job.experience}</p>
-            <p>${job.description}</p>
-            <a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="${mailtoLink}">
-              <span class="icons">
-                <i class="icon-1 bi bi-arrow-right-short"></i>
-                <i class="icon-2 bi bi-arrow-right-short"></i>
-              </span>
-              <span>Apply Now</span>
-            </a>
+          <div class="job-card-inner">
+            <div class="img-wrapper">
+              <img src="${job.image}" class="d-block w-100" alt="${job.title}" />
+            </div>
+            <div class="carousel-overlay center-align">
+              <div class="content-wrapper">
+                <h3>${job.title}</h3>
+                <p class="mx-auto"><i class="bi bi-briefcase me-2"></i>Experience: ${job.experience}</p>
+                <p class="mx-auto">${job.description}</p>
+                <a class="special-link" href="${mailtoLink}">
+                  <span>Apply Now</span>
+                  
+                </a>
+              </div>
+            </div>
           </div>
         `;
 
