@@ -251,7 +251,8 @@
 
    /* Reorder: H2 -> Image -> P */
    .section-item {
-     display: flex !important;
+     display: flex ;
+     
      flex-direction: column !important;
    }
 
