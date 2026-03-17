@@ -1,23 +1,76 @@
 [
   {
-    "title": "Angular Developer",
-    "experience": "3 - 5 years",
-    "description": "Develop dynamic web applications using Angular framework.",
-    "image": "assets/photos/a.jpg"
-    
+  "title": "Angular Developer",
+  "experience": "2–4 years",
+  "description": "We are looking for an Angular Developer to build and maintain responsive web applications\nusing Angular, TypeScript, HTML, and CSS, collaborate with backend and design teams,\nintegrate REST APIs, and optimize performance following Agile development practices.\nCandidates with strong experience in Angular (v16+), RxJS, state management (NgRx), Git,\nand modern front-end development concepts will be preferred.",
+  "image": "assets/photos/a.png"
   },
   {
-    "title": "Microservices Developer (.Net)",
-    "experience": "3 - 5 years",
-    "description": "Build scalable microservices with .Net technology.",
-    "image": "assets/photos/ai_image.jpg"
-    
+  "title": "Business Analyst",
+  "experience": "3–5 years",
+  "description": "We are looking for a Business Analyst to gather, analyze, and document business requirements, prepare BRD/SRS/FRD, perform gap analysis, and support the design and implementation of banking/financial software solutions in coordination with stakeholders and technical teams. Candidates with strong analytical and documentation skills, experience in wireframing/workflow tools, and exposure to BFSI / Asset Management domain will be preferred.",
+  "image": "assets/photos/ai_image.png"
   },
   {
-    "title": "Application Support Engineer",
-    "experience": "3 - 5 years",
-    "description": "Provide technical support for application systems.",
-    "image": "assets/photos/ai_image.jpg"
-  
-  }
+  "title": "Software Engineer – DB",
+  "experience": "2–4 years",
+  "description": "We are looking for a Software Engineer – DB to develop and maintain applications using SQL/T-SQL/PL-SQL, handle complex queries, perform database updates, troubleshoot performance issues, and support database optimization. Candidates with strong SQL fundamentals, experience in database performance tuning, and exposure to Oracle, SSIS, or SSRS will be preferred.",
+  "image": "assets/photos/ai_image.png"
+ },
+ {
+    "title": "Senior Software Engineer – DB",
+    "experience": "5–8 years",
+    "description": "We are looking for a Senior Software Engineer – DB to design, develop, and optimize database solutions using Oracle/SQL Server, write and tune complex SQL/PL-SQL queries and stored procedures, handle performance tuning, troubleshoot database issues, and support business applications in coordination with cross-functional teams. Candidates with strong experience in database development, performance optimization, and enterprise application support will be preferred.",
+    "image": "assets/photos/ai_image.png"
+  },
+  {
+  "title": ".NET Core Developer",
+  "experience": "2–4 years",
+  "description": "We are looking for a .NET Core Developer to design, develop, and maintain high-performance web applications and RESTful APIs using .NET Core, C#, ASP.NET Core, and SQL Server, while working closely with cross-functional teams to deliver scalable and secure software solutions. Candidates with strong knowledge of API development, Entity Framework, Git, SDLC, Agile practices, and exposure to Angular/frontend technologies will be preferred.",
+  "image": "assets/photos/ai_image.png"
+  },
+  {
+  "title": "Senior .NET Core Developer",
+  "experience": "5–8 years",
+  "description": "We are looking for a Senior .NET Core Developer to design, develop, and maintain high-performance web applications and RESTful APIs using .NET Core, C#, ASP.NET Core, and SQL Server, while working closely with cross-functional teams to deliver scalable, secure, and robust software solutions. Candidates with strong experience in API development, Entity Framework, Agile/SDLC practices, performance optimization, and exposure to Angular or frontend technologies will be preferred.",
+  "image": "assets/photos/ai_image.png"
+  },
+  {
+  "title": "Flutter Junior Developer",
+  "experience": "1–2 years",
+  "description": "We are looking for a Flutter Developer to design and develop high-performance mobile applications using Flutter and Dart, integrate APIs, implement UI/UX designs, manage local databases, and ensure smooth cross-platform functionality on Android and iOS. Candidates with strong experience in Flutter, Dart, SQL, Git, mobile app architecture patterns (MVC/MVP/MVVM), and hands-on mobile app development will be preferred.",
+  "image": "assets/photos/ai_image.png"
+  },
+  {
+  "title": "Angular Junior Developer",
+  "experience": "1–2 years",
+  "description": "We are looking for an Angular Developer to build and maintain responsive web applications using Angular, TypeScript, HTML, and CSS, collaborate with backend and design teams, integrate REST APIs, and optimize performance following Agile development practices. Candidates with strong experience in Angular (v16+), RxJS, state management (NgRx), Git, and modern front-end development concepts will be preferred.",
+  "image": "assets/photos/ai_image.png"
+  },
+  {
+  "title": "Project Manager (HRMS Development)",
+  "experience": "15+ years (minimum 8+ years in project management, with experience in .NET web application & HRMS projects)",
+  "description": "We are looking for an experienced Technical Project Manager with strong expertise in .NET/.NET Core, microservices architecture, and enterprise web application development to lead large-scale projects, manage cross-functional teams, and ensure timely delivery of secure, scalable, and high-performance applications. Candidates with strong experience in project management, Microsoft technologies (C#, ASP.NET, .NET Core), Agile/Scrum methodologies, and exposure to HRMS/Financial/ERP applications will be preferred.",
+  "image": "assets/photos/ai_image.png"
+  },
+  {
+  "title": "Data Centre Support Engineer",
+  "experience": "3–5 years",
+  "description": "We are looking for a Data Centre Support Engineer (L2 – Server) to manage and maintain data centre infrastructure including Windows/Linux servers, storage systems, patching, backup/tape management, rack mounting, cabling, and coordination with OEM vendors for implementation and troubleshooting. Candidates with strong experience in server/storage infrastructure, IT infra maintenance, firewall/switch basics, and data centre operations will be preferred.",
+  "image": "assets/photos/ai_image.png"
+  },
+  {
+  "title": "Network Support Engineer",
+  "experience": "1–3 years",
+  "description": "We are looking for a Network Support Engineer (L1) to monitor and maintain network infrastructure, support branch connectivity, handle firewall and switch configuration, coordinate with ISPs for link issues, and perform network monitoring, patching, and troubleshooting as per company policies. Candidates with knowledge of networking, firewalls, MPLS/ILL, remote branch support, and exposure to Fortinet, IPSec, or SD-WAN will be preferred.",
+  "image": "assets/photos/ai_image.png"
+  },
+  {
+  "title": "System Administrator",
+  "experience": "2–3 years",
+  "description": "We are looking for a System Administrator to manage and maintain Windows and Linux systems, handle user accounts, group policies, security updates, email configuration, software/hardware installation, and provide technical and helpdesk support to ensure smooth IT operations. Candidates with experience in system administration, OS troubleshooting, network setup, antivirus/security management, and end-user support will be preferred.",
+  "image": "assets/photos/ai_image.png"
+ }
+ 
+
 ]
