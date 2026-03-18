@@ -20,7 +20,7 @@
     <!-- <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet" /> -->
     <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link href="assets/vendors/aos/aos.css" rel="stylesheet" />
-    <script defer src="assets/css/third_party_css/font-awesome/all.js"></script>
+    <script defer defer src="assets/css/third_party_css/font-awesome/all.js"></script>
     <!-- ======= Theme Style =======-->
     <link href="assets/css/common.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
@@ -31,8 +31,12 @@
         as="style">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <script src="assets/js/navbar-loader.js"></script>
-    <script src="assets/js/footer-loader.js"></script>
+    <link rel="preload" href="assets/js/navbar-loader.js" as="script">
+    <link rel="preload" href="assets/js/footer-loader.js" as="script">
+
+    <!-- Then defer scripts normally -->
+    <script defer src="assets/js/navbar-loader.js"></script>
+    <script defer src="assets/js/footer-loader.js"></script>
 
 </head>
 
@@ -133,7 +137,8 @@
                                 <strong>Emsyne</strong>, the IT
                                 division of <strong>The Muthoot Group</strong>, specializes in
                                 ERP, CRM, and workflow automation solutions. Based at
-                                Infopark, Kochi, we help businesses adapt to change, embrace tech innovations, and transform digitally.
+                                Infopark, Kochi, we help businesses adapt to change, embrace tech innovations, and
+                                transform digitally.
                             </p>
                             <p class="subheading1">
                                 Our mission is to deliver
@@ -260,7 +265,8 @@
                                     </div>
                                     <div class="feature-content">
                                         <h5>Continuous Learning</h5>
-                                        <p>AI systems that adapt and improve over time, learning from new data models and
+                                        <p>AI systems that adapt and improve over time, learning from new data models
+                                            and
                                             patterns</p>
                                     </div>
                                 </div>
@@ -412,6 +418,11 @@
 
                             <div class="offer-gallery">
                                 <div class="offer-track">
+                                    <div class="offer-card" data-service="enterprise">
+                                        <img src="assets/photos/enterprise_solutions.png" alt="Enterprise"
+                                            loading="lazy">
+                                        <span>Enterprise</span>
+                                    </div>
                                     <div class="offer-card" data-service="custom">
                                         <img src="assets/photos/custom_software.webp" alt="Custom">
                                         <span>Custom</span>
@@ -1001,8 +1012,8 @@
                         <div class="swiper-container testimonials-swiper-container">
                             <div class="swiper-wrapper"> -->
 
-                                <!-- Testimonial 1 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 1 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Real-time tracking and seamless payments simplified my business
@@ -1021,8 +1032,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 2 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 2 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Budgeting and expense tracking made freelance finance management
@@ -1041,8 +1052,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 3 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 3 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Smart investment tools with tailored recommendations for long-term
@@ -1061,8 +1072,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 4 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 4 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Simple, secure, and confidence-boosting money management experience.
@@ -1081,8 +1092,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 5 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 5 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Strong security and smooth performance make this platform reliable.
@@ -1101,8 +1112,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 6 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 6 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; An intuitive platform that streamlined operations and accelerated
@@ -1125,19 +1136,19 @@
                         </div>
                     </div> -->
 
-                    <!-- Pagination & Navigation -->
-                    <!-- <div class="swiper-pagination"></div>
+            <!-- Pagination & Navigation -->
+            <!-- <div class="swiper-pagination"></div>
 
                 </div>
     </div>
     </div>
     </section> -->
 
-    <section class="section contact__v2" id="contact">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-6 col-lg-7 mx-auto text-center">
-                    <!-- <h2 class="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">Contact Us</h2>
+            <section class="section contact__v2" id="contact">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div class="col-md-6 col-lg-7 mx-auto text-center">
+                            <!-- <h2 class="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">Contact Us</h2>
                               -->
                     <div class="sticky-heading" data-animate>
                         <span class="left-word" style="--i:0">CONTACT</span>
@@ -1175,45 +1186,76 @@
                                 </span>
                             </div>
 
-                            <!-- Email -->
-                            <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="100">
-                                <div class="icon d-block">
-                                    <i class="bi bi-send"></i>
-                                </div>
-                                <span>
-                                    <span class="d-block">Email</span>
-                                    <strong>contact@emsyne.com</strong>
-                                </span>
+                            <p data-aos="fade-up" data-aos-delay="100" class="subheading">
+                                We’d love to hear from you! Reach out to us for inquiries,
+                                collaborations, or support.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-stretch tip">
+                        <!-- Left Image Section -->
+                        <div class="col-md-6">
+                            <div class="h-100 d-flex align-items-center justify-content-center">
+                                <img src="assets/images/about_2-min.jpg" alt="Contact Us"
+                                    class="img-fluid h-100 w-100 object-fit-cover rounded" loading="lazy" />
                             </div>
+                        </div>
 
-                            <!-- Address -->
-                            <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="200">
-                                <div class="icon d-block">
-                                    <i class="bi bi-geo-alt"></i>
+                        <!-- Right Contact Details -->
+                        <div class="col-md-6 tip">
+                            <div class="contact-tile h-100 d-flex flex-column justify-content-center"
+                                style="background-color: #002a74; color: #ffffff">
+                                <div class="d-flex gap-5 flex-column">
+                                    <!-- Phone -->
+                                    <div class="d-flex align-items-start gap-3" data-aos="fade-up">
+                                        <div class="icon d-block">
+                                            <i class="bi bi-telephone"></i>
+                                        </div>
+                                        <span>
+                                            <span class="d-block">Phone</span>
+                                            <strong>+91 484 6677604</strong>
+                                        </span>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="icon d-block">
+                                            <i class="bi bi-send"></i>
+                                        </div>
+                                        <span>
+                                            <span class="d-block">Email</span>
+                                            <strong>contact@emsyne.com</strong>
+                                        </span>
+                                    </div>
+
+                                    <!-- Address -->
+                                    <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="200">
+                                        <div class="icon d-block">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </div>
+                                        <span>
+                                            <span class="d-block">Address</span>
+                                            <address class="fw-bold mb-0">
+                                                Emsyne<br />
+                                                4th Floor, LULU Cyber Tower 1 <br />
+                                                11th Floor, LULU Cyber Tower 2 <br />
+                                                Infopark, Kusumagiri P.O, Kakkanad <br />
+                                                Kochi - 682042, Kerala, India
+                                            </address>
+                                        </span>
+                                    </div>
                                 </div>
-                                <span>
-                                    <span class="d-block">Address</span>
-                                    <address class="fw-bold mb-0">
-                                        Emsyne<br />
-                                        4th Floor, LULU Cyber Tower 1 <br />
-                                        11th Floor, LULU Cyber Tower 2 <br />
-                                        Infopark, Kusumagiri P.O, Kakkanad <br />
-                                        Kochi - 682042, Kerala, India
-                                    </address>
-                                </span>
                             </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
+            </section>
 
-        </div>
-    </section>
+            <!-- Footer will be loaded here by footer-loader.js -->
+            <div id="footer-container"></div>
 
-    <!-- Footer will be loaded here by footer-loader.js -->
-    <div id="footer-container"></div>
-
-    </main>
+        </main>
     </div>
 
     <!-- ======= Back to Top =======-->
@@ -1221,19 +1263,17 @@
     <!-- End Back to top-->
 
     <!-- ======= Javascripts =======-->
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/index_script.js"></script>
-    <script src="assets/css/third_party_css/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/gsap/gsap.min.js"></script>
-    <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
-    <script src="assets/vendors/glightbox/glightbox.min.js"></script>
-    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendors/aos/aos.js"></script>
-    <script src="assets/vendors/purecounter/purecounter.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/send_email.js"></script>
+    <script defer src="assets/js/index_script.js"></script>
+    <script defer src="assets/css/third_party_css/purecounter/purecounter_vanilla.js"></script>
+    <script defer src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/vendors/gsap/gsap.min.js"></script>
+    <script defer src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script defer src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script defer src="assets/vendors/glightbox/glightbox.min.js"></script>
+    <script defer src="assets/vendors/swiper/swiper-bundle.min.js"></script>
+    <script defer src="assets/vendors/aos/aos.js"></script>
+    <script defer src="assets/vendors/purecounter/purecounter.js"></script>
+    <script defer src="assets/js/custom.js"></script>
     <!-- End JavaScripts-->
 </body>
 <script>

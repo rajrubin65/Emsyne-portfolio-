@@ -17,7 +17,7 @@
     <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
     <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link href="assets/vendors/aos/aos.css" rel="stylesheet" />
-    <script defer src="assets/css/third_party_css/font-awesome/all.js"></script>
+    <script defer defer src="assets/css/third_party_css/font-awesome/all.js"></script>
 
     <!-- ======= Theme Style =======-->
     <link href="assets/css/common.css" rel="stylesheet" />
@@ -26,8 +26,12 @@
     <link href="assets/css/footer.css" rel="stylesheet" />
     <link href="assets/css/life-at-emsyne.css" rel="stylesheet" />
 
-    <script src="assets/js/navbar-loader.js"></script>
-    <script src="assets/js/footer-loader.js"></script>
+     <link rel="preload" href="assets/js/navbar-loader.js" as="script">
+  <link rel="preload" href="assets/js/footer-loader.js" as="script">
+
+  <!-- Then defer scripts normally -->
+  <script defer src="assets/js/navbar-loader.js"></script>
+  <script defer src="assets/js/footer-loader.js"></script>
 </head>
 
 <body>
@@ -62,8 +66,8 @@
                 <div class="container">
                     <div class="row justify-content-center mb-5">
                         <div class="col-lg-10 text-center" data-aos="fade-up">
-                            <p class="lead  intro-text">At <span class="fw-bold"
-                                    style="color:#002a74;">EMSYNE</span>, we believe that great technology is built by
+                            <p class="lead  intro-text">At <span class="fw-bold" style="color:#002a74;">EMSYNE</span>,
+                                we believe that great technology is built by
                                 great people. For over 20 years, we’ve been helping Our Clients innovate, scale, and
                                 transform through reliable technology solutions. Behind this journey is a team of
                                 passionate engineers, problem-solvers, and innovators who collaborate every day to build
@@ -142,7 +146,7 @@
                     <div class="row text-center mb-5">
                         <div class="col-lg-8 mx-auto">
                             <h2 class="emsyne-heading" data-aos="fade-up">Our Vibrant Culture</h2>
-                            <h6  data-aos="fade-up" data-aos-delay="100">At Emsyne, we believe that a
+                            <h6 data-aos="fade-up" data-aos-delay="100">At Emsyne, we believe that a
                                 great workplace is built on collaboration, respect, and a passion for excellence.</h6>
                         </div>
                     </div>
@@ -270,7 +274,7 @@
                             <div class="value-item">
                                 <div class="value-icon"><i class="fas fa-users"></i></div>
                                 <h4>Inclusivity</h4>
-                                <p >A diverse team brings diverse perspectives, leading to better
+                                <p>A diverse team brings diverse perspectives, leading to better
                                     solutions.</p>
                             </div>
                         </div>
@@ -278,7 +282,7 @@
                             <div class="value-item">
                                 <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
                                 <h4>Creativity</h4>
-                                <p >We empower our teams to think outside the box and challenge the
+                                <p>We empower our teams to think outside the box and challenge the
                                     status quo.</p>
                             </div>
                         </div>
@@ -286,7 +290,7 @@
                             <div class="value-item">
                                 <div class="value-icon"><i class="fas fa-chart-line"></i></div>
                                 <h4>Growth</h4>
-                                <p >Continuous learning and professional development are encouraged at
+                                <p>Continuous learning and professional development are encouraged at
                                     every level.</p>
                             </div>
                         </div>
@@ -358,7 +362,7 @@
             <div class="lightbox-gallery-container">
                 <button class="lightbox-nav prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
                 <div class="lightbox-image-wrapper">
-                    <img id="lightboxImage" src="" alt="Lightbox Image" class="lightbox-single-image">
+                    <img id="lightboxImage" src="" alt="Lightbox Image" class="lightbox-single-image" loading="lazy">
                 </div>
                 <button class="lightbox-nav next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
             </div>
@@ -370,10 +374,10 @@
     </div>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/aos/aos.js"></script>
-    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/life-at-emsyne.js"></script>
+    <script defer src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/vendors/aos/aos.js"></script>
+    <script defer src="assets/vendors/swiper/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/life-at-emsyne.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

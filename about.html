@@ -9,7 +9,7 @@
   <link href="assets/css/common.css" rel="stylesheet" />
   <link href="assets/css/footer.css" rel="stylesheet" />
   <link href="assets/css/aboutus.css" rel="stylesheet" />
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link href="assets/css/third_party_css/bootstrap-icon/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/third_party_css/font-awesome/all.min.css" />
@@ -18,24 +18,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="assets/css/navbar.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
-  <script src="assets/css/third_party_css/jquery/jquery-3.6.0.min.js"></script>
+  <script defer src="assets/css/third_party_css/jquery/jquery-3.6.0.min.js"></script>
   <!-- GSAP -->
-<script src="assets/css/third_party_css/gsap/gsap.min.js"></script>
+  <script defer src="assets/css/third_party_css/gsap/gsap.min.js"></script>
 
-<!-- Swiper -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper -->
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<!-- GLightbox -->
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- GLightbox -->
+  <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-<!-- PureCounter -->
-<script src="assets/css/third_party_css/purecounter/purecounter_vanilla.js"></script>
+  <!-- PureCounter -->
+  <script defer src="assets/css/third_party_css/purecounter/purecounter_vanilla.js"></script>
 
-<!-- Your custom JS -->
-<script src="js/custom.js"></script>
+  <!-- Your custom JS -->
 
-<script src="assets/js/navbar-loader.js"></script>
-<script src="assets/js/footer-loader.js"></script>
+  <link rel="preload" href="assets/js/navbar-loader.js" as="script">
+  <link rel="preload" href="assets/js/footer-loader.js" as="script">
+
+  <!-- Then defer scripts normally -->
+  <script defer src="assets/js/navbar-loader.js"></script>
+  <script defer src="assets/js/footer-loader.js"></script>
 
 </head>
 
@@ -43,41 +46,48 @@
   <!-- Navbar will be loaded here by navbar-loader.js -->
   <div id="navbar-container"></div>
 
-<main class="container">
-  <!-- Hero Section -->
-  <section class="hero">
-  <div class="container">
-    <div class="row align-items-center" data-aos="fade-right">
-      <div class="col-lg-7 mt-custom">
-        <h1 class="hero-title ">
-          About <span class="color">Us</span>
-        </h1>
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center" data-aos="fade-right">
+          <div class="col-lg-7 mt-custom">
+            <h1 class="hero-title ">
+              About <span class="color">Us</span>
+            </h1>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-  <!-- Who Are We Section -->
-  <section>
-    <div class="row">
-      <div class="col-md-6 mb-4 first" data-aos="fade-up" data-aos-delay="200">
-        <h1 class="display-6 fw-bolder text-dark mb-4 h1who">
-          Who Are <span class="wetxt">We</span>
-        </h1>
+    </section>
+    <!-- Who Are We Section -->
+    <section>
+      <div class="row">
+        <div class="col-md-6 mb-4 first" data-aos="fade-up" data-aos-delay="200">
+          <h1 class="display-6 fw-bolder text-dark mb-4 h1who">
+            Who Are <span class="wetxt">We</span>
+          </h1>
 
-        <p>
-          We are a technology-driven software development company delivering secure, scalable, and innovative digital solutions for modern businesses. Our skilled team of engineers and technology specialists helps organizations transform ideas into powerful digital platforms that drive efficiency and growth.
-        </p>
+          <p>
+            We are a technology-driven software development company delivering secure, scalable, and innovative digital
+            solutions for modern businesses. Our skilled team of engineers and technology specialists helps
+            organizations transform ideas into powerful digital platforms that drive efficiency and growth.
+          </p>
 
-        <p>
-          Our expertise extends to Banking and Fintech, where precision, security, and scalability are critical. We develop digital banking platforms, financial management systems, and payment solutions that empower financial institutions to innovate confidently.
-        </p>
-        <p>
-          Security and long-term partnerships are central to our approach. By combining strong technical expertise with a deep understanding of business needs, we deliver reliable solutions that support digital transformation and sustainable growth.
-        </p>
-        <!-- <p>
+          <p>
+            Our expertise extends to Banking and Fintech, where precision, security, and scalability are critical. We
+            develop digital banking platforms, financial management systems, and payment solutions that empower
+            financial institutions to innovate confidently.
+          </p>
+          <p>
+            Security and long-term partnerships are central to our approach. By combining strong technical expertise
+            with a deep understanding of business needs, we deliver reliable solutions that support digital
+            transformation and sustainable growth.
+          </p>
+          <!-- <p>
           Security is at the core of everything we build. Our development approach integrates secure coding standards, strong data protection frameworks, and modern infrastructure practices, ensuring that every solution we deliver meets the highest standards of security, compliance, and reliability.
 
         </p> -->
+<<<<<<< HEAD
       </div>
       <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
         <div class="image-collage">
@@ -91,72 +101,90 @@
           <img src="assets/images/about1.webp" class="collage-img img-main" data-aos-delay="200" data-aos="zoom-out-right" />
           <img src="assets/images/about2.webp" class="collage-img img-right-top" data-aos-delay="200" data-aos="zoom-out-right" />
           <img src="assets/images/about3.webp" class="collage-img img-right-bottom" data-aos-delay="200" data-aos="zoom-out-right" />
+=======
+>>>>>>> fe6e8298e04e4aebee1f9f93b6facaace473ac86
         </div>
-      </div>
-       
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="image-collage">
+            <div class="blob-container">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob-svg">
+                <path fill="#e0f7ff"
+                  d="M48.1,-64.3C62.2,-55.4,73.4,-41.8,79.2,-26.2C85,-10.6,85.4,7.1,79.3,22.5C73.2,37.9,60.6,51.1,46.2,60.7C31.8,70.3,15.9,76.4,-1.3,77.8C-18.5,79.2,-37,75.9,-50.8,66.4C-64.6,56.9,-73.7,41.2,-78.3,24.5C-82.9,7.8,-83,-9.8,-76.8,-24.1C-70.6,-38.4,-58.1,-49.4,-44.6,-58.3C-31.1,-67.2,-15.5,-74,1.4,-75.8C18.3,-77.6,36.7,-73.2,48.1,-64.3Z"
+                  transform="translate(100 100) scale(1.1)" />
+              </svg>
+            </div>
+            <img src="assets/images/about1.jpeg" class="collage-img img-main" data-aos-delay="200"
+              data-aos="zoom-out-right" loading="lazy" />
+            <img src="assets/images/about2.jpeg" class="collage-img img-right-top" data-aos-delay="200"
+              data-aos="zoom-out-right" loading="lazy" />
+            <img src="assets/images/about3.jpeg" class="collage-img img-right-bottom" data-aos-delay="200"
+              data-aos="zoom-out-right" loading="lazy" />
+          </div>
+        </div>
+
         <!-- <p>
           Beyond technology, we believe in building long-term partnerships with our clients. By combining deep technical expertise with a strong understanding of business needs, we work collaboratively to deliver solutions that create measurable value and sustainable growth.
         </p>
         <p>
           Driven by innovation, powered by expertise, and committed to excellence, we strive to help businesses embrace digital transformation and unlock their full potential in an evolving digital landscape.
         </p> -->
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Core Perspectives Section -->
-  <section class="sec_2">
-    <div data-aos-delay="500" data-aos="fade-left">
-      <h3>Our Core Perspectives</h3>
-      <p class="ptag">
-        Emsyne delivers business value by leveraging technology with
-        experience, efficiency, and excellence. We remain
-        customer-focused, Business-centric approach to individual needs while
-        ensuring integrity and responsibility. Our commitment to quality
-        drives us to give undivided attention and consistency in every
-        project. With innovation, care, and growth at the core, we build
-        sustainable solutions that create lasting impact.
-      </p>
-      <blockquote class="blockquote">
-        <h5>
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="#2A3855" viewBox="0 0 16 16"
-            class="quote-icon">
-            <path
-              d="M6.354 1.146A.5.5 0 0 1 7 1.5v4a.5.5 0 0 1-.5.5H5a2 2 0 0 0-2 2v1h3a2 2 0 0 1 2 2v3H1v-4a6 6 0 0 1 6-6h-.5a.5.5 0 0 1-.354-.854zM14.354 1.146A.5.5 0 0 1 15 1.5v4a.5.5 0 0 1-.5.5H13a2 2 0 0 0-2 2v1h3a2 2 0 0 1 2 2v3h-7v-4a6 6 0 0 1 6-6h-.5a.5.5 0 0 1-.354-.854z" />
-          </svg>
-          We make it happen by earning trust, walking the path, and owning the outcome.
-        </h5>
-      </blockquote>
-      <div class="content-columns">
-        <div class="column" data-aos-delay="500" data-aos="fade-left">
-          <h3>Why Us</h3>
-          <p >
-            Emsyne provides businesses with an innovative edge through
-            custom applications and IT-enabled services. Our focus is on
-            delivering business value and optimizing resources, capital,
-            and talent. As a trusted partner for global enterprises, we
-            differentiate through technology-driven solutions. We
-            re-engineer processes to meet evolving customer needs with
-            agility. Positioned for transformation, we help businesses
-            unlock growth and enter new markets.
-          </p>
-        </div>
-        
-        <div class="column" data-aos-delay="500" data-aos="fade-left">
-          <h3>What we do</h3>
-          <p >
-            Emsyne delivers comprehensive IT services that enhance
-            efficiency, productivity, and system integration. With proven
-            expertise in Windows, Oracle, Java, SQL Server, and modern
-            technologies, we create scalable solutions. Our industry
-            insights help us understand client needs and provide unified
-            applications that simplify workflows. From design to
-            deployment, we empower businesses to innovate, make better
-            decisions, and achieve growth.
-          </p>
+    <!-- Core Perspectives Section -->
+    <section class="sec_2">
+      <div data-aos-delay="500" data-aos="fade-left">
+        <h3>Our Core Perspectives</h3>
+        <p class="ptag">
+          Emsyne delivers business value by leveraging technology with
+          experience, efficiency, and excellence. We remain
+          customer-focused, Business-centric approach to individual needs while
+          ensuring integrity and responsibility. Our commitment to quality
+          drives us to give undivided attention and consistency in every
+          project. With innovation, care, and growth at the core, we build
+          sustainable solutions that create lasting impact.
+        </p>
+        <blockquote class="blockquote">
+          <h5>
+            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="#2A3855" viewBox="0 0 16 16"
+              class="quote-icon">
+              <path
+                d="M6.354 1.146A.5.5 0 0 1 7 1.5v4a.5.5 0 0 1-.5.5H5a2 2 0 0 0-2 2v1h3a2 2 0 0 1 2 2v3H1v-4a6 6 0 0 1 6-6h-.5a.5.5 0 0 1-.354-.854zM14.354 1.146A.5.5 0 0 1 15 1.5v4a.5.5 0 0 1-.5.5H13a2 2 0 0 0-2 2v1h3a2 2 0 0 1 2 2v3h-7v-4a6 6 0 0 1 6-6h-.5a.5.5 0 0 1-.354-.854z" />
+            </svg>
+            We make it happen by earning trust, walking the path, and owning the outcome.
+          </h5>
+        </blockquote>
+        <div class="content-columns">
+          <div class="column" data-aos-delay="500" data-aos="fade-left">
+            <h3>Why Us</h3>
+            <p>
+              Emsyne provides businesses with an innovative edge through
+              custom applications and IT-enabled services. Our focus is on
+              delivering business value and optimizing resources, capital,
+              and talent. As a trusted partner for global enterprises, we
+              differentiate through technology-driven solutions. We
+              re-engineer processes to meet evolving customer needs with
+              agility. Positioned for transformation, we help businesses
+              unlock growth and enter new markets.
+            </p>
+          </div>
+
+          <div class="column" data-aos-delay="500" data-aos="fade-left">
+            <h3>What we do</h3>
+            <p>
+              Emsyne delivers comprehensive IT services that enhance
+              efficiency, productivity, and system integration. With proven
+              expertise in Windows, Oracle, Java, SQL Server, and modern
+              technologies, we create scalable solutions. Our industry
+              insights help us understand client needs and provide unified
+              applications that simplify workflows. From design to
+              deployment, we empower businesses to innovate, make better
+              decisions, and achieve growth.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <!-- Stories Carousel Section -->
  <section id="conTest" data-aos="fade-up" data-aos-delay="200">
@@ -191,11 +219,10 @@
 
   <!-- Footer will be loaded here by footer-loader.js -->
   <div id="footer-container"></div>
-  <script src="assets/js/aboutus.js"></script>
+  <script defer src="assets/js/aboutus.js"></script>
 
-  <script src="assets/js/custom.js"></script>
-  <script src="assets/js/navbar.js"></script>
-  <script src="assets/css/third_party_css/aos/aos.js"></script>
+  <script defer src="assets/js/custom.js"></script>
+  <script defer src="assets/css/third_party_css/aos/aos.js"></script>
   <script>
     AOS.init({ duration: 1200, once: true });
   </script>

@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
         itemDiv.innerHTML = `
           <div class="job-card-inner">
             <div class="img-wrapper">
-              <img src="${job.image}" class="d-block w-100" alt="${job.title}" />
+              <img src="${job.image}" class="d-block w-100" alt="${job.title}" loading="lazy" />
             </div>
             <div class="carousel-overlay center-align">
               <div class="content-wrapper">

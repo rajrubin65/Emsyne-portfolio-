@@ -23,9 +23,13 @@
   <link href="assets/css/navbar.css" rel="stylesheet" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <script src="assets/js/footer-loader.js"></script>
-  <script src="assets/js/navbar-loader.js"></script>
-  <script src="assets/css/third_party_css/gsap/gsap.min.js"></script>
+  <link rel="preload" href="assets/js/navbar-loader.js" as="script">
+  <link rel="preload" href="assets/js/footer-loader.js" as="script">
+
+  <!-- Then defer scripts normally -->
+  <script defer src="assets/js/navbar-loader.js"></script>
+  <script defer src="assets/js/footer-loader.js"></script>
+  <script defer src="assets/css/third_party_css/gsap/gsap.min.js"></script>
 
 
 
@@ -470,9 +474,8 @@
 
   <!-- Footer will be loaded here by footer-loader.js -->
   <div id="footer-container"></div>
-  <script src="assets/js/custom.js"></script>
-  <script src="assets/js/navbar.js"></script>
-  <script src="assets/css/third_party_css/aos/aos.js"></script>
+  <script defer src="assets/js/custom.js"></script>
+  <script defer src="assets/css/third_party_css/aos/aos.js"></script>
   <script>
     AOS.init({
       duration: 600, // Shorter duration for faster animations
