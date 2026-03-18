@@ -334,7 +334,8 @@
     .mobile-dropdown-menu li a:focus,
     .mobile-dropdown-menu li a:active {
         background: transparent !important;
-        color: #3173dc !important; /* Prevent text color from turning white */
+        color: #3173dc !important;
+        /* Prevent text color from turning white */
     }
 
     .mobile-dropdown-toggle {
