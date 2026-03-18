@@ -18,9 +18,13 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/cookies.css" rel="stylesheet" />
 
-    <script src="assets/css/third_party_css/jquery/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/navbar-loader.js"></script>
-    <script src="assets/js/footer-loader.js"></script>
+    <script defer src="assets/css/third_party_css/jquery/jquery-3.6.0.min.js"></script>
+     <link rel="preload" href="assets/js/navbar-loader.js" as="script">
+    <link rel="preload" href="assets/js/footer-loader.js" as="script">
+
+  <!-- Then defer scripts normally -->
+  <script defer src="assets/js/navbar-loader.js"></script>
+  <script defer src="assets/js/footer-loader.js"></script>
 </head>
 
 <body>
@@ -132,9 +136,8 @@
 
     <div id="footer-container"></div>
 
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/css/third_party_css/aos/aos.js"></script>
+    <script defer src="assets/js/custom.js"></script>
+    <script defer src="assets/css/third_party_css/aos/aos.js"></script>
     <script>
         AOS.init({ duration: 1200, once: true });
     </script>

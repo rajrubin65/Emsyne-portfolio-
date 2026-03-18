@@ -23,9 +23,13 @@
   <link href="assets/css/navbar.css" rel="stylesheet" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <script src="assets/js/footer-loader.js"></script>
-  <script src="assets/js/navbar-loader.js"></script>
-  <script src="assets/css/third_party_css/gsap/gsap.min.js"></script>
+  <link rel="preload" href="assets/js/navbar-loader.js" as="script">
+  <link rel="preload" href="assets/js/footer-loader.js" as="script">
+
+  <!-- Then defer scripts normally -->
+  <script defer src="assets/js/navbar-loader.js"></script>
+  <script defer src="assets/js/footer-loader.js"></script>
+  <script defer src="assets/css/third_party_css/gsap/gsap.min.js"></script>
 
 
 
@@ -82,7 +86,7 @@
         </div>
         <div class="col-image" data-aos="fade-right" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/custom_software.png" alt="Custom Software Development">
+            <img src="assets/photos/custom_software.png" alt="Custom Software Development" loading="lazy">
           </div>
         </div>
       </div>
@@ -98,7 +102,7 @@
         </div>
         <div class="col-image" data-aos="fade-left" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/web_platform.png" alt="Web & Platform Development">
+            <img src="assets/photos/web_platform.png" alt="Web & Platform Development" loading="lazy">
           </div>
         </div>
       </div>
@@ -113,7 +117,7 @@
         </div>
         <div class="col-image" data-aos="fade-right" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/mobile_apps.png" alt="Mobile Application Development">
+            <img src="assets/photos/mobile_apps.png" alt="Mobile Application Development" loading="lazy">
           </div>
         </div>
       </div>
@@ -130,7 +134,7 @@
         </div>
         <div class="col-image" data-aos="fade-left" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/banking_fintech.png" alt="Banking & Fintech Solutions">
+            <img src="assets/photos/banking_fintech.png" alt="Banking & Fintech Solutions" loading="lazy">
           </div>
         </div>
       </div>
@@ -146,7 +150,7 @@
         </div>
         <div class="col-image" data-aos="fade-right" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/security.png" alt="Security at the Core">
+            <img src="assets/photos/security.png" alt="Security at the Core" loading="lazy">
           </div>
         </div>
       </div>
@@ -161,7 +165,7 @@
         </div>
         <div class="col-image" data-aos="fade-left" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/cloudinta.jpg" alt="Cloud Infrastructure & Strategy">
+            <img src="assets/photos/cloudinta.jpg" alt="Cloud Infrastructure & Strategy" loading="lazy">
           </div>
         </div>
       </div>
@@ -176,7 +180,7 @@
         </div>
         <div class="col-image" data-aos="fade-right" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/application_inte.jpg" alt="API & System Integration">
+            <img src="assets/photos/application_inte.jpg" alt="API & System Integration" loading="lazy">
           </div>
         </div>
       </div>
@@ -191,7 +195,7 @@
         </div>
         <div class="col-image" data-aos="fade-left" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/ot.jpg" alt="UI/UX Design & Strategy">
+            <img src="assets/photos/ot.jpg" alt="UI/UX Design & Strategy" loading="lazy">
           </div>
         </div>
       </div>
@@ -206,7 +210,8 @@
         </div>
         <div class="col-image" data-aos="fade-right" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/standard-quality-control-concept-m.jpg" alt="Quality Engineering & Testing">
+            <img src="assets/photos/standard-quality-control-concept-m.jpg" alt="Quality Engineering & Testing"
+              loading="lazy">
           </div>
         </div>
       </div>
@@ -221,7 +226,7 @@
         </div>
         <div class="col-image" data-aos="fade-left" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/a.jpg" alt="DevOps & Continuous Delivery">
+            <img src="assets/photos/a.jpg" alt="DevOps & Continuous Delivery" loading="lazy">
           </div>
         </div>
       </div>
@@ -238,7 +243,7 @@
         <div class="col-image" data-aos="fade-right" data-aos-delay="400">
           <div class="image-container">
             <img src="assets/photos/businessman-application-human-digital-business.jpg"
-              alt="Dedicated Development Teams">
+              alt="Dedicated Development Teams" loading="lazy">
           </div>
         </div>
       </div>
@@ -256,7 +261,7 @@
         </div>
         <div class="col-image" data-aos="fade-left" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/db.jpg" alt="Data Engineering & Analytics">
+            <img src="assets/photos/db.jpg" alt="Data Engineering & Analytics" loading="lazy">
           </div>
         </div>
       </div>
@@ -273,7 +278,7 @@
         </div>
         <div class="col-image" data-aos="fade-right" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/ot.jpg" alt="IT Strategy & Consulting">
+            <img src="assets/photos/ot.jpg" alt="IT Strategy & Consulting" loading="lazy">
           </div>
         </div>
       </div>
@@ -289,7 +294,7 @@
         </div>
         <div class="col-image" data-aos="fade-left" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/ERP.jpg" alt="Legacy System Modernization">
+            <img src="assets/photos/ERP.jpg" alt="Legacy System Modernization" loading="lazy">
           </div>
         </div>
       </div>
@@ -306,7 +311,7 @@
         </div>
         <div class="col-image" data-aos="fade-right" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/a.jpg" alt="IoT & Smart Solutions">
+            <img src="assets/photos/a.jpg" alt="IoT & Smart Solutions" loading="lazy">
           </div>
         </div>
       </div>
@@ -322,7 +327,7 @@
         </div>
         <div class="col-image" data-aos="fade-left" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/ai_image.jpg" alt="Automation & RPA">
+            <img src="assets/photos/ai_image.jpg" alt="Automation & RPA" loading="lazy">
           </div>
         </div>
       </div>
@@ -337,7 +342,7 @@
         </div>
         <div class="col-image" data-aos="fade-right" data-aos-delay="400">
           <div class="image-container">
-            <img src="assets/photos/dbxx.jpg" alt="VAPT & Security Audits">
+            <img src="assets/photos/dbxx.jpg" alt="VAPT & Security Audits" loading="lazy">
           </div>
         </div>
       </div>
@@ -470,9 +475,8 @@
 
   <!-- Footer will be loaded here by footer-loader.js -->
   <div id="footer-container"></div>
-  <script src="assets/js/custom.js"></script>
-  <script src="assets/js/navbar.js"></script>
-  <script src="assets/css/third_party_css/aos/aos.js"></script>
+  <script defer src="assets/js/custom.js"></script>
+  <script defer src="assets/css/third_party_css/aos/aos.js"></script>
   <script>
     AOS.init({
       duration: 600, // Shorter duration for faster animations

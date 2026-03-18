@@ -20,7 +20,7 @@
     <!-- <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet" /> -->
     <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link href="assets/vendors/aos/aos.css" rel="stylesheet" />
-    <script defer src="assets/css/third_party_css/font-awesome/all.js"></script>
+    <script defer defer src="assets/css/third_party_css/font-awesome/all.js"></script>
     <!-- ======= Theme Style =======-->
     <link href="assets/css/common.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
@@ -31,8 +31,12 @@
         as="style">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <script src="assets/js/navbar-loader.js"></script>
-    <script src="assets/js/footer-loader.js"></script>
+    <link rel="preload" href="assets/js/navbar-loader.js" as="script">
+    <link rel="preload" href="assets/js/footer-loader.js" as="script">
+
+    <!-- Then defer scripts normally -->
+    <script defer src="assets/js/navbar-loader.js"></script>
+    <script defer src="assets/js/footer-loader.js"></script>
 
 </head>
 
@@ -133,7 +137,8 @@
                                 <strong>Emsyne</strong>, the IT
                                 division of <strong>The Muthoot Group</strong>, specializes in
                                 ERP, CRM, and workflow automation solutions. Based at
-                                Infopark, Kochi, we help businesses adapt to change, embrace tech innovations, and transform digitally.
+                                Infopark, Kochi, we help businesses adapt to change, embrace tech innovations, and
+                                transform digitally.
                             </p>
                             <p class="subheading1">
                                 Our mission is to deliver
@@ -260,7 +265,8 @@
                                     </div>
                                     <div class="feature-content">
                                         <h5>Continuous Learning</h5>
-                                        <p>AI systems that adapt and improve over time, learning from new data models and
+                                        <p>AI systems that adapt and improve over time, learning from new data models
+                                            and
                                             patterns</p>
                                     </div>
                                 </div>
@@ -298,7 +304,8 @@
                         <button class="crew-arrow crew-left">‹</button>
                         <div class="crew-track">
                             <div class="crew-card" data-index="0">
-                                <img src="assets/images/portfolio/pexels-photo-3184291.jpeg" alt="EMBank" />
+                                <img src="assets/images/portfolio/pexels-photo-3184291.jpeg" alt="EMBank"
+                                    loading="lazy" />
                                 <div class="crew-content">
                                     <h3>EMBANK</h3>
                                     <p class="subheading">
@@ -310,7 +317,8 @@
                             </div>
 
                             <div class="crew-card" data-index="1">
-                                <img src="assets/images/portfolio/pexels-photo-3183197.jpeg" alt="WebPay" />
+                                <img src="assets/images/portfolio/pexels-photo-3183197.jpeg" alt="WebPay"
+                                    loading="lazy" />
                                 <div class="crew-content">
                                     <h3>WEBPAY</h3>
                                     <p class="subheading">
@@ -321,7 +329,8 @@
                             </div>
 
                             <div class="crew-card" data-index="2">
-                                <img src="assets/images/portfolio/pexels-photo-3184292.jpeg" alt="HRMS" />
+                                <img src="assets/images/portfolio/pexels-photo-3184292.jpeg" alt="HRMS"
+                                    loading="lazy" />
                                 <div class="crew-content">
                                     <h3>HRMS</h3>
                                     <p class="subheading">
@@ -333,7 +342,8 @@
                             </div>
 
                             <div class="crew-card" data-index="3">
-                                <img src="assets/images/portfolio/pexels-photo-3183150.jpeg" alt="IPMS" />
+                                <img src="assets/images/portfolio/pexels-photo-3183150.jpeg" alt="IPMS"
+                                    loading="lazy" />
                                 <div class="crew-content">
                                     <h3>IPMS</h3>
                                     <p class="subheading">Insurance Policy Management system.</p>
@@ -342,7 +352,8 @@
                             </div>
 
                             <div class="crew-card" data-index="4">
-                                <img src="assets/images/portfolio/pexels-photo-3184296.jpeg" alt="Loan Softwares" />
+                                <img src="assets/images/portfolio/pexels-photo-3184296.jpeg" alt="Loan Softwares"
+                                    loading="lazy" />
                                 <div class="crew-content">
                                     <h3>Loan Systems</h3>
                                     <p class="subheading"></p>
@@ -353,7 +364,8 @@
                             </div>
 
                             <div class="crew-card" data-index="5">
-                                <img src="assets/images/portfolio/pexels-photo-5239879.jpeg" alt="Global Pay" />
+                                <img src="assets/images/portfolio/pexels-photo-5239879.jpeg" alt="Global Pay"
+                                    loading="lazy" />
                                 <div class="crew-content">
                                     <h3>GLOBAL PAY</h3>
                                     <p class="subheading">
@@ -364,7 +376,8 @@
                             </div>
 
                             <div class="crew-card" data-index="6">
-                                <img src="assets/images/portfolio/pexels-photo-210990.jpeg" alt="Audit Software" />
+                                <img src="assets/images/portfolio/pexels-photo-210990.jpeg" alt="Audit Software"
+                                    loading="lazy" />
                                 <div class="crew-content">
                                     <h3>AUDIT SOFTWARE</h3>
                                     <p class="subheading">
@@ -374,7 +387,8 @@
                                 </div>
                             </div>
                             <div class="crew-card" data-index="7">
-                                <img src="assets/images/portfolio/pexels-photo-1092644.jpeg" alt="Mobility Solutions" />
+                                <img src="assets/images/portfolio/pexels-photo-1092644.jpeg" alt="Mobility Solutions"
+                                    loading="lazy" />
                                 <div class="crew-content">
                                     <h3>MOBILITY SOLUTIONS</h3>
                                     <p class="subheading">
@@ -412,72 +426,78 @@
 
                             <div class="offer-gallery">
                                 <div class="offer-track">
+                                    <div class="offer-card" data-service="enterprise">
+                                        <img src="assets/photos/enterprise_solutions.png" alt="Enterprise"
+                                            loading="lazy">
+                                        <span>Enterprise</span>
+                                    </div>
                                     <div class="offer-card" data-service="custom">
-                                        <img src="assets/photos/custom_software.png" alt="Custom">
+                                        <img src="assets/photos/custom_software.png" alt="Custom" loading="lazy">
                                         <span>Custom</span>
                                     </div>
                                     <div class="offer-card" data-service="web_platform">
-                                        <img src="assets/photos/web_platform.png" alt="Web & Platform">
+                                        <img src="assets/photos/web_platform.png" alt="Web & Platform" loading="lazy">
                                         <span>Web & Plat</span>
                                     </div>
                                     <div class="offer-card" data-service="mobile_app">
-                                        <img src="assets/photos/mobile_apps.png" alt="Mobile">
+                                        <img src="assets/photos/mobile_apps.png" alt="Mobile" loading="lazy">
                                         <span>Mobile</span>
                                     </div>
                                     <div class="offer-card" data-service="banking">
-                                        <img src="assets/photos/banking_fintech.png" alt="Banking">
+                                        <img src="assets/photos/banking_fintech.png" alt="Banking" loading="lazy">
                                         <span>Fintech</span>
                                     </div>
                                     <div class="offer-card" data-service="security_core">
-                                        <img src="assets/photos/security.png" alt="Security">
+                                        <img src="assets/photos/security.png" alt="Security" loading="lazy">
                                         <span>Security</span>
                                     </div>
                                     <div class="offer-card" data-service="cloud_infra">
-                                        <img src="assets/images/cloudservice.jpg" alt="Cloud">
+                                        <img src="assets/images/cloudservice.jpg" alt="Cloud" loading="lazy">
                                         <span>Cloud</span>
                                     </div>
                                     <div class="offer-card" data-service="api_integration">
-                                        <img src="assets/images/appintegration.jpg" alt="API">
+                                        <img src="assets/images/appintegration.jpg" alt="API" loading="lazy">
                                         <span>API Integ</span>
                                     </div>
                                     <div class="offer-card" data-service="ui_ux">
-                                        <img src="assets/photos/ot.jpg" alt="UI/UX">
+                                        <img src="assets/photos/ot.jpg" alt="UI/UX" loading="lazy">
                                         <span>UI/UX</span>
                                     </div>
                                     <div class="offer-card" data-service="quality">
-                                        <img src="assets/photos/standard-quality-control-concept-m.jpg" alt="Quality">
+                                        <img src="assets/photos/standard-quality-control-concept-m.jpg" alt="Quality"
+                                            loading="lazy">
                                         <span>Quality</span>
                                     </div>
                                     <div class="offer-card" data-service="devops">
-                                        <img src="assets/photos/a.jpg" alt="DevOps">
+                                        <img src="assets/photos/a.jpg" alt="DevOps" loading="lazy">
                                         <span>DevOps</span>
                                     </div>
                                     <div class="offer-card" data-service="dedicated_teams">
-                                        <img src="assets/images/outsource.jpg" alt="Dedicated">
+                                        <img src="assets/images/outsource.jpg" alt="Dedicated" loading="lazy">
                                         <span>Dedicated</span>
                                     </div>
                                     <div class="offer-card" data-service="data">
-                                        <img src="assets/images/databaseservice.jpg" alt="Data">
+                                        <img src="assets/images/databaseservice.jpg" alt="Data" loading="lazy">
                                         <span>Data</span>
                                     </div>
                                     <div class="offer-card" data-service="strategy">
-                                        <img src="assets/photos/ot.jpg" alt="Strategy">
+                                        <img src="assets/photos/ot.jpg" alt="Strategy" loading="lazy">
                                         <span>Strategy</span>
                                     </div>
                                     <div class="offer-card" data-service="legacy">
-                                        <img src="assets/images/erpservice.jpg" alt="Legacy">
+                                        <img src="assets/images/erpservice.jpg" alt="Legacy" loading="lazy">
                                         <span>Legacy</span>
                                     </div>
                                     <div class="offer-card" data-service="iot">
-                                        <img src="assets/photos/a.jpg" alt="IoT">
+                                        <img src="assets/photos/a.jpg" alt="IoT" loading="lazy">
                                         <span>IoT</span>
                                     </div>
                                     <div class="offer-card" data-service="automation">
-                                        <img src="assets/images/ai.jpg" alt="Automation">
+                                        <img src="assets/images/ai.jpg" alt="Automation" loading="lazy">
                                         <span>Automation</span>
                                     </div>
                                     <div class="offer-card" data-service="vapt">
-                                        <img src="assets/photos/dbxx.jpg" alt="VAPT">
+                                        <img src="assets/photos/dbxx.jpg" alt="VAPT" loading="lazy">
                                         <span>VAPT</span>
                                     </div>
                                 </div>
@@ -493,7 +513,8 @@
                         <!-- 01 Enterprise Software Solutions -->
                         <div class="extra-services" data-animate data-service="enterprise">
                             <div class="service-image tip">
-                                <img src="assets/photos/enterprise_solutions.png" alt="Enterprise Software Solutions" />
+                                <img src="assets/photos/enterprise_solutions.png" alt="Enterprise Software Solutions"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">01</div>
@@ -518,7 +539,8 @@
                         <!-- 02 Custom Software Development -->
                         <div class="extra-services active" data-animate data-service="custom">
                             <div class="service-image tip">
-                                <img src="assets/photos/custom_software.png" alt="Custom Software Development" />
+                                <img src="assets/photos/custom_software.png" alt="Custom Software Development"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">02</div>
@@ -541,7 +563,8 @@
                         <!-- 03 Web & Platform Development -->
                         <div class="extra-services" data-animate data-service="web_platform">
                             <div class="service-image tip">
-                                <img src="assets/photos/web_platform.png" alt="Web & Platform Development" />
+                                <img src="assets/photos/web_platform.png" alt="Web & Platform Development"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">03</div>
@@ -564,7 +587,8 @@
                         <!-- 04 Mobile Application Development -->
                         <div class="extra-services" data-animate data-service="mobile_app">
                             <div class="service-image tip">
-                                <img src="assets/photos/mobile_apps.png" alt="Mobile Application Development" />
+                                <img src="assets/photos/mobile_apps.png" alt="Mobile Application Development"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">04</div>
@@ -587,7 +611,8 @@
                         <!-- 05 Banking & Fintech Solutions -->
                         <div class="extra-services" data-animate data-service="banking">
                             <div class="service-image tip">
-                                <img src="assets/photos/banking_fintech.png" alt="Banking & Fintech Solutions" />
+                                <img src="assets/photos/banking_fintech.png" alt="Banking & Fintech Solutions"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">05</div>
@@ -610,7 +635,7 @@
                         <!-- 06 Security at the Core -->
                         <div class="extra-services" data-animate data-service="security_core">
                             <div class="service-image tip">
-                                <img src="assets/photos/security.png" alt="Security at the Core" />
+                                <img src="assets/photos/security.png" alt="Security at the Core" loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">06</div>
@@ -633,7 +658,8 @@
                         <!-- 07 Cloud Infrastructure & Strategy -->
                         <div class="extra-services" data-animate data-service="cloud_infra">
                             <div class="service-image tip">
-                                <img src="assets/images/cloudservice.jpg" alt="Cloud Infrastructure & Strategy" />
+                                <img src="assets/images/cloudservice.jpg" alt="Cloud Infrastructure & Strategy"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">07</div>
@@ -656,7 +682,8 @@
                         <!-- 08 API & System Integration -->
                         <div class="extra-services" data-animate data-service="api_integration">
                             <div class="service-image tip">
-                                <img src="assets/images/appintegration.jpg" alt="API & System Integration" />
+                                <img src="assets/images/appintegration.jpg" alt="API & System Integration"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">08</div>
@@ -679,7 +706,7 @@
                         <!-- 09 UI/UX Design & Strategy -->
                         <div class="extra-services" data-animate data-service="ui_ux">
                             <div class="service-image tip">
-                                <img src="assets/photos/ot.jpg" alt="UI/UX Design & Strategy" />
+                                <img src="assets/photos/ot.jpg" alt="UI/UX Design & Strategy" loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">09</div>
@@ -703,7 +730,7 @@
                         <div class="extra-services" data-animate data-service="quality">
                             <div class="service-image tip">
                                 <img src="assets/photos/standard-quality-control-concept-m.jpg"
-                                    alt="Quality Engineering & Testing" />
+                                    alt="Quality Engineering & Testing" loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">10</div>
@@ -726,7 +753,7 @@
                         <!-- 11 DevOps & Continuous Delivery -->
                         <div class="extra-services" data-animate data-service="devops">
                             <div class="service-image tip">
-                                <img src="assets/photos/a.jpg" alt="DevOps & Continuous Delivery" />
+                                <img src="assets/photos/a.jpg" alt="DevOps & Continuous Delivery" loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">11</div>
@@ -749,7 +776,8 @@
                         <!-- 12 Dedicated Development Teams -->
                         <div class="extra-services" data-animate data-service="dedicated_teams">
                             <div class="service-image tip">
-                                <img src="assets/images/outsource.jpg" alt="Dedicated Development Teams" />
+                                <img src="assets/images/outsource.jpg" alt="Dedicated Development Teams"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">12</div>
@@ -772,7 +800,8 @@
                         <!-- 13 Data Engineering & Analytics -->
                         <div class="extra-services" data-animate data-service="data">
                             <div class="service-image tip">
-                                <img src="assets/images/databaseservice.jpg" alt="Data Engineering & Analytics" />
+                                <img src="assets/images/databaseservice.jpg" alt="Data Engineering & Analytics"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">13</div>
@@ -795,7 +824,7 @@
                         <!-- 14 IT Strategy & Consulting -->
                         <div class="extra-services" data-animate data-service="strategy">
                             <div class="service-image tip">
-                                <img src="assets/photos/ot.jpg" alt="IT Strategy & Consulting" />
+                                <img src="assets/photos/ot.jpg" alt="IT Strategy & Consulting" loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">14</div>
@@ -818,7 +847,8 @@
                         <!-- 15 Legacy System Modernization -->
                         <div class="extra-services" data-animate data-service="legacy">
                             <div class="service-image tip">
-                                <img src="assets/images/erpservice.jpg" alt="Legacy System Modernization" />
+                                <img src="assets/images/erpservice.jpg" alt="Legacy System Modernization"
+                                    loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">15</div>
@@ -841,7 +871,7 @@
                         <!-- 16 IoT & Smart Solutions -->
                         <div class="extra-services" data-animate data-service="iot">
                             <div class="service-image tip">
-                                <img src="assets/photos/a.jpg" alt="IoT & Smart Solutions" />
+                                <img src="assets/photos/a.jpg" alt="IoT & Smart Solutions" loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">16</div>
@@ -864,7 +894,7 @@
                         <!-- 17 Automation & RPA -->
                         <div class="extra-services" data-animate data-service="automation">
                             <div class="service-image tip">
-                                <img src="assets/images/ai.jpg" alt="Automation & RPA" />
+                                <img src="assets/images/ai.jpg" alt="Automation & RPA" loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">17</div>
@@ -887,7 +917,7 @@
                         <!-- 18 VAPT & Security Audits -->
                         <div class="extra-services" data-animate data-service="vapt">
                             <div class="service-image tip">
-                                <img src="assets/photos/dbxx.jpg" alt="VAPT & Security Audits" />
+                                <img src="assets/photos/dbxx.jpg" alt="VAPT & Security Audits" loading="lazy" />
                             </div>
                             <div class="service-content tip">
                                 <div class="number-tip">18</div>
@@ -932,65 +962,78 @@
                             <!-- Logos -->
 
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" alt="Google logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" alt="Google logo"
+                                    loading="lazy" />
                             </div>
 
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS logo"
+                                    loading="lazy" />
                             </div>
 
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/broadcom.svg" alt="Broadcom logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/broadcom.svg" alt="Broadcom logo"
+                                    loading="lazy" />
                             </div>
 
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/oracle-6.svg" alt="Oracle logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/oracle-6.svg" alt="Oracle logo"
+                                    loading="lazy" />
                             </div>
 
                             <div class="logo-item">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg" alt="Fortinet logo">
-</div>
-
-                            <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/juniper-networks.svg" alt="Juniper logo" />
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg"
+                                    alt="Fortinet logo" loading="lazy">
                             </div>
 
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/microsoft-5.svg" alt="Microsoft logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/juniper-networks.svg" alt="Juniper logo"
+                                    loading="lazy" />
+                            </div>
+
+                            <div class="logo-item">
+                                <img src="https://cdn.worldvectorlogo.com/logos/microsoft-5.svg" alt="Microsoft logo"
+                                    loading="lazy" />
                             </div>
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/adobe-2.svg" alt="Adobe logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/adobe-2.svg" alt="Adobe logo"
+                                    loading="lazy" />
                             </div>
                             <div class="logo-item">
                                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/loom.svg" alt="Loom"
-                                    style="filter: invert(41%) sepia(96%) saturate(749%) hue-rotate(205deg) brightness(97%) contrast(96%);" />
+                                    style="filter: invert(41%) sepia(96%) saturate(749%) hue-rotate(205deg) brightness(97%) contrast(96%);"
+                                    loading="lazy" />
                             </div>
 
                             <div class="logo-item">
                                 <img src="https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg"
-                                    alt="Google Analytics logo" />
+                                    alt="Google Analytics logo" loading="lazy" />
                             </div>
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/dropbox-3.svg" alt="Dropbox logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/dropbox-3.svg" alt="Dropbox logo"
+                                    loading="lazy" />
                             </div>
                             <!-- Duplicate logos for infinite loop -->
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/adobe-2.svg" alt="Adobe logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/adobe-2.svg" alt="Adobe logo"
+                                    loading="lazy" />
                             </div>
 
                             <div class="logo-item">
                                 <img src="https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg"
-                                    alt="Google Analytics logo" />
+                                    alt="Google Analytics logo" loading="lazy" />
                             </div>
 
                             <div class="logo-item">
                                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/spotify.svg" alt="Spotify"
-                                    style="filter: invert(48%) sepia(88%) saturate(390%) hue-rotate(86deg) brightness(95%) contrast(95%);" />
+                                    style="filter: invert(48%) sepia(88%) saturate(390%) hue-rotate(86deg) brightness(95%) contrast(95%);"
+                                    loading="lazy" />
                             </div>
 
 
                             <div class="logo-item">
-                                <img src="https://cdn.worldvectorlogo.com/logos/dropbox-3.svg" alt="Dropbox logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/dropbox-3.svg" alt="Dropbox logo"
+                                    loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -1015,8 +1058,8 @@
                         <div class="swiper-container testimonials-swiper-container">
                             <div class="swiper-wrapper"> -->
 
-                                <!-- Testimonial 1 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 1 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Real-time tracking and seamless payments simplified my business
@@ -1035,8 +1078,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 2 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 2 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Budgeting and expense tracking made freelance finance management
@@ -1055,8 +1098,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 3 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 3 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Smart investment tools with tailored recommendations for long-term
@@ -1075,8 +1118,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 4 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 4 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Simple, secure, and confidence-boosting money management experience.
@@ -1095,8 +1138,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 5 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 5 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; Strong security and smooth performance make this platform reliable.
@@ -1115,8 +1158,8 @@
                                     </div>
                                 </div> -->
 
-                                <!-- Testimonial 6 -->
-                                <!-- <div class="swiper-slide">
+            <!-- Testimonial 6 -->
+            <!-- <div class="swiper-slide">
                                     <div class="testimonial rounded-4 p-4">
                                         <blockquote class="mb-3 subheading">
                                             &ldquo; An intuitive platform that streamlined operations and accelerated
@@ -1139,95 +1182,95 @@
                         </div>
                     </div> -->
 
-                    <!-- Pagination & Navigation -->
-                    <!-- <div class="swiper-pagination"></div>
+            <!-- Pagination & Navigation -->
+            <!-- <div class="swiper-pagination"></div>
 
                 </div>
     </div>
     </div>
     </section> -->
 
-    <section class="section contact__v2" id="contact">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-6 col-lg-7 mx-auto text-center">
-                    <!-- <h2 class="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">Contact Us</h2>
+            <section class="section contact__v2" id="contact">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div class="col-md-6 col-lg-7 mx-auto text-center">
+                            <!-- <h2 class="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">Contact Us</h2>
                               -->
-                    <div class="sticky-heading" data-animate>
-                        <span class="left-word" style="--i:0">CONTACT</span>
-                        <span class="right-word" style="--i:1">US</span>
-                    </div>
-
-                    <p data-aos="fade-up" data-aos-delay="100" class="subheading">
-                        We’d love to hear from you! Reach out to us for inquiries,
-                        collaborations, or support.
-                    </p>
-                </div>
-            </div>
-            <div class="row align-items-stretch tip">
-                <!-- Left Image Section -->
-                <div class="col-md-6">
-                    <div class="h-100 d-flex align-items-center justify-content-center">
-                        <img src="assets/images/about_2-min.jpg" alt="Contact Us"
-                            class="img-fluid h-100 w-100 object-fit-cover rounded" />
-                    </div>
-                </div>
-
-                <!-- Right Contact Details -->
-                <div class="col-md-6 tip">
-                    <div class="contact-tile h-100 d-flex flex-column justify-content-center"
-                        style="background-color: #002a74; color: #ffffff">
-                        <div class="d-flex gap-5 flex-column">
-                            <!-- Phone -->
-                            <div class="d-flex align-items-start gap-3" data-aos="fade-up">
-                                <div class="icon d-block">
-                                    <i class="bi bi-telephone"></i>
-                                </div>
-                                <span>
-                                    <span class="d-block">Phone</span>
-                                    <strong>+91 484 6677604</strong>
-                                </span>
+                            <div class="sticky-heading" data-animate>
+                                <span class="left-word" style="--i:0">CONTACT</span>
+                                <span class="right-word" style="--i:1">US</span>
                             </div>
 
-                            <!-- Email -->
-                            <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="100">
-                                <div class="icon d-block">
-                                    <i class="bi bi-send"></i>
-                                </div>
-                                <span>
-                                    <span class="d-block">Email</span>
-                                    <strong>contact@emsyne.com</strong>
-                                </span>
+                            <p data-aos="fade-up" data-aos-delay="100" class="subheading">
+                                We’d love to hear from you! Reach out to us for inquiries,
+                                collaborations, or support.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-stretch tip">
+                        <!-- Left Image Section -->
+                        <div class="col-md-6">
+                            <div class="h-100 d-flex align-items-center justify-content-center">
+                                <img src="assets/images/about_2-min.jpg" alt="Contact Us"
+                                    class="img-fluid h-100 w-100 object-fit-cover rounded" loading="lazy" />
                             </div>
+                        </div>
 
-                            <!-- Address -->
-                            <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="200">
-                                <div class="icon d-block">
-                                    <i class="bi bi-geo-alt"></i>
+                        <!-- Right Contact Details -->
+                        <div class="col-md-6 tip">
+                            <div class="contact-tile h-100 d-flex flex-column justify-content-center"
+                                style="background-color: #002a74; color: #ffffff">
+                                <div class="d-flex gap-5 flex-column">
+                                    <!-- Phone -->
+                                    <div class="d-flex align-items-start gap-3" data-aos="fade-up">
+                                        <div class="icon d-block">
+                                            <i class="bi bi-telephone"></i>
+                                        </div>
+                                        <span>
+                                            <span class="d-block">Phone</span>
+                                            <strong>+91 484 6677604</strong>
+                                        </span>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="icon d-block">
+                                            <i class="bi bi-send"></i>
+                                        </div>
+                                        <span>
+                                            <span class="d-block">Email</span>
+                                            <strong>contact@emsyne.com</strong>
+                                        </span>
+                                    </div>
+
+                                    <!-- Address -->
+                                    <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="200">
+                                        <div class="icon d-block">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </div>
+                                        <span>
+                                            <span class="d-block">Address</span>
+                                            <address class="fw-bold mb-0">
+                                                Emsyne<br />
+                                                4th Floor, LULU Cyber Tower 1 <br />
+                                                11th Floor, LULU Cyber Tower 2 <br />
+                                                Infopark, Kusumagiri P.O, Kakkanad <br />
+                                                Kochi - 682042, Kerala, India
+                                            </address>
+                                        </span>
+                                    </div>
                                 </div>
-                                <span>
-                                    <span class="d-block">Address</span>
-                                    <address class="fw-bold mb-0">
-                                        Emsyne<br />
-                                        4th Floor, LULU Cyber Tower 1 <br />
-                                        11th Floor, LULU Cyber Tower 2 <br />
-                                        Infopark, Kusumagiri P.O, Kakkanad <br />
-                                        Kochi - 682042, Kerala, India
-                                    </address>
-                                </span>
                             </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
+            </section>
 
-        </div>
-    </section>
+            <!-- Footer will be loaded here by footer-loader.js -->
+            <div id="footer-container"></div>
 
-    <!-- Footer will be loaded here by footer-loader.js -->
-    <div id="footer-container"></div>
-
-    </main>
+        </main>
     </div>
 
     <!-- ======= Back to Top =======-->
@@ -1235,19 +1278,17 @@
     <!-- End Back to top-->
 
     <!-- ======= Javascripts =======-->
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/index_script.js"></script>
-    <script src="assets/css/third_party_css/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/gsap/gsap.min.js"></script>
-    <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
-    <script src="assets/vendors/glightbox/glightbox.min.js"></script>
-    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendors/aos/aos.js"></script>
-    <script src="assets/vendors/purecounter/purecounter.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/send_email.js"></script>
+    <script defer src="assets/js/index_script.js"></script>
+    <script defer src="assets/css/third_party_css/purecounter/purecounter_vanilla.js"></script>
+    <script defer src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/vendors/gsap/gsap.min.js"></script>
+    <script defer src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script defer src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script defer src="assets/vendors/glightbox/glightbox.min.js"></script>
+    <script defer src="assets/vendors/swiper/swiper-bundle.min.js"></script>
+    <script defer src="assets/vendors/aos/aos.js"></script>
+    <script defer src="assets/vendors/purecounter/purecounter.js"></script>
+    <script defer src="assets/js/custom.js"></script>
     <!-- End JavaScripts-->
 </body>
 <script>
