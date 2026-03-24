@@ -1347,23 +1347,19 @@ button.learn-more:hover .button-text {
 .service-image {
     width: 100%;
     max-width: 420px;
-    /* increased image size */
     height: auto;
     margin-bottom: 20px;
     background: transparent;
-    border-radius: 0;
+    border-radius: 12px;
     box-shadow: none;
 }
 
 .service-image img {
     width: 100%;
     max-width: 420px;
-    /* standard width */
     height: 260px;
-    /* standard height */
     border-radius: 12px;
-    object-fit: cover;
-    /* crops nicely without stretching */
+    object-fit: fill;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -1440,9 +1436,9 @@ button.learn-more:hover .button-text {
 
     .service-image img {
         width: 100%;
-        height: auto;
+        height: 100%;
         max-height: 200px;
-        object-fit: cover;
+        object-fit: fill;
         border-radius: 12px;
     }
 
@@ -1476,7 +1472,9 @@ button.learn-more:hover .button-text {
     }
 
     .service-image img {
+        height: 100%;
         max-height: 160px;
+        object-fit: fill;
     }
 
     .service-content .title {

@@ -133,13 +133,12 @@
  }
 
  .image-container img {
-   width: 100%;
+   width: 98%;
    height: 100%;
-   object-fit: cover;
+   object-fit: fill;
    border-radius: 0.5rem;
    opacity: 1;
    will-change: opacity;
-   /* Optimize for AOS animations */
  }
 
  .heading_h1 {
