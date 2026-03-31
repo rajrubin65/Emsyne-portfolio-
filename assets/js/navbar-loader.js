@@ -5,6 +5,25 @@
  */
 
 document.addEventListener("DOMContentLoaded", async () => {
+  // Ensure navbar container and skeleton exist immediately to avoid layout jump and blank header
+  let navbarContainer = document.getElementById("navbar-container");
+  if (!navbarContainer) {
+    navbarContainer = document.createElement("div");
+    navbarContainer.id = "navbar-container";
+    document.body.insertBefore(navbarContainer, document.body.firstChild);
+  }
+
+  // Show skeleton while loader runs
+  navbarContainer.classList.add("navbar-loading");
+  navbarContainer.innerHTML = `
+    <div class="navbar-skeleton" aria-hidden="true">
+      <div class="skeleton-logo"></div>
+      <div class="skeleton-links">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  `;
+
   try {
     // Fetch the navbar HTML
     const response = await fetch("components/navbar.html");
@@ -12,21 +31,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const navbarHtml = await response.text();
 
-    // Create a placeholder element if it doesn't exist
-    let navbarContainer = document.getElementById("navbar-container");
-    if (!navbarContainer) {
-      navbarContainer = document.createElement("div");
-      navbarContainer.id = "navbar-container";
-      document.body.insertBefore(navbarContainer, document.body.firstChild);
-    }
-
     // Insert the navbar HTML
     navbarContainer.innerHTML = navbarHtml;
+    navbarContainer.classList.remove("navbar-loading");
 
     // Initialize navbar functionality (hamburger menu, overlay, etc.)
     initializeNavbar();
   } catch (error) {
     console.error("Error loading navbar:", error);
+    navbarContainer.classList.remove("navbar-loading");
+    navbarContainer.innerHTML = `<div class="navbar-error">Navbar failed to load. <a href="index.html">Go Home</a></div>`;
   }
 });
 
