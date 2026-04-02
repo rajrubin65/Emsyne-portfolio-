@@ -303,7 +303,7 @@
 
 
     .collage-img {
-      position: relative;
+      position: absolute;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
@@ -319,6 +319,8 @@
       max-width: 300px;
       height: 75%;
       object-fit: cover;
+      left: 20%;
+      top: 12.5%;
     }
 
     .img-right-top {
@@ -494,6 +496,7 @@
         top: 0;
         object-fit: cover;
         border-radius: 0.5rem;
+        position: absolute;
       }
 
       .img-right-top,
@@ -586,14 +589,18 @@
 
       .image-collage {
         height: 200px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .img-main {
         width: 80%;
         max-width: 400px;
         height: auto;
-        left: 0;
-        top: 0;
+        position: static;
         object-fit: cover;
       }
 
